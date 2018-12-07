@@ -63,63 +63,54 @@
           <small>$50,000</small>
         </div>
       </div>
-      <section id="rooms-setup" class="chat">
-        <ul>
-          <li class="animated fadeInUp">
-            <div class="small-avatar">
-              <img src="../../src/images/guide.jpg" align="Your Guide">
-            </div>
-            <div class="bubble">
-              <p>Which rooms have been affected by this loss? Please select all that apply.</p>
-            </div>
-          </li>
-        </ul>
+      <section id="product-details" class="chat">
         <div class="questions">
           <form>
-            <h1 class="animated fadeInUp">Affected Rooms</h1>
+            <h1 class="animated fadeInUp">Sofas</h1>
             <fieldset class="animated fadeInUp">
-              <legend>Living Room</legend>
-              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="living-room" id="living-room">
-                <label class="checkbox" for="living-room">Living Room</label>
+              <legend>Description</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Error message</span>
+                <input type="text" name="description" id="description" placeholder="Description">
+                <label for="description">Description</label>
+                <span class="valid"><i class="la la-check-circle-o"></i></span>
               </div>
             </fieldset>
-            <fieldset class="animated fadeInUp">
-              <legend>Kitchen</legend>
-              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="kitchen" id="kitchen">
-                <label class="checkbox" for="kitchen">Kitchen</label>
-              </div>
-            </fieldset>
-            <fieldset class="animated fadeInUp">
-              <legend>Bathroom</legend>
-              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="bathroom" id="bathroom">
-                <label class="checkbox" for="bathroom">Bathroom</label>
-              </div>
-            </fieldset>
-            <fieldset class="animated fadeInUp">
-              <legend>Bedroom</legend>
-              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="bedroom" id="bedroom">
-                <label class="checkbox" for="bedroom">Bedroom</label>
-              </div>
-            </fieldset>
-            <fieldset class="animated fadeInUp">
-              <legend>Basement</legend>
-              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="basement" id="basement">
-                <label class="checkbox" for="basement">Basement</label>
-              </div>
-            </fieldset>
-            <div class="button-box animated fadeInUp">
+            <div class="small animated fadeInUp">
+              <fieldset>
+                <legend>Value</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message">Error message</span>
+                  <select name="value" id="value">
+                    <option value="Low">Low</option>
+                    <option value="Med">Med</option>
+                    <option value="High">High</option>
+                  </select>
+                  <div class="select-icon"><i class="la la-angle-down"></i></div>
+                  <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                  <label for="value">Value</label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Qty</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message">Error message</span>
+                  <input type="number" name="quantity" id="quantity" placeholder="Quantity">
+                  <label for="quantity">Quantity</label>
+                  <span class="valid"><i class="la la-check-circle-o"></i></span>
+                </div>
+              </fieldset>
+            </div>
+            <div class="button-box first animated fadeInUp">
+              <a id="photo" class="button color-two add"><span class="button-label">Add Photo<span class="post" style="margin-left: 0.5rem;"><i class="la la-camera-retro"></i></span></span></a>
+              <a id="add" class="button color-two add"><span class="button-label">Add Another?</span></a>
+            </div>
+            <div class="button-box second animated fadeInUp">
               <a id="prev" class="button color-one"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
               <a id="next" class="button color-one save"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+            </div>
+            <div class="button-box third animated fadeInUp">
+              <a id="done" class="button secondary color-two add"><span class="button-label">Done</span></a>
             </div>
           </form>
         </div>
@@ -132,7 +123,7 @@
       $('#prev').click(function() {
         $('body').addClass('flipOutY');
           setTimeout(function(){
-              window.location = "loss-information.html";
+              window.location = "product-setup.html";
           }, 1000);
       });
     </script>
@@ -140,7 +131,7 @@
       $('#next').click(function() {
         $('body').addClass('flipOutY');
           setTimeout(function(){
-              window.location = "product-setup.html";
+              window.location = "next-product-setup.html";
           }, 1000);
       });
     </script>

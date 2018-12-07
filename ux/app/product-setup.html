@@ -134,6 +134,7 @@
               </div>
             </fieldset>
             <div class="button-box animated fadeInUp">
+              <a id="prev" class="button color-one"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
               <a id="next" class="button color-one save"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
             </div>
           </form>
@@ -144,10 +145,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script>
+      $('#prev').click(function() {
+        $('body').addClass('flipOutY');
+          setTimeout(function(){
+              window.location = "rooms-setup.html";
+          }, 1000);
+      });
+    </script>
+    <script>
       $('#next').click(function() {
         $('body').addClass('flipOutY');
           setTimeout(function(){
-              window.location = "product-details.html";
+              window.location = "product-details-intro.html";
           }, 1000);
       });
     </script>

@@ -63,65 +63,35 @@
           <small>$50,000</small>
         </div>
       </div>
-      <section id="rooms-setup" class="chat">
+      <section id="product-details" class="chat">
         <ul>
           <li class="animated fadeInUp">
             <div class="small-avatar">
               <img src="../../src/images/guide.jpg" align="Your Guide">
             </div>
             <div class="bubble">
-              <p>Which rooms have been affected by this loss? Please select all that apply.</p>
+              <p>Okay&hellip; tell me about the {sofas} in the {living room}.</p>
+            </div>
+          </li>
+          <li class="animated fadeInUp">
+            <div class="small-avatar">
+              <img src="../../src/images/guide.jpg" align="Your Guide">
+            </div>
+            <div class="bubble">
+              <p>Whenever you're done with any room, just tap the Done button.</p>
+            </div>
+          </li>
+          <li class="animated fadeInUp">
+            <div class="small-avatar">
+              <img src="../../src/images/guide.jpg" align="Your Guide">
+            </div>
+            <div class="bubble">
+              <p>You can also easily add a photo for each item.</p>
             </div>
           </li>
         </ul>
-        <div class="questions">
-          <form>
-            <h1 class="animated fadeInUp">Affected Rooms</h1>
-            <fieldset class="animated fadeInUp">
-              <legend>Living Room</legend>
-              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="living-room" id="living-room">
-                <label class="checkbox" for="living-room">Living Room</label>
-              </div>
-            </fieldset>
-            <fieldset class="animated fadeInUp">
-              <legend>Kitchen</legend>
-              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="kitchen" id="kitchen">
-                <label class="checkbox" for="kitchen">Kitchen</label>
-              </div>
-            </fieldset>
-            <fieldset class="animated fadeInUp">
-              <legend>Bathroom</legend>
-              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="bathroom" id="bathroom">
-                <label class="checkbox" for="bathroom">Bathroom</label>
-              </div>
-            </fieldset>
-            <fieldset class="animated fadeInUp">
-              <legend>Bedroom</legend>
-              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="bedroom" id="bedroom">
-                <label class="checkbox" for="bedroom">Bedroom</label>
-              </div>
-            </fieldset>
-            <fieldset class="animated fadeInUp">
-              <legend>Basement</legend>
-              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="basement" id="basement">
-                <label class="checkbox" for="basement">Basement</label>
-              </div>
-            </fieldset>
-            <div class="button-box animated fadeInUp">
-              <a id="prev" class="button color-one"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
-              <a id="next" class="button color-one save"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
-            </div>
-          </form>
+        <div class="button-box ready animated fadeInUp">
+          <a id="next" class="button color-one"><span class="button-label">Ready?</span></a>
         </div>
       </section>
     </main>
@@ -129,18 +99,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script>
-      $('#prev').click(function() {
-        $('body').addClass('flipOutY');
-          setTimeout(function(){
-              window.location = "loss-information.html";
-          }, 1000);
-      });
-    </script>
-    <script>
       $('#next').click(function() {
         $('body').addClass('flipOutY');
           setTimeout(function(){
-              window.location = "product-setup.html";
+              window.location = "product-details.html";
           }, 1000);
       });
     </script>

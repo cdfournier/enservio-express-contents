@@ -3041,16 +3041,17 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
     min-height: inherit; } }
 
 body {
-  justify-content: flex-start; }
-
-.bg-color-one {
-  background-color: #2e84ed; }
+  justify-content: flex-start;
+  animation: none; }
 
 main {
   padding: 0 0 2rem; }
 
 .button-box {
   padding: 1rem 0 0; }
+
+button span.pre i.la, .button span.pre i.la, button span.post i.la, .button span.post i.la {
+  top: 0.175rem; }
 
 span.error-message {
   min-height: 1rem;
@@ -3062,6 +3063,13 @@ span.error-message {
   margin: 0 auto;
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s; }
+
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s; }
+
+.bg-color-one {
+  background-color: #2e84ed; }
 
 .loading-screen {
   display: flex;
@@ -3178,7 +3186,12 @@ span.error-message {
   padding: 0 0 0 1rem; }
 
 .questions form .button-box {
+  flex-direction: row;
+  justify-content: center;
   padding: 0; }
+
+.questions form .button-box .button {
+  margin: 1rem 0.5rem 0; }
 
 .limits-meter {
   display: flex;
@@ -3227,8 +3240,8 @@ header.start .logo {
   animation-delay: 6s; }
 
 #start.chat .button-box.ready {
-  -webkit-animation-delay: 8s;
-  animation-delay: 8s; }
+  -webkit-animation-delay: 6.25s;
+  animation-delay: 6.25s; }
 
 header .logo {
   -webkit-animation-delay: 0.25s;
@@ -3356,3 +3369,85 @@ header .logo {
 #product-setup .questions form .button-box {
   -webkit-animation-delay: 3.25s;
   animation-delay: 3.25s; }
+
+#product-details.chat ul li:nth-of-type(1n) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
+
+#product-details.chat ul li:nth-of-type(2n) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
+
+#product-details.chat ul li:nth-of-type(3n) {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s; }
+
+#product-details .button-box.ready {
+  -webkit-animation-delay: 4.25s;
+  animation-delay: 4.25s; }
+
+#product-details .questions form {
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+#product-details .questions form h1 {
+  padding: 0 0 1rem 1rem;
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s; }
+
+#product-details .questions form fieldset:nth-of-type(1n) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
+
+#product-details .questions form .small {
+  -webkit-animation-delay: 1.25s;
+  animation-delay: 1.25s; }
+
+#product-details .questions form .button-box.first {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
+
+#product-details .questions form .button-box.second {
+  -webkit-animation-delay: 1.75s;
+  animation-delay: 1.75s; }
+
+#product-details .questions form .button-box.third {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
+
+#next-product.chat ul li:nth-of-type(1n) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
+
+#next-product .button-box.ready {
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s; }
+
+#next-product .questions form {
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+#next-product .questions form h1 {
+  padding: 0 0 1rem 1rem;
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s; }
+
+#next-product .questions form fieldset:nth-of-type(1n) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
+
+#next-product .questions form .small {
+  -webkit-animation-delay: 1.25s;
+  animation-delay: 1.25s; }
+
+#next-product .questions form .button-box.first {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
+
+#next-product .questions form .button-box.second {
+  -webkit-animation-delay: 1.75s;
+  animation-delay: 1.75s; }
+
+#next-product .questions form .button-box.third {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
