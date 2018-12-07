@@ -14,11 +14,11 @@
 
 // FOOTER
 footer {
+  flex-direction: column;
   justify-content: center;
   width: initial;
+  line-height: 1.5;
 }
-
-footer span {margin: 0;}
 
 
 // LOGO
@@ -66,16 +66,16 @@ footer span {margin: 0;}
   @include animation-delay(1s);
 }
 
-.loading-screen footer.reverse span {
+.loading-screen footer.reverse {
   width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
-.loading-screen footer.reverse span a {color: $white;}
+.loading-screen footer.reverse a {color: $white;}
 
-.loading-screen footer.reverse span a:hover,
-.loading-screen footer.reverse span a:focus {color: $color-two;}
+.loading-screen footer.reverse a:hover,
+.loading-screen footer.reverse a:focus {color: $color-two;}
 
 
 // GUIDE
