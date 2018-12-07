@@ -1,0 +1,167 @@
+@import '../../../enservio-design-system/src/css/master';
+
+
+//MIXINS
+@mixin animation-delay($delay: 1s) {
+  -webkit-animation-delay: $delay;
+  animation-delay: $delay;
+};
+
+
+// COLOR APPLICATION
+.bg-color-one {background-color: $color-one;}
+
+
+// LOGO
+.logo {
+  width: 100%;
+  max-width: 14rem;
+  margin: 0 auto;
+  @include animation-delay(0.5s);
+}
+
+
+// LOADING SCREEN
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 100;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.loading-screen .logo {max-width: 18rem;}
+
+.loading-screen .logo svg:first-of-type {padding: 0 0 1rem;}
+
+.loading-screen footer.reverse {
+  position: absolute;
+  bottom: 0;
+}
+
+.loading-screen footer.reverse {
+  justify-content: center;
+  color: $white;
+  @include animation-delay(1s);
+}
+
+.loading-screen footer.reverse span {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.loading-screen footer.reverse span a {color: $white;}
+
+.loading-screen footer.reverse span a:hover,
+.loading-screen footer.reverse span a:focus {color: $color-two;}
+
+
+// GUIDE
+.guide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.guide .large-avatar img {
+  width: 8rem;
+  border-radius: 100%;
+}
+
+.guide p {
+  font-weight: 500;
+  text-align: center;
+}
+
+
+// CHAT
+.chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1rem 1rem 0;
+}
+
+.chat ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.chat ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+}
+
+.chat ul li .small-avatar {
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 1rem 0 0;
+}
+
+.chat ul li .small-avatar img {border-radius: 100%;}
+
+.chat ul li .bubble {
+  display: block;
+  width: 90%;
+  padding: 1rem;
+  border-radius: 0.25rem 0.25rem 0.25rem 0;
+  background-color: $off-white;
+}
+
+.chat ul li .bubble p {padding: 0 0 0.833rem;}
+
+.chat ul li .bubble p:last-of-type {padding: 0;}
+
+
+// QUESTIONS
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  margin: 0 auto 2rem;
+}
+
+.questions form {
+  width: 88%;
+  margin: 0;
+  padding: 1rem 0 0;
+}
+
+.questions form .field {padding: 0 0 0 1rem;}
+
+
+// ANIMATIONS
+header .logo {@include animation-delay(4.25s);}
+
+.guide.fadeInUp {@include animation-delay(4.5s);}
+
+.chat ul li.first {@include animation-delay(6s);}
+
+.chat ul li.second {@include animation-delay(8s);}
+
+.questions.first {@include animation-delay(8.5s);}
+
+.chat ul li.third {@include animation-delay(14s);}
+
+.questions.second {@include animation-delay(14.5s);}
+
+.chat ul li.fourth {@include animation-delay(20s);}
+
+.questions.third {@include animation-delay(20.5s);}
