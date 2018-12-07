@@ -18,6 +18,18 @@ footer {
   justify-content: center;
   width: initial;
   line-height: 1.5;
+  @include animation-delay(4s);
+}
+
+
+// BUTTON BOX ADJUSTMENT
+.button-box {padding: 1rem 0 0;}
+
+
+// ERROR MESSAGE ADJUSTMENT
+span.error-message {
+  min-height: 1rem;
+  font-size: 0.694rem;
 }
 
 
@@ -148,37 +160,55 @@ footer {
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
 }
 
 .questions form {
-  width: 88%;
   margin: 0;
-  padding: 1rem 0 0;
+  padding: 0 1rem 0 0;
+}
+
+.questions form h1 {
+  padding: 0 0 0 1rem;
+  font-size: 1.44rem;
 }
 
 .questions form .field {padding: 0 0 0 1rem;}
 
+.questions form .button-box {padding: 0;}
 
-// ANIMATIONS
-header .logo {@include animation-delay(4.25s);}
 
+// START ANIMATIONS
+header.start .logo {@include animation-delay(4.25s);}
 .guide.fadeInUp {@include animation-delay(4.5s);}
+#start.chat ul li:nth-of-type(1n) {@include animation-delay(5s);}
+#start.chat ul li:nth-of-type(2n) {@include animation-delay(6s);}
+#start.chat .button-box.ready {@include animation-delay(8s);}
 
-.chat ul li.first {@include animation-delay(6s);}
 
-.chat ul li.second {@include animation-delay(8s);}
+// LOSS INFORMATION ANIMATIONS
+header .logo {@include animation-delay(0.25s);}
+#loss-information .questions form h1 {@include animation-delay(0.75s);}
+#loss-information .questions form fieldset:nth-of-type(1n) {@include animation-delay(1s);}
+#loss-information .questions form fieldset:nth-of-type(2n) {@include animation-delay(1.5s);}
+#loss-information .questions form fieldset:nth-of-type(3n) {@include animation-delay(2s);}
+#loss-information .questions form .small {@include animation-delay(2.5s);}
+#loss-information .questions form fieldset:nth-of-type(4n) {@include animation-delay(3s);}
+#loss-information .questions form fieldset:nth-of-type(5n) {
+  max-width: 50%;
+  @include animation-delay(3.5s);}
+#loss-information .questions form .button-box {@include animation-delay(4s);}
 
-.questions.first {@include animation-delay(8.5s);}
 
-.chat ul li.third {@include animation-delay(12s);}
-
-.questions.second {@include animation-delay(12.5s);}
-
-.chat ul li.fourth {@include animation-delay(16s);}
-
-.questions.third {@include animation-delay(16.5s);}
-
-.chat ul li.fifth {@include animation-delay(20s);}
-
-.button-box.fadeInUp {@include animation-delay(21s);}
+// ROOMS SETUP ANIMATIONS
+#rooms-setup.chat ul li:nth-of-type(1n) {@include animation-delay(0.5s);}
+#rooms-setup .questions form {padding: 2rem 1rem 0 3rem;}
+#rooms-setup .questions form h1 {
+  padding: 0 0 1rem 1rem;
+  @include animation-delay(1s);}
+#rooms-setup .questions form fieldset:nth-of-type(1n) {@include animation-delay(1.5s);}
+#rooms-setup .questions form fieldset:nth-of-type(2n) {@include animation-delay(2s);}
+#rooms-setup .questions form fieldset:nth-of-type(3n) {@include animation-delay(2.5s);}
+#rooms-setup .questions form fieldset:nth-of-type(4n) {@include animation-delay(3s);}
+#rooms-setup .questions form fieldset:nth-of-type(5n) {@include animation-delay(3.5s);}
+#rooms-setup .questions form .button-box {@include animation-delay(4s);}

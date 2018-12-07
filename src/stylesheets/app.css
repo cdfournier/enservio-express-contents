@@ -3047,7 +3047,16 @@ footer {
   flex-direction: column;
   justify-content: center;
   width: initial;
-  line-height: 1.5; }
+  line-height: 1.5;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s; }
+
+.button-box {
+  padding: 1rem 0 0; }
+
+span.error-message {
+  min-height: 1rem;
+  font-size: 0.694rem; }
 
 .logo {
   width: 100%;
@@ -3161,17 +3170,23 @@ footer {
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
-  margin: 0 auto 2rem; }
+  margin: 0 auto; }
 
 .questions form {
-  width: 88%;
   margin: 0;
-  padding: 1rem 0 0; }
+  padding: 0 1rem 0 0; }
+
+.questions form h1 {
+  padding: 0 0 0 1rem;
+  font-size: 1.44rem; }
 
 .questions form .field {
   padding: 0 0 0 1rem; }
 
-header .logo {
+.questions form .button-box {
+  padding: 0; }
+
+header.start .logo {
   -webkit-animation-delay: 4.25s;
   animation-delay: 4.25s; }
 
@@ -3179,38 +3194,87 @@ header .logo {
   -webkit-animation-delay: 4.5s;
   animation-delay: 4.5s; }
 
-.chat ul li.first {
+#start.chat ul li:nth-of-type(1n) {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s; }
+
+#start.chat ul li:nth-of-type(2n) {
   -webkit-animation-delay: 6s;
   animation-delay: 6s; }
 
-.chat ul li.second {
+#start.chat .button-box.ready {
   -webkit-animation-delay: 8s;
   animation-delay: 8s; }
 
-.questions.first {
-  -webkit-animation-delay: 8.5s;
-  animation-delay: 8.5s; }
+header .logo {
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s; }
 
-.chat ul li.third {
-  -webkit-animation-delay: 12s;
-  animation-delay: 12s; }
+#loss-information .questions form h1 {
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s; }
 
-.questions.second {
-  -webkit-animation-delay: 12.5s;
-  animation-delay: 12.5s; }
+#loss-information .questions form fieldset:nth-of-type(1n) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
 
-.chat ul li.fourth {
-  -webkit-animation-delay: 16s;
-  animation-delay: 16s; }
+#loss-information .questions form fieldset:nth-of-type(2n) {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
 
-.questions.third {
-  -webkit-animation-delay: 16.5s;
-  animation-delay: 16.5s; }
+#loss-information .questions form fieldset:nth-of-type(3n) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
 
-.chat ul li.fifth {
-  -webkit-animation-delay: 20s;
-  animation-delay: 20s; }
+#loss-information .questions form .small {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s; }
 
-.button-box.fadeInUp {
-  -webkit-animation-delay: 21s;
-  animation-delay: 21s; }
+#loss-information .questions form fieldset:nth-of-type(4n) {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s; }
+
+#loss-information .questions form fieldset:nth-of-type(5n) {
+  max-width: 50%;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s; }
+
+#loss-information .questions form .button-box {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s; }
+
+#rooms-setup.chat ul li:nth-of-type(1n) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
+
+#rooms-setup .questions form {
+  padding: 2rem 1rem 0 3rem; }
+
+#rooms-setup .questions form h1 {
+  padding: 0 0 1rem 1rem;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
+
+#rooms-setup .questions form fieldset:nth-of-type(1n) {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
+
+#rooms-setup .questions form fieldset:nth-of-type(2n) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
+
+#rooms-setup .questions form fieldset:nth-of-type(3n) {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s; }
+
+#rooms-setup .questions form fieldset:nth-of-type(4n) {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s; }
+
+#rooms-setup .questions form fieldset:nth-of-type(5n) {
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s; }
+
+#rooms-setup .questions form .button-box {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s; }
