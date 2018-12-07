@@ -3040,16 +3040,14 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
   .field input[type="radio"] {
     min-height: inherit; } }
 
+body {
+  justify-content: flex-start; }
+
 .bg-color-one {
   background-color: #2e84ed; }
 
-footer {
-  flex-direction: column;
-  justify-content: center;
-  width: initial;
-  line-height: 1.5;
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s; }
+main {
+  padding: 0 0 2rem; }
 
 .button-box {
   padding: 1rem 0 0; }
@@ -3082,32 +3080,27 @@ span.error-message {
   min-height: 100vh; }
 
 .loading-screen .logo {
-  max-width: 18rem;
-  margin-bottom: 4rem; }
+  max-width: 18rem; }
 
 .loading-screen .logo svg:first-of-type {
   padding: 0 0 1rem; }
 
-.loading-screen footer.reverse {
-  position: absolute;
-  bottom: 0; }
-
-.loading-screen footer.reverse {
+.loading-screen footer {
+  flex-direction: column;
   justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
   color: #ffffff;
   -webkit-animation-delay: 1s;
   animation-delay: 1s; }
 
-.loading-screen footer.reverse {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center; }
-
-.loading-screen footer.reverse a {
+.loading-screen footer a {
   color: #ffffff; }
 
-.loading-screen footer.reverse a:hover,
-.loading-screen footer.reverse a:focus {
+.loading-screen footer a:hover,
+.loading-screen footer a:focus {
   color: #0f4a92; }
 
 .guide {
@@ -3115,7 +3108,8 @@ span.error-message {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 0 1rem; }
 
 .guide .large-avatar img {
   width: 8rem;
@@ -3177,7 +3171,7 @@ span.error-message {
   padding: 0 1rem 0 0; }
 
 .questions form h1 {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0.694rem 1rem;
   font-size: 1.44rem; }
 
 .questions form .field {
@@ -3185,6 +3179,36 @@ span.error-message {
 
 .questions form .button-box {
   padding: 0; }
+
+.limits-meter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem 1rem 1rem;
+  background-color: #ffffff;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
+
+.limits-meter label {
+  padding: 0 0 0.694rem;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.44rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: capitalize; }
+
+.limits-meter meter {
+  width: 100%;
+  height: 4px; }
+
+.limits-meter .range {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 500;
+  line-height: 2; }
 
 header.start .logo {
   -webkit-animation-delay: 4.25s;
@@ -3219,35 +3243,37 @@ header .logo {
   animation-delay: 1s; }
 
 #loss-information .questions form fieldset:nth-of-type(2n) {
+  -webkit-animation-delay: 1.25s;
+  animation-delay: 1.25s; }
+
+#loss-information .questions form fieldset:nth-of-type(3n) {
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s; }
 
-#loss-information .questions form fieldset:nth-of-type(3n) {
+#loss-information .questions form .small {
+  -webkit-animation-delay: 1.75s;
+  animation-delay: 1.75s; }
+
+#loss-information .questions form fieldset:nth-of-type(4n) {
   -webkit-animation-delay: 2s;
   animation-delay: 2s; }
 
-#loss-information .questions form .small {
-  -webkit-animation-delay: 2.5s;
-  animation-delay: 2.5s; }
-
-#loss-information .questions form fieldset:nth-of-type(4n) {
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s; }
-
 #loss-information .questions form fieldset:nth-of-type(5n) {
   max-width: 50%;
-  -webkit-animation-delay: 3.5s;
-  animation-delay: 3.5s; }
+  -webkit-animation-delay: 2.25s;
+  animation-delay: 2.25s; }
 
 #loss-information .questions form .button-box {
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s; }
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s; }
 
 #rooms-setup.chat ul li:nth-of-type(1n) {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s; }
 
 #rooms-setup .questions form {
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 2rem 1rem 0 3rem; }
 
 #rooms-setup .questions form h1 {
@@ -3255,26 +3281,78 @@ header .logo {
   -webkit-animation-delay: 1s;
   animation-delay: 1s; }
 
+#rooms-setup .questions form fieldset {
+  width: 50%; }
+
 #rooms-setup .questions form fieldset:nth-of-type(1n) {
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s; }
 
 #rooms-setup .questions form fieldset:nth-of-type(2n) {
+  -webkit-animation-delay: 1.75s;
+  animation-delay: 1.75s; }
+
+#rooms-setup .questions form fieldset:nth-of-type(3n) {
   -webkit-animation-delay: 2s;
   animation-delay: 2s; }
 
-#rooms-setup .questions form fieldset:nth-of-type(3n) {
+#rooms-setup .questions form fieldset:nth-of-type(4n) {
+  -webkit-animation-delay: 2.25s;
+  animation-delay: 2.25s; }
+
+#rooms-setup .questions form fieldset:nth-of-type(5n) {
   -webkit-animation-delay: 2.5s;
   animation-delay: 2.5s; }
 
-#rooms-setup .questions form fieldset:nth-of-type(4n) {
+#rooms-setup .questions form .button-box {
   -webkit-animation-delay: 3s;
   animation-delay: 3s; }
 
-#rooms-setup .questions form fieldset:nth-of-type(5n) {
-  -webkit-animation-delay: 3.5s;
-  animation-delay: 3.5s; }
+#product-setup.chat ul li:nth-of-type(1n) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
 
-#rooms-setup .questions form .button-box {
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s; }
+#product-setup .questions form {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2rem 1rem 0 3rem; }
+
+#product-setup .questions form h1 {
+  padding: 0 0 1rem 1rem;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
+
+#product-setup .questions form fieldset {
+  width: 50%; }
+
+#product-setup .questions form fieldset:nth-of-type(1n) {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
+
+#product-setup .questions form fieldset:nth-of-type(2n) {
+  -webkit-animation-delay: 1.75s;
+  animation-delay: 1.75s; }
+
+#product-setup .questions form fieldset:nth-of-type(3n) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
+
+#product-setup .questions form fieldset:nth-of-type(4n) {
+  -webkit-animation-delay: 2.25s;
+  animation-delay: 2.25s; }
+
+#product-setup .questions form fieldset:nth-of-type(5n) {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s; }
+
+#product-setup .questions form fieldset:nth-of-type(6n) {
+  -webkit-animation-delay: 2.75s;
+  animation-delay: 2.75s; }
+
+#product-setup .questions form fieldset:nth-of-type(7n) {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s; }
+
+#product-setup .questions form .button-box {
+  -webkit-animation-delay: 3.25s;
+  animation-delay: 3.25s; }

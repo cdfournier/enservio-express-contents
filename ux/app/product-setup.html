@@ -63,58 +63,74 @@
           <small>$50,000</small>
         </div>
       </div>
-      <section id="rooms-setup" class="chat">
+      <section id="product-setup" class="chat">
         <ul>
           <li class="animated fadeInUp">
             <div class="small-avatar">
               <img src="../../src/images/guide.jpg" align="Your Guide">
             </div>
             <div class="bubble">
-              <p>Which rooms have been affected by this loss? Please select all that apply.</p>
+              <p>Excellent. Now let's make a list of all of the products in each room. Let's start with the living room.</p>
             </div>
           </li>
         </ul>
         <div class="questions">
           <form>
-            <h1 class="animated fadeInUp">Affected Rooms</h1>
+            <h1 class="animated fadeInUp">Living Room Items</h1>
             <fieldset class="animated fadeInUp">
-              <legend>Living Room</legend>
+              <legend>Lamps</legend>
               <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="living-room" id="living-room">
-                <label class="checkbox" for="living-room">Living Room</label>
+                <input type="checkbox" name="lamps" id="lamps">
+                <label class="checkbox" for="lamps">Lamps</label>
               </div>
             </fieldset>
             <fieldset class="animated fadeInUp">
-              <legend>Kitchen</legend>
+              <legend>Sofas</legend>
               <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="kitchen" id="kitchen">
-                <label class="checkbox" for="kitchen">Kitchen</label>
+                <input type="checkbox" name="sofas" id="sofas">
+                <label class="checkbox" for="sofas">Sofas</label>
               </div>
             </fieldset>
             <fieldset class="animated fadeInUp">
-              <legend>Bathroom</legend>
+              <legend>Chairs</legend>
               <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="bathroom" id="bathroom">
-                <label class="checkbox" for="bathroom">Bathroom</label>
+                <input type="checkbox" name="chairs" id="chairs">
+                <label class="checkbox" for="chairs">Chairs</label>
               </div>
             </fieldset>
             <fieldset class="animated fadeInUp">
-              <legend>Bedroom</legend>
+              <legend>Coffee Tables</legend>
               <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="bedroom" id="bedroom">
-                <label class="checkbox" for="bedroom">Bedroom</label>
+                <input type="checkbox" name="coffee-tables" id="coffee-tables">
+                <label class="checkbox" for="coffee-tables">Coffee Tables</label>
               </div>
             </fieldset>
             <fieldset class="animated fadeInUp">
-              <legend>Basement</legend>
+              <legend>Televisions</legend>
               <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message checkbox">Error message</span>
-                <input type="checkbox" name="basement" id="basement">
-                <label class="checkbox" for="basement">Basement</label>
+                <input type="checkbox" name="televisions" id="televisions">
+                <label class="checkbox" for="televisions">Televisions</label>
+              </div>
+            </fieldset>
+            <fieldset class="animated fadeInUp">
+              <legend>Rugs</legend>
+              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message checkbox">Error message</span>
+                <input type="checkbox" name="rugs" id="rugs">
+                <label class="checkbox" for="rugs">Rugs</label>
+              </div>
+            </fieldset>
+            <fieldset class="animated fadeInUp">
+              <legend>Drapery</legend>
+              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message checkbox">Error message</span>
+                <input type="checkbox" name="drapery" id="drapery">
+                <label class="checkbox" for="drapery">Drapery</label>
               </div>
             </fieldset>
             <div class="button-box animated fadeInUp">
@@ -131,7 +147,7 @@
       $('#next').click(function() {
         $('body').addClass('flipOutY');
           setTimeout(function(){
-              window.location = "product-setup.html";
+              window.location = "product-details.html";
           }, 1000);
       });
     </script>

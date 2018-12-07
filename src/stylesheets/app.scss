@@ -8,18 +8,16 @@
 };
 
 
+// BODY ADJUSTMENT
+body {justify-content: flex-start;}
+
+
 // COLOR APPLICATION
 .bg-color-one {background-color: $color-one;}
 
 
-// FOOTER
-footer {
-  flex-direction: column;
-  justify-content: center;
-  width: initial;
-  line-height: 1.5;
-  @include animation-delay(4s);
-}
+// MAIN ADJUSTMENT
+main {padding: 0 0 2rem;}
 
 
 // BUTTON BOX ADJUSTMENT
@@ -60,34 +58,25 @@ span.error-message {
   min-height: 100vh;
 }
 
-.loading-screen .logo {
-  max-width: 18rem;
-  margin-bottom: 4rem;
-}
+.loading-screen .logo {max-width: 18rem;}
 
 .loading-screen .logo svg:first-of-type {padding: 0 0 1rem;}
 
-.loading-screen footer.reverse {
-  position: absolute;
-  bottom: 0;
-}
-
-.loading-screen footer.reverse {
+.loading-screen footer {
+  flex-direction: column;
   justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
   color: $white;
   @include animation-delay(1s);
 }
 
-.loading-screen footer.reverse {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
+.loading-screen footer a {color: $white;}
 
-.loading-screen footer.reverse a {color: $white;}
-
-.loading-screen footer.reverse a:hover,
-.loading-screen footer.reverse a:focus {color: $color-two;}
+.loading-screen footer a:hover,
+.loading-screen footer a:focus {color: $color-two;}
 
 
 // GUIDE
@@ -97,6 +86,7 @@ span.error-message {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  padding: 0 0 1rem;
 }
 
 .guide .large-avatar img {
@@ -169,13 +159,48 @@ span.error-message {
 }
 
 .questions form h1 {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0.694rem 1rem;
   font-size: 1.44rem;
 }
 
 .questions form .field {padding: 0 0 0 1rem;}
 
 .questions form .button-box {padding: 0;}
+
+
+// LIMITS METER
+.limits-meter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem 1rem 1rem;
+  background-color: $white;
+  @include animation-delay(0.5s);
+}
+
+.limits-meter label {
+  padding: 0 0 0.694rem;
+  font-family: $serif;
+  font-size: 1.44rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.limits-meter meter {
+  width: 100%;
+  height: 4px;
+}
+
+.limits-meter .range {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 500;
+  line-height: 2;
+}
 
 
 // START ANIMATIONS
@@ -190,25 +215,49 @@ header.start .logo {@include animation-delay(4.25s);}
 header .logo {@include animation-delay(0.25s);}
 #loss-information .questions form h1 {@include animation-delay(0.75s);}
 #loss-information .questions form fieldset:nth-of-type(1n) {@include animation-delay(1s);}
-#loss-information .questions form fieldset:nth-of-type(2n) {@include animation-delay(1.5s);}
-#loss-information .questions form fieldset:nth-of-type(3n) {@include animation-delay(2s);}
-#loss-information .questions form .small {@include animation-delay(2.5s);}
-#loss-information .questions form fieldset:nth-of-type(4n) {@include animation-delay(3s);}
+#loss-information .questions form fieldset:nth-of-type(2n) {@include animation-delay(1.25s);}
+#loss-information .questions form fieldset:nth-of-type(3n) {@include animation-delay(1.5s);}
+#loss-information .questions form .small {@include animation-delay(1.75s);}
+#loss-information .questions form fieldset:nth-of-type(4n) {@include animation-delay(2s);}
 #loss-information .questions form fieldset:nth-of-type(5n) {
   max-width: 50%;
-  @include animation-delay(3.5s);}
-#loss-information .questions form .button-box {@include animation-delay(4s);}
+  @include animation-delay(2.25s);}
+#loss-information .questions form .button-box {@include animation-delay(2.5s);}
 
 
 // ROOMS SETUP ANIMATIONS
 #rooms-setup.chat ul li:nth-of-type(1n) {@include animation-delay(0.5s);}
-#rooms-setup .questions form {padding: 2rem 1rem 0 3rem;}
+#rooms-setup .questions form {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2rem 1rem 0 3rem;}
 #rooms-setup .questions form h1 {
   padding: 0 0 1rem 1rem;
   @include animation-delay(1s);}
+#rooms-setup .questions form fieldset {width: 50%;}
 #rooms-setup .questions form fieldset:nth-of-type(1n) {@include animation-delay(1.5s);}
-#rooms-setup .questions form fieldset:nth-of-type(2n) {@include animation-delay(2s);}
-#rooms-setup .questions form fieldset:nth-of-type(3n) {@include animation-delay(2.5s);}
-#rooms-setup .questions form fieldset:nth-of-type(4n) {@include animation-delay(3s);}
-#rooms-setup .questions form fieldset:nth-of-type(5n) {@include animation-delay(3.5s);}
-#rooms-setup .questions form .button-box {@include animation-delay(4s);}
+#rooms-setup .questions form fieldset:nth-of-type(2n) {@include animation-delay(1.75s);}
+#rooms-setup .questions form fieldset:nth-of-type(3n) {@include animation-delay(2s);}
+#rooms-setup .questions form fieldset:nth-of-type(4n) {@include animation-delay(2.25s);}
+#rooms-setup .questions form fieldset:nth-of-type(5n) {@include animation-delay(2.5s);}
+#rooms-setup .questions form .button-box {@include animation-delay(3s);}
+
+
+// PRODUCT SETUP ANIMATIONS
+#product-setup.chat ul li:nth-of-type(1n) {@include animation-delay(0.5s);}
+#product-setup .questions form {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2rem 1rem 0 3rem;}
+#product-setup .questions form h1 {
+  padding: 0 0 1rem 1rem;
+  @include animation-delay(1s);}
+#product-setup .questions form fieldset {width: 50%;}
+#product-setup .questions form fieldset:nth-of-type(1n) {@include animation-delay(1.5s);}
+#product-setup .questions form fieldset:nth-of-type(2n) {@include animation-delay(1.75s);}
+#product-setup .questions form fieldset:nth-of-type(3n) {@include animation-delay(2s);}
+#product-setup .questions form fieldset:nth-of-type(4n) {@include animation-delay(2.25s);}
+#product-setup .questions form fieldset:nth-of-type(5n) {@include animation-delay(2.5s);}
+#product-setup .questions form fieldset:nth-of-type(6n) {@include animation-delay(2.75s);}
+#product-setup .questions form fieldset:nth-of-type(7n) {@include animation-delay(3s);}
+#product-setup .questions form .button-box {@include animation-delay(3.25s);}
