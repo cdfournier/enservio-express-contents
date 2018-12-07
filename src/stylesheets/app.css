@@ -3043,6 +3043,9 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
 .bg-color-one {
   background-color: #2e84ed; }
 
+footer {
+  justify-content: center; }
+
 footer span {
   margin: 0; }
 
