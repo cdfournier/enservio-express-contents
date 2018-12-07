@@ -3044,7 +3044,8 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
   background-color: #2e84ed; }
 
 footer {
-  justify-content: center; }
+  justify-content: center;
+  width: initial; }
 
 footer span {
   margin: 0; }
@@ -3069,6 +3070,7 @@ footer span {
   overflow: hidden;
   z-index: 100;
   width: 100%;
+  max-height: 100vh;
   min-height: 100vh; }
 
 .loading-screen .logo {
