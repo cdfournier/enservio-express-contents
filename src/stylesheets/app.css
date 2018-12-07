@@ -3043,6 +3043,9 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
 .bg-color-one {
   background-color: #2e84ed; }
 
+footer span {
+  margin: 0; }
+
 .logo {
   width: 100%;
   max-width: 14rem;
@@ -3066,7 +3069,8 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
   min-height: 100vh; }
 
 .loading-screen .logo {
-  max-width: 18rem; }
+  max-width: 18rem;
+  margin-bottom: 4rem; }
 
 .loading-screen .logo svg:first-of-type {
   padding: 0 0 1rem; }
@@ -3184,17 +3188,25 @@ header .logo {
   animation-delay: 8.5s; }
 
 .chat ul li.third {
-  -webkit-animation-delay: 14s;
-  animation-delay: 14s; }
+  -webkit-animation-delay: 12s;
+  animation-delay: 12s; }
 
 .questions.second {
-  -webkit-animation-delay: 14.5s;
-  animation-delay: 14.5s; }
+  -webkit-animation-delay: 12.5s;
+  animation-delay: 12.5s; }
 
 .chat ul li.fourth {
+  -webkit-animation-delay: 16s;
+  animation-delay: 16s; }
+
+.questions.third {
+  -webkit-animation-delay: 16.5s;
+  animation-delay: 16.5s; }
+
+.chat ul li.fifth {
   -webkit-animation-delay: 20s;
   animation-delay: 20s; }
 
-.questions.third {
-  -webkit-animation-delay: 20.5s;
-  animation-delay: 20.5s; }
+.button-box.fadeInUp {
+  -webkit-animation-delay: 21s;
+  animation-delay: 21s; }
