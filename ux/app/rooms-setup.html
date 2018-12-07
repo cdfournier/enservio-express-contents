@@ -122,5 +122,24 @@
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".save").click(function(){
+          // Get input name
+          var living = $("#living-room").val();
+          var kitchen = $("#kitchen").val();
+          var bathroom = $("#bathroom").val();
+          var bedroom = $("#bedroom").val();
+          var basement = $("#basement").val();
+  
+          // Store data
+          localStorage.setItem("living", living);
+          localStorage.setItem("kitchen", kitchen);
+          localStorage.setItem("bathroom", bathroom);
+          localStorage.setItem("bedroom", bedroom);
+          localStorage.setItem("basement", basement);
+        });
+      });
+    </script>
   </body>
 </html>
