@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio Express Contents</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../../../src/css/app.css">
+  </head>
+  <body class="animated">
+    <section id="alerts" class="alerts">
+      <div class="alert-bar error file-type">
+        <div class="alert-bar-details">
+          <span><i class="la la-exclamation-circle"></i></span>
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss error"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="alert-bar success">
+        <div class="alert-bar-details">
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss success"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="alert-bar system">
+        <div class="alert-bar-details">
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss system"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="timeout">
+        <div class="text center md">
+          <h1>Timeout Warning</h1>
+          <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the <b>Continue</b> button to keep working.</p>
+        </div>
+        <div class="button-box">
+          <button class="button color-one continue"><span class="button-label">Continue</span></button>
+        </div>
+      </div>
+    </section>
+    <main>
+      <section id="product-setup">
+        <div class="chat">
+          <ul>
+            <li class="animated fadeInUp">
+              <div class="small-avatar">
+                <img src="../../../src/images/guide.jpg" align="Your Guide">
+              </div>
+              <div class="bubble">
+                <p>Okay&hellip; now we're going to start adding items to the inventory.</p>
+              </div>
+            </li>
+            <li class="animated fadeInUp">
+              <div class="small-avatar">
+                <img src="../../../src/images/guide.jpg" align="Your Guide">
+              </div>
+              <div class="bubble">
+                <p>Let's go over how this works. You can tap the <b>Skip</b> button below at any time.</p>
+              </div>
+            </li>
+            <li class="animated fadeInUp">
+              <div class="small-avatar">
+                <img src="../../../src/images/guide.jpg" align="Your Guide">
+              </div>
+              <div class="bubble">
+                <p>We'll start by asking you about one of the product types you checked in one of the rooms. You will be able to apply a value and a quantity for each item.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="button-box">
+          <a id="prev" class="button color-one animated fadeInUp"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+          <a id="next" class="button color-one animated fadeInUp"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+        </div>
+        <div class="button-box">
+          <a id="skip" class="button color-two animated fadeInUp"><span class="button-label">Skip</span></a>
+        </div>
+      </section>
+    </main>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../assets/scripts/app.js"></script>
+  </body>
+</html>
