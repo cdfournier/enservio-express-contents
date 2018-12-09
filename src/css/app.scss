@@ -1,0 +1,260 @@
+@import '../../../enservio-design-system/src/css/master';
+
+
+//MIXINS
+@mixin animation-delay($delay: 1s) {
+  -webkit-animation-delay: $delay;
+  animation-delay: $delay;
+};
+
+
+// MASTER ADJUSTMENTS
+body, .body {
+  justify-content: flex-start;
+  animation: none;
+}
+
+main {padding: 2rem 0;}
+
+span.error-message {
+  min-height: 1rem;
+  font-size: 0.694rem;
+}
+
+.logo {
+  width: 100%;
+  max-width: 14rem;
+  margin: 0 auto;
+  @include animation-delay(0.5s);
+}
+
+.button-box {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button-box .button, .button-box .button.small {margin: 1rem 0.5rem 0;}
+
+.carousel .carousel-cell {
+  justify-content: flex-start;
+  padding: 0;
+}
+
+
+// ANIMATION DURATION SETTING
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+
+// SMALL BUTTONS
+.button.small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 2.25rem;
+  max-width: 2.25rem;
+  height: 2.25rem;
+  max-height: 2.25rem;
+  margin: 0 0 0 0.5rem;
+  padding: 0.5rem;
+  border-radius: 100%;
+  font-size: 1.44rem;
+  line-height: 1;
+}
+
+
+// LOADING SCREEN
+.bg-color-one {background-color: $color-one;}
+
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 100;
+  width: 100%;
+  max-height: 100vh;
+  min-height: 100vh;
+}
+
+.loading-screen .logo {max-width: 18rem;}
+
+.loading-screen .logo svg:first-of-type {padding: 0 0 1rem;}
+
+.loading-screen footer {
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
+  color: $white;
+  @include animation-delay(1s);
+}
+
+.loading-screen footer a {color: $white;}
+
+.loading-screen footer a:hover,
+.loading-screen footer a:focus {color: $color-two;}
+
+
+// GREETING
+.greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem 0 1rem;
+}
+
+.greeting .large-avatar img {
+  width: 8rem;
+  border-radius: 100%;
+}
+
+.greeting p {
+  font-weight: 500;
+  text-align: center;
+}
+
+
+// CHAT
+.chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem 0;
+}
+
+.chat ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.chat ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+}
+
+.chat ul li .small-avatar {
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 1rem 0 0;
+}
+
+.chat ul li .small-avatar img {border-radius: 100%;}
+
+.chat ul li .bubble {
+  display: block;
+  width: 90%;
+  padding: 1rem;
+  border-radius: 0.25rem 0.25rem 0.25rem 0;
+  background-color: $off-white;
+}
+
+.chat ul li .bubble p {padding: 0 0 0.833rem;}
+
+.chat ul li .bubble p:last-of-type {padding: 0;}
+
+
+// QUESTIONS
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.questions form {
+  margin: 0;
+  padding: 0 2rem 0 1rem;
+}
+
+.questions form.col {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.questions form.col fieldset {width: 50%;}
+
+.questions form h1 {
+  padding: 0 0 0.694rem 1rem;
+  font-size: 1.44rem;
+}
+
+.questions form p {
+  padding: 0 0 1.694rem 1rem;
+  line-height: 1;
+}
+
+.questions form .field {padding: 0 0 0 1rem;}
+
+.questions form .button-box {
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+}
+
+.questions form .button-box .button {margin: 1rem 0.5rem 0;}
+
+
+// LIMITS METER
+.limits-meter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem 1rem 1rem;
+  background-color: $white;
+}
+
+.limits-meter h1 {
+  padding: 0 0 0.694rem;
+  font-family: $serif;
+  font-size: 1.44rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.limits-meter .limit-gauge {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: $light-gray;
+}
+
+.limits-meter .limit-gauge > span {
+  display: block;
+  height: inherit;
+}
+
+.limits-meter .limit-gauge > span.low {background-color: $valid;}
+
+.limits-meter .limit-gauge > span.high {background-color: $invalid;}
+
+.limits-meter .range {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 500;
+  line-height: 2;
+}
