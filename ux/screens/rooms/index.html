@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio Express Contents</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../../../src/css/app.css">
+  </head>
+  <body class="animated">
+    <section id="alerts" class="alerts">
+      <div class="alert-bar error file-type">
+        <div class="alert-bar-details">
+          <span><i class="la la-exclamation-circle"></i></span>
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss error"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="alert-bar success">
+        <div class="alert-bar-details">
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss success"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="alert-bar system">
+        <div class="alert-bar-details">
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss system"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="timeout">
+        <div class="text center md">
+          <h1>Timeout Warning</h1>
+          <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the <b>Continue</b> button to keep working.</p>
+        </div>
+        <div class="button-box">
+          <button class="button color-one continue"><span class="button-label">Continue</span></button>
+        </div>
+      </div>
+    </section>
+    <main>
+      <section id="rooms" class="questions">
+        <form class="col">
+          <h1 class="animated fadeInUp">Affected Rooms</h1>
+          <p class="animated fadeInUp">Please check all that apply.</p>
+          <fieldset class="animated fadeInUp">
+            <legend>Living Room</legend>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message checkbox">Error message</span>
+              <input type="checkbox" name="living-room" id="living-room">
+              <label class="checkbox" for="living-room">Living Room</label>
+            </div>
+          </fieldset>
+          <fieldset class="animated fadeInUp">
+            <legend>Kitchen</legend>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message checkbox">Error message</span>
+              <input type="checkbox" name="kitchen" id="kitchen">
+              <label class="checkbox" for="kitchen">Kitchen</label>
+            </div>
+          </fieldset>
+          <fieldset class="animated fadeInUp">
+            <legend>Bathroom</legend>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message checkbox">Error message</span>
+              <input type="checkbox" name="bathroom" id="bathroom">
+              <label class="checkbox" for="bathroom">Bathroom</label>
+            </div>
+          </fieldset>
+          <fieldset class="animated fadeInUp">
+            <legend>Bedroom</legend>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message checkbox">Error message</span>
+              <input type="checkbox" name="bedroom" id="bedroom">
+              <label class="checkbox" for="bedroom">Bedroom</label>
+            </div>
+          </fieldset>
+          <fieldset class="animated fadeInUp">
+            <legend>Basement</legend>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message checkbox">Error message</span>
+              <input type="checkbox" name="basement" id="basement">
+              <label class="checkbox" for="basement">Basement</label>
+            </div>
+          </fieldset>
+          <div class="button-box">
+            <a href="../loss-setup/index.html" id="prev" class="button color-one animated fadeInUp"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+            <a href="../product-intro/index.html" id="next" class="button color-one animated fadeInUp"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+          </div>
+        </form>
+      </section>
+    </main>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../assets/scripts/app.js"></script>
+  </body>
+</html>
