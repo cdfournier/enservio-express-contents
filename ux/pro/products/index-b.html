@@ -53,7 +53,7 @@
       <div class="limits-meter animated fadeInUp">
         <h1>Contents Limit</h1>
         <div class="limit-gauge">
-          <span class="low" style="width: 0%;"></span>
+          <span class="low" style="width: 10%;"></span>
         </div>
         <div class="range">
           <small>{$min}</small>
@@ -62,7 +62,6 @@
       </div>
       <section id="product-details" class="questions">
         <form>
-          <h1 class="animated fadeInUp">Sofas</h1>
           <fieldset class="animated fadeInUp">
             <legend>Description</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
@@ -97,14 +96,14 @@
               </div>
             </fieldset>
           </div>
-          <div class="button-box first animated fadeInUp">
-            <a id="prev" class="button color-one"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
-            <a id="add" class="button small color-two"><i class="la la-plus"></i></a>
-            <a id="photo" class="button small color-two"><i class="la la-camera-retro"></i></a>
-            <a id="next" class="button color-one save"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+          <div class="button-box animated fadeInUp">
+            <a id="cancel" class="button color-one"><span class="button-label">Cancel</span></a>
+            <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+            <a href="index-c.html" id="next" class="button color-one save"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
           </div>
-          <div class="button-box third animated fadeInUp">
-            <a id="done" class="button secondary color-two add"><span class="button-label">Done</span></a>
+          <div class="button-box animated fadeInUp" style="padding-top: 1rem;">
+            <a href="../inventory/index.html" id="list" class="button secondary color-two add"><span class="button-label">View Inventory<span class="post" style="margin-left: 0.5rem;"><i class="la la-archive"></i></span></span></a>
+            <a href="../inventory/index.html" id="done" class="button secondary color-two add"><span class="button-label">Done</span></a>
           </div>
         </form>
       </section>

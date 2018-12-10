@@ -50,63 +50,62 @@
       </div>
     </section>
     <main>
-      <div class="limits-meter animated fadeInUp">
-        <h1>Contents Limit</h1>
-        <div class="limit-gauge">
-          <span class="low" style="width: 0%;"></span>
+      <section id="rooms">
+        <div class="chat">
+          <ul>
+            <li class="animated fadeInUp">
+              <div class="small-avatar">
+                <img src="../../../src/images/guide.jpg" align="Your Guide">
+              </div>
+              <div class="bubble">
+                <p>Thanks! Now tell me which room we'll be starting in.</p>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="range">
-          <small>{$min}</small>
-          <small>{$max}</small>
-        </div>
-      </div>
-      <section id="product-details" class="questions">
-        <form>
-          <h1 class="animated fadeInUp">Sofas</h1>
-          <fieldset class="animated fadeInUp">
-            <legend>Description</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message">Error message</span>
-              <input type="text" name="description" id="description" placeholder="Description">
-              <label for="description">Description</label>
-              <span class="valid"><i class="la la-check-circle-o"></i></span>
-            </div>
-          </fieldset>
-          <div class="small animated fadeInUp">
-            <fieldset>
-              <legend>Value</legend>
+        <div class="questions">
+          <form>
+            <h1 class="animated fadeInUp">Pick a Room</h1>
+            <fieldset class="animated fadeInUp">
+              <legend>Room</legend>
               <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message">Error message</span>
-                <select name="value" id="value">
-                  <option value="Low">Low</option>
-                  <option value="Med">Med</option>
-                  <option value="High">High</option>
+                <select name="room" id="room">
+                  <option value="0">Choose a room</option>
+                  <option value="Attic">Attic</option>
+                  <option value="Basement">Basement</option>
+                  <option value="Bedroom">Bedroom</option>
+                  <option value="Garage">Garage</option>
+                  <option value="Kitchen">Kitchen</option>
+                  <option value="Living Room">Living Room</option>
+                  <option value="Other">Other</option>
                 </select>
                 <div class="select-icon"><i class="la la-angle-down"></i></div>
                 <span class="select valid"><i class="la la-check-circle-o"></i></span>
-                <label for="value">Value</label>
+                <label for="room">Room</label>
               </div>
             </fieldset>
-            <fieldset>
-              <legend>Qty</legend>
-              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message">Error message</span>
-                <input type="number" name="quantity" id="quantity" placeholder="Quantity">
-                <label for="quantity">Quantity</label>
-                <span class="valid"><i class="la la-check-circle-o"></i></span>
+            <div class="button-box">
+              <a href="../loss-setup/index.html" id="prev" class="button color-one animated fadeInUp"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+              <a href="../products/index.html" id="next" class="button color-one animated fadeInUp"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+            </div>
+          </form>
+        </div>
+        <div class="chat" style="padding-top: 2rem;">
+          <ul class="animated fadeInUp" style="animation-delay: 2s;">
+            <li class="animated fadeInUp">
+              <div class="small-avatar">
+                <img src="../../../src/images/guide.jpg" align="Your Guide">
               </div>
-            </fieldset>
+              <div class="bubble">
+                <p>Don't want to work by room? No problem. Just tap the <b>Skip</b> button we can get started.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="button-box">
+            <a href="../products/index.html" id="next" class="button color-two animated fadeInUp" style="animation-delay: 2.5s;"><span class="button-label">Skip</span></a>
           </div>
-          <div class="button-box first animated fadeInUp">
-            <a id="prev" class="button color-one"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
-            <a id="add" class="button small color-two"><i class="la la-plus"></i></a>
-            <a id="photo" class="button small color-two"><i class="la la-camera-retro"></i></a>
-            <a id="next" class="button color-one save"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
-          </div>
-          <div class="button-box third animated fadeInUp">
-            <a id="done" class="button secondary color-two add"><span class="button-label">Done</span></a>
-          </div>
-        </form>
+        </div>
       </section>
     </main>
     <!-- scripts -->
