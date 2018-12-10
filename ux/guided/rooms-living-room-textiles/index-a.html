@@ -53,7 +53,7 @@
       <div class="limits-meter animated fadeInUp">
         <h1>Contents Limit</h1>
         <div class="limit-gauge">
-          <span class="low" style="width: 0%;"></span>
+          <span class="low" style="width: 70%;"></span>
         </div>
         <div class="range">
           <small>{$min}</small>
@@ -62,6 +62,7 @@
       </div>
       <section id="product-details" class="questions">
         <form>
+          <h1 class="animated fadeInUp">Textiles</h1>
           <fieldset class="animated fadeInUp">
             <legend>Description</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
@@ -97,9 +98,12 @@
             </fieldset>
           </div>
           <div class="button-box animated fadeInUp">
-            <a id="cancel" class="button color-one"><span class="button-label">Cancel</span></a>
             <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
-            <a href="index-b.html" id="next" class="button color-one save"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+            <a href="index-b.html" id="save" class="button color-two"><span class="button-label">Save</span></a>
+          </div>
+          <div class="button-box animated fadeInUp">
+            <a id="next-item" class="button color-one save"><span class="button-label">Next Item<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+            <a id="next-room" class="button color-one save"><span class="button-label">Next Room<span class="post"><i class="la la-arrow-right"></i></span></span></a>
           </div>
           <div class="button-box animated fadeInUp" style="padding-top: 1rem;">
             <a id="done" class="button secondary color-two"><span class="button-label">Done</span></a>

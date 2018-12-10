@@ -288,23 +288,37 @@ span.error-message {
 }
 
 .express-contents-list ul {
-  padding: 0;
+  padding: 0 0 2rem;
   list-style-type: none;
+}
+
+.express-contents-list ul:last-of-type {padding: 0 0 6rem;}
+
+.express-contents-list ul h2 {
+  padding: 0 0 1rem;
+  font-size: 1.2rem;
 }
 
 .express-contents-list ul li {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  position: relative;
   overflow: hidden;
   width: 100%;
   margin: 0 auto 1rem;
   padding: 1rem;
   border: 1px solid $light-gray;
   border-radius: 2px;
+  @include transition(all, 0.5s, ease-in-out);
 }
 
 .express-contents-list ul li:last-of-type {margin: 0 auto;}
+
+.express-contents-list ul li input.accordian {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
 
 .express-contents-list ul li span.item-number {
   display: flex;
@@ -323,23 +337,32 @@ span.error-message {
   background-color: #000000;
 }
 
-.express-contents-list ul li .description,
-.express-contents-list ul li .quantity,
-.express-contents-list ul li .photos,
-.express-contents-list ul li .value {
+.express-contents-list ul li .top-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+}
+
+.express-contents-list ul li .top-line .description,
+.express-contents-list ul li .top-line .quantity,
+.express-contents-list ul li .top-line .photos,
+.express-contents-list ul li .top-line .value {
   display: flex;
   flex-direction: column;
   padding: 0 0.5rem 0 0;
   line-height: 1.25;
 }
 
-.express-contents-list ul li .description {
+.express-contents-list ul li .top-line .description {
   width: 50%;
   max-width: 50%;
   min-width: 50%;
 }
 
-.express-contents-list ul li .description span:last-of-type {
+.express-contents-list ul li .top-line .description span:last-of-type {
   display: block;
   overflow: hidden;
   text-align: left;
@@ -347,24 +370,52 @@ span.error-message {
   white-space: nowrap;
 }
 
-.express-contents-list ul li .description span:first-of-type,
-.express-contents-list ul li .quantity span:first-of-type,
-.express-contents-list ul li .photos span:first-of-type,
-.express-contents-list ul li .value span:first-of-type {
+.express-contents-list ul li .top-line .description span:first-of-type,
+.express-contents-list ul li .top-line .quantity span:first-of-type,
+.express-contents-list ul li .top-line .photos span:first-of-type,
+.express-contents-list ul li .top-line .value span:first-of-type {
   font-size: 0.833rem;
   font-weight: 500;
 }
 
-.express-contents-list ul li .value {width: 20%;}
+.express-contents-list ul li .top-line .value {width: 20%;}
 
-.express-contents-list ul li .quantity,
-.express-contents-list ul li .photos {width: 15%;}
+.express-contents-list ul li .top-line .quantity,
+.express-contents-list ul li .top-line .photos {width: 15%;}
 
-.express-contents-list ul li .photos {padding: 0;}
+.express-contents-list ul li .top-line .quantity,
+.express-contents-list ul li .top-line .photos,
+.express-contents-list ul li .top-line .value {text-align: center;}
 
-.express-contents-list ul li .quantity,
-.express-contents-list ul li .photos,
-.express-contents-list ul li .value {text-align: center;}
+.express-contents-list ul li i.la.la-angle-down {
+  line-height: 1.25;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+.express-contents-list ul li .edit-product-details {
+  max-height: 0;
+  @include transition(max-height, 0.25s, ease-in-out);
+}
+
+.express-contents-list ul li input.accordian:checked ~ .edit-product-details {
+  max-height: 100rem;
+  @include transition(max-height, 0.5s, ease-in-out);
+}
+
+.express-contents-list ul li input.accordian:checked ~ .express-contents-list ul li i.la.la-angle-down {
+  @include transform(rotate(0.5turn));
+}
+
+.express-contents-list ul li .edit-product-details form {padding: 2rem 0 0;}
+
+.express-contents-list .button-box.submit {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem 0 2rem;
+  background-color: $white;
+}
 
 
 // PROCESSING

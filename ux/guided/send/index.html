@@ -50,61 +50,36 @@
       </div>
     </section>
     <main>
-      <div class="limits-meter animated fadeInUp">
-        <h1>Contents Limit</h1>
-        <div class="limit-gauge">
-          <span class="low" style="width: 0%;"></span>
-        </div>
-        <div class="range">
-          <small>{$min}</small>
-          <small>{$max}</small>
-        </div>
-      </div>
-      <section id="product-details" class="questions">
-        <form>
-          <fieldset class="animated fadeInUp">
-            <legend>Description</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message">Error message</span>
-              <input type="text" name="description" id="description" placeholder="Description">
-              <label for="description">Description</label>
-              <span class="valid"><i class="la la-check-circle-o"></i></span>
-            </div>
-          </fieldset>
-          <div class="small animated fadeInUp">
-            <fieldset>
-              <legend>Value</legend>
-              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message">Error message</span>
-                <select name="value" id="value">
-                  <option value="$">$</option>
-                  <option value="$$">$$</option>
-                  <option value="$$$">$$$</option>
-                </select>
-                <div class="select-icon"><i class="la la-angle-down"></i></div>
-                <span class="select valid"><i class="la la-check-circle-o"></i></span>
-                <label for="value">Value</label>
+      <section id="settlement">
+        <div class="chat">
+          <ul>
+            <li class="animated fadeInUp">
+              <div class="small-avatar">
+                <img src="../../../src/images/guide.jpg" align="Your Guide">
               </div>
-            </fieldset>
-            <fieldset>
-              <legend>Qty</legend>
+              <div class="bubble">
+                <p>Excellent. What is the insured's email address?</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="questions">
+          <form>
+            <fieldset class="animated fadeInUp">
+              <legend>Email Address</legend>
               <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message">Error message</span>
-                <input type="number" name="quantity" id="quantity" placeholder="Quantity">
-                <label for="quantity">Quantity</label>
+                <input type="email" name="email" id="email" placeholder="Email address">
+                <label for="email">Email Address</label>
                 <span class="valid"><i class="la la-check-circle-o"></i></span>
               </div>
             </fieldset>
-          </div>
-          <div class="button-box animated fadeInUp">
-            <a id="cancel" class="button color-one"><span class="button-label">Cancel</span></a>
-            <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
-            <a href="index-b.html" id="next" class="button color-one save"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
-          </div>
-          <div class="button-box animated fadeInUp" style="padding-top: 1rem;">
-            <a id="done" class="button secondary color-two"><span class="button-label">Done</span></a>
-          </div>
-        </form>
+            <div class="button-box animated fadeInUp">
+              <a id="cancel" class="button secondary color-one"><span class="button-label">Cancel</span></a>
+              <a href="../sent/index.html" id="send" class="button color-one"><span class="button-label">Send</span></a>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
     <!-- scripts -->
