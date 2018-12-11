@@ -53,7 +53,7 @@
       <div class="limits-meter animated fadeInUp">
         <h1>Contents Limit</h1>
         <div class="limit-gauge">
-          <span class="high" style="width: 70%;"></span>
+          <span class="high" style="width: 85%;"></span>
         </div>
         <div class="range">
           <small>{$min}</small>
@@ -61,105 +61,859 @@
         </div>
       </div>
       <section id="inventory" class="express-contents-list">
-        <h1 class=" animated fadeInUp">Contents Inventory</h1>
+        <h1 class="animated fadeInUp">Contents Inventory</h1>
         <ul>
-          <li class=" animated fadeInUp">
-            <span class="item-number">1</span>
-            <div class="description">
-              <span>Desc</span>
-              <span>Sofa</span>
-            </div>
-            <div class="value">
-              <span>Value</span>
-              <span>$$$</span>
-            </div>
-            <div class="quantity">
-              <span>Qty</span>
-              <span>1</span>
-            </div>
-            <div class="photos">
-              <span>Pics</span>
-              <span>3</span>
-            </div>
-          </li>
-          <li class=" animated fadeInUp">
-            <span class="item-number">2</span>
-            <div class="description">
-              <span>Desc</span>
-              <span>Samsung 58&quot; LED 2160p 4K UHD TV with HDR</span>
-            </div>
-            <div class="value">
-              <span>Value</span>
-              <span>$$$</span>
-            </div>
-            <div class="quantity">
-              <span>Qty</span>
-              <span>1</span>
-            </div>
-            <div class="photos">
-              <span>Pics</span>
-              <span>1</span>
-            </div>
-          </li>
-          <li class=" animated fadeInUp">
-            <span class="item-number">3</span>
-            <div class="description">
-              <span>Desc</span>
-              <span>Black/White Chevron Woven Area Rug</span>
-            </div>
-            <div class="value">
-              <span>Value</span>
-              <span>$$</span>
-            </div>
-            <div class="quantity">
-              <span>Qty</span>
-              <span>1</span>
-            </div>
-            <div class="photos">
-              <span>Pics</span>
-              <span>1</span>
-            </div>
-          </li>
-          <li class=" animated fadeInUp">
-            <span class="item-number">4</span>
-            <div class="description">
-              <span>Desc</span>
-              <span>Reclaimed Russian Oak Plank Coffee Table</span>
-            </div>
-            <div class="value">
-              <span>Value</span>
-              <span>$$</span>
-            </div>
-            <div class="quantity">
-              <span>Qty</span>
-              <span>1</span>
-            </div>
-            <div class="photos">
-              <span>Pics</span>
-              <span>1</span>
+          <h2 class="animated fadeInUp">Bedroom</h2>
+          <li class="animated fadeInUp">
+            <input id="item-1" type="checkbox" name="item-1" class="accordian">
+            <label for="item-1" class="top-line">
+              <span class="item-number">1</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Sharp 50&quot; 4K Ultra HD HDR Smart LED</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$$</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>1</span>
+              </div>
+              <div class="photos">
+                <span>Pics</span>
+                <span>0</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Sharp 50&quot; 4K Ultra HD HDR Smart LED">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <select name="value" id="value">
+                        <option value="$$">$$</option>
+                        <option value="$">$</option>
+                        <option value="$$$">$$$</option>
+                      </select>
+                      <div class="select-icon"><i class="la la-angle-down"></i></div>
+                      <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                      <label for="value">Value</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="1">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
             </div>
           </li>
-          <li class=" animated fadeInUp">
-            <span class="item-number">5</span>
-            <div class="description">
-              <span>Desc</span>
-              <span>Slacks</span>
+          <li class="animated fadeInUp">
+            <input id="item-2" type="checkbox" name="item-2" class="accordian">
+            <label for="item-2" class="top-line">
+              <span class="item-number">2</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Queen sized bed</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$$</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>1</span>
+              </div>
+              <div class="photos">
+                <span>Pics</span>
+                <span>3</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Queen sized bed">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <select name="value" id="value">
+                        <option value="$$">$$</option>
+                        <option value="$">$</option>
+                        <option value="$$$">$$$</option>
+                      </select>
+                      <div class="select-icon"><i class="la la-angle-down"></i></div>
+                      <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                      <label for="value">Value</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="1">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
             </div>
-            <div class="value">
-              <span>Value</span>
-              <span>$$</span>
+          </li>
+          <li class="animated fadeInUp">
+            <input id="item-3" type="checkbox" name="item-3" class="accordian">
+            <label for="item-3" class="top-line">
+              <span class="item-number">3</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Queen Mattress &amp; Box Spring Set</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$$</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>1</span>
+              </div>
+              <div class="photos">
+                <span>Pics</span>
+                <span>3</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Queen Mattress &amp; Box Spring Set">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <select name="value" id="value">
+                        <option value="$$">$$</option>
+                        <option value="$">$</option>
+                        <option value="$$$">$$$</option>
+                      </select>
+                      <div class="select-icon"><i class="la la-angle-down"></i></div>
+                      <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                      <label for="value">Value</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="1">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
             </div>
-            <div class="quantity">
-              <span>Qty</span>
-              <span>10</span>
+          </li>
+          <li class="animated fadeInUp">
+            <input id="item-4" type="checkbox" name="item-4" class="accordian">
+            <label for="item-4" class="top-line">
+              <span class="item-number">4</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>2 Drawer nightstand</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$$</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>2</span>
+              </div>
+              <div class="photos">
+                <span>Pics</span>
+                <span>2</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="2 Drawer nightstand">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <select name="value" id="value">
+                        <option value="$$">$$</option>
+                        <option value="$">$</option>
+                        <option value="$$$">$$$</option>
+                      </select>
+                      <div class="select-icon"><i class="la la-angle-down"></i></div>
+                      <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                      <label for="value">Value</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="2">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
             </div>
-            <div class="photos">
-              <span>Pics</span>
-              <span>1</span>
+          </li>
+          <li class="animated fadeInUp">
+            <input id="item-5" type="checkbox" name="item-5" class="accordian">
+            <label for="item-5" class="top-line">
+              <span class="item-number">5</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Bedside lamps</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>2</span>
+              </div>
+              <div class="photos">
+                <span>Pics</span>
+                <span>0</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Bedside lamps">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <select name="value" id="value">
+                        <option value="$">$</option>
+                        <option value="$$">$$</option>
+                        <option value="$$$">$$$</option>
+                      </select>
+                      <div class="select-icon"><i class="la la-angle-down"></i></div>
+                      <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                      <label for="value">Value</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="2">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="animated fadeInUp">
+            <input id="item-6" type="checkbox" name="item-6" class="accordian">
+            <label for="item-6" class="top-line">
+              <span class="item-number">6</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Curtains</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$$$</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>4</span>
+              </div>
+              <div class="photos">
+                <span>Pics</span>
+                <span>1</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Curtains">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <select name="value" id="value">
+                        <option value="$$$">$$$</option>
+                        <option value="$">$</option>
+                        <option value="$$">$$</option>
+                      </select>
+                      <div class="select-icon"><i class="la la-angle-down"></i></div>
+                      <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                      <label for="value">Value</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="4">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
             </div>
           </li>
         </ul>
-        <div class="button-box">
+        <ul>
+          <h2 class="animated fadeInUp">Living Room</h2>
+          <li class="animated fadeInUp">
+            <input id="item-7" type="checkbox" name="item-7" class="accordian">
+            <label for="item-7" class="top-line">
+              <span class="item-number">7</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Sharp 50&quot; 4K Ultra HD HDR Smart LED</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$$</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>1</span>
+              </div>
+              <div class="photos">
+                <span>Pics</span>
+                <span>1</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Sharp 50&quot; 4K Ultra HD HDR Smart LED">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <select name="value" id="value">
+                        <option value="$$">$$</option>
+                        <option value="$">$</option>
+                        <option value="$$$">$$$</option>
+                      </select>
+                      <div class="select-icon"><i class="la la-angle-down"></i></div>
+                      <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                      <label for="value">Value</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="1">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="animated fadeInUp">
+            <input id="item-8" type="checkbox" name="item-8" class="accordian">
+            <label for="item-8" class="top-line">
+              <span class="item-number">8</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Alexa Rolled-Arm Sofa</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$$</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>1</span>
+              </div>
+              <div class="photos">
+                <span>Pics</span>
+                <span>2</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Alexa Rolled-Arm Sofa">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <select name="value" id="value">
+                        <option value="$$">$$</option>
+                        <option value="$">$</option>
+                        <option value="$$$">$$$</option>
+                      </select>
+                      <div class="select-icon"><i class="la la-angle-down"></i></div>
+                      <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                      <label for="value">Value</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="1">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="animated fadeInUp">
+            <input id="item-9" type="checkbox" name="item-9" class="accordian">
+            <label for="item-9" class="top-line">
+              <span class="item-number">9</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Westin Rolled Arm Chair</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$$</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>1</span>
+              </div>
+              <div class="photos">
+                <span>Pics</span>
+                <span>1</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Westin Rolled Arm Chair">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <select name="value" id="value">
+                        <option value="$$">$$</option>
+                        <option value="$">$</option>
+                        <option value="$$$">$$$</option>
+                      </select>
+                      <div class="select-icon"><i class="la la-angle-down"></i></div>
+                      <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                      <label for="value">Value</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="1">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="animated fadeInUp">
+            <input id="item-10" type="checkbox" name="item-10" class="accordian">
+            <label for="item-10" class="top-line">
+              <span class="item-number">10</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Corinna Angle Leg Coffee Table Wood</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$$</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>1</span>
+              </div>
+              <div class="photos">
+                <span>Pics</span>
+                <span>1</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Corinna Angle Leg Coffee Table Wood">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <select name="value" id="value">
+                        <option value="$$">$$</option>
+                        <option value="$">$</option>
+                        <option value="$$$">$$$</option>
+                      </select>
+                      <div class="select-icon"><i class="la la-angle-down"></i></div>
+                      <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                      <label for="value">Value</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="1">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="animated fadeInUp">
+            <input id="item-11" type="checkbox" name="item-11" class="accordian">
+            <label for="item-11" class="top-line">
+              <span class="item-number">11</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Wood Tripod Brass floor lamps</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$$</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>2</span>
+              </div>
+              <div class="photos">
+                <span>Pics</span>
+                <span>0</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Wood Tripod Brass floor lamps">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <select name="value" id="value">
+                        <option value="$$">$$</option>
+                        <option value="$">$</option>
+                        <option value="$$$">$$$</option>
+                      </select>
+                      <div class="select-icon"><i class="la la-angle-down"></i></div>
+                      <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                      <label for="value">Value</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="2">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="animated fadeInUp">
+            <input id="item-12" type="checkbox" name="item-12" class="accordian">
+            <label for="item-12" class="top-line">
+              <span class="item-number">12</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Blackout Curtain Panel Gray Chevron 84&quot;</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$$$</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>12</span>
+              </div>
+              <div class="photos">
+                <span>Pics</span>
+                <span>4</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Blackout Curtain Panel Gray Chevron 84&quot;">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <select name="value" id="value">
+                        <option value="$$$">$$$</option>
+                        <option value="$">$</option>
+                        <option value="$$">$$</option>
+                      </select>
+                      <div class="select-icon"><i class="la la-angle-down"></i></div>
+                      <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                      <label for="value">Value</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="12">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="animated fadeInUp">
+            <input id="item-14" type="checkbox" name="item-14" class="accordian">
+            <label for="item-14" class="top-line">
+              <span class="item-number">14</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Santa Monica Shag Rug Ivory 8' x 10'</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$$$</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>1</span>
+              </div>
+              <div class="photos">
+                <span>Pics</span>
+                <span>1</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Santa Monica Shag Rug Ivory 8' x 10'">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <select name="value" id="value">
+                        <option value="$$$">$$$</option>
+                        <option value="$">$</option>
+                        <option value="$$">$$</option>
+                      </select>
+                      <div class="select-icon"><i class="la la-angle-down"></i></div>
+                      <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                      <label for="value">Value</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="1">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
+            </div>
+          </li>
+        </ul>
+        <div class="button-box submit">
           <a href="../processing/index.html" id="next" class="button color-one animated fadeInUp"><span class="button-label">Submit</span></a>
         </div>
       </section>

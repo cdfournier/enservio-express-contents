@@ -3203,6 +3203,21 @@ span.error-message {
 .chat ul li .bubble p:last-of-type {
   padding: 0; }
 
+.help.chat {
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  left: 0; }
+
+.chat.reverse ul li {
+  flex-direction: row-reverse; }
+
+.chat.reverse ul li .small-avatar {
+  margin: 0 auto 0 1rem; }
+
+.chat.reverse ul li .bubble {
+  border-radius: 0.25rem 0.25rem 0 0.25rem; }
+
 .questions {
   display: flex;
   flex-direction: column;

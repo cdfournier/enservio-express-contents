@@ -50,7 +50,15 @@
       </div>
     </section>
     <main>
-      <section id="settlement">
+      <section id="greeting">
+        <div class="greeting">
+          <div class="large-avatar animated fadeInUp">
+            <img src="../../../src/images/guide.jpg" align="Your Guide">
+          </div>
+          <div class="name animated fadeInUp">
+            <p>{Guide}</p>
+          </div>
+        </div>
         <div class="chat">
           <ul>
             <li class="animated fadeInUp">
@@ -58,27 +66,21 @@
                 <img src="../../../src/images/guide.jpg" align="Your Guide">
               </div>
               <div class="bubble">
-                <p>Excellent. What is the insured's email address?</p>
+                <p>Hi <b>{Adjuster}</b>! My name is <b>{Guide}</b>. I'm going to help you create this contents list.</p>
+              </div>
+            </li>
+            <li class="animated fadeInUp">
+              <div class="small-avatar">
+                <img src="../../../src/images/guide.jpg" align="Your Guide">
+              </div>
+              <div class="bubble">
+              <p>Ready to get started? First we're going to need some information about the loss.</p>
               </div>
             </li>
           </ul>
-        </div>
-        <div class="questions">
-          <form>
-            <fieldset class="animated fadeInUp">
-              <legend>Email Address</legend>
-              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message">Error message</span>
-                <input type="email" name="email" id="email" placeholder="Email address">
-                <label for="email">Email Address</label>
-                <span class="valid"><i class="la la-check-circle-o"></i></span>
-              </div>
-            </fieldset>
-            <div class="button-box animated fadeInUp">
-              <a id="cancel" class="button secondary color-one"><span class="button-label">Cancel</span></a>
-              <a href="../sent/index.html" id="send" class="button color-one"><span class="button-label">Send</span></a>
-            </div>
-          </form>
+          <div class="button-box">
+            <a href="../loss-setup/index.html" id="next" class="button color-one animated fadeInUp"><span class="button-label">Ready?</span></a>
+          </div>
         </div>
       </section>
     </main>

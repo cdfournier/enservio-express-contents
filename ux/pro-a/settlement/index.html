@@ -58,27 +58,31 @@
                 <img src="../../../src/images/guide.jpg" align="Your Guide">
               </div>
               <div class="bubble">
-                <p>Excellent. What is the insured's email address?</p>
+                <p>Here's the settlement offer.</p>
               </div>
             </li>
           </ul>
         </div>
-        <div class="questions">
-          <form>
-            <fieldset class="animated fadeInUp">
-              <legend>Email Address</legend>
-              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message">Error message</span>
-                <input type="email" name="email" id="email" placeholder="Email address">
-                <label for="email">Email Address</label>
-                <span class="valid"><i class="la la-check-circle-o"></i></span>
+        <div class="settlement animated fadeInUp">
+          <h1>Settlement Offer</h1>
+          <p>${Offer}</p>
+        </div>
+        <div class="chat">
+          <ul>
+            <li class="animated fadeInUp">
+              <div class="small-avatar">
+                <img src="../../../src/images/guide.jpg" align="Your Guide">
               </div>
-            </fieldset>
-            <div class="button-box animated fadeInUp">
-              <a id="cancel" class="button secondary color-one"><span class="button-label">Cancel</span></a>
-              <a href="../sent/index.html" id="send" class="button color-one"><span class="button-label">Send</span></a>
-            </div>
-          </form>
+              <div class="bubble">
+                <p>Now let us know what you'd like to do.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="button-box animated fadeInUp" style="flex-direction: column;">
+          <a href="../send/index.html" id="send" class="button color-two"><span class="button-label">Send to Insured</span></a>
+          <a id="download" class="button color-two"><span class="button-label">Download Report</span></a>
+          <a id="save" class="button color-one"><span class="button-label">Save</span></a>
         </div>
       </section>
     </main>

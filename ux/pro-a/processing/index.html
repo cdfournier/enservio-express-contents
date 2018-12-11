@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Enservio Express Contents</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="4.5; url='../settlement/index.html'">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
@@ -50,7 +51,7 @@
       </div>
     </section>
     <main>
-      <section id="settlement">
+      <section id="processing" class="processing">
         <div class="chat">
           <ul>
             <li class="animated fadeInUp">
@@ -58,27 +59,13 @@
                 <img src="../../../src/images/guide.jpg" align="Your Guide">
               </div>
               <div class="bubble">
-                <p>Excellent. What is the insured's email address?</p>
+                <p>Thanks! Please stand by while we review your inventory. We promise this won't take long.</p>
               </div>
             </li>
           </ul>
         </div>
-        <div class="questions">
-          <form>
-            <fieldset class="animated fadeInUp">
-              <legend>Email Address</legend>
-              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message">Error message</span>
-                <input type="email" name="email" id="email" placeholder="Email address">
-                <label for="email">Email Address</label>
-                <span class="valid"><i class="la la-check-circle-o"></i></span>
-              </div>
-            </fieldset>
-            <div class="button-box animated fadeInUp">
-              <a id="cancel" class="button secondary color-one"><span class="button-label">Cancel</span></a>
-              <a href="../sent/index.html" id="send" class="button color-one"><span class="button-label">Send</span></a>
-            </div>
-          </form>
+        <div class="spinner-box animated fadeInUp">
+          <div class="spinner"><i class="la la-refresh la-spin"></i></div>
         </div>
       </section>
     </main>

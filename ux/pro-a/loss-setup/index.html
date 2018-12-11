@@ -50,69 +50,82 @@
       </div>
     </section>
     <main>
-      <div class="limits-meter animated fadeInUp">
-        <h1>Contents Limit</h1>
-        <div class="limit-gauge">
-          <span class="low" style="width: 0%;"></span>
-        </div>
-        <div class="range">
-          <small>{$min}</small>
-          <small>{$max}</small>
-        </div>
-      </div>
-      <section id="product-details" class="questions">
+      <section id="loss-setup" class="questions">
         <form>
+          <h1 class="animated fadeInUp">Loss Information</h1>
           <fieldset class="animated fadeInUp">
-            <legend>Description</legend>
+            <legend>Insured Name</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
               <span class="error-message">Error message</span>
-              <input type="text" name="description" id="description" placeholder="Description">
-              <label for="description">Description</label>
+              <input type="text" name="insured-name" id="insured-name" placeholder="Insured Name">
+              <label for="insured-name">Insured Name</label>
               <span class="valid"><i class="la la-check-circle-o"></i></span>
             </div>
           </fieldset>
-          <div class="small animated fadeInUp">
-            <fieldset>
-              <legend>Value</legend>
+          <fieldset class="animated fadeInUp">
+            <legend>Loss Street</legend>
+            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message">Error message</span>
+              <input type="text" name="loss-street" id="loss-street" placeholder="Loss Street">
+              <label for="loss-street">Loss Street</label>
+              <span class="valid"><i class="la la-check-circle-o"></i></span>
+            </div>
+          </fieldset>
+          <fieldset class="animated fadeInUp">
+            <legend>Loss City</legend>
+            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message">Error message</span>
+              <input type="text" name="loss-city" id="loss-city" placeholder="Insured City">
+              <label for="loss-city">Loss City</label>
+              <span class="valid"><i class="la la-check-circle-o"></i></span>
+            </div>
+          </fieldset>
+          <div class="small">
+            <fieldset class="animated fadeInUp">
+              <legend>State</legend>
               <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message">Error message</span>
-                <select name="value" id="value">
-                  <option value="$">$</option>
-                  <option value="$$">$$</option>
-                  <option value="$$$">$$$</option>
-                </select>
-                <div class="select-icon"><i class="la la-angle-down"></i></div>
-                <span class="select valid"><i class="la la-check-circle-o"></i></span>
-                <label for="value">Value</label>
+                <input type="text" name="loss-state" id="loss-state" placeholder="State">
+                <label for="loss-state">State</label>
+                <span class="valid"><i class="la la-check-circle-o"></i></span>
               </div>
             </fieldset>
-            <fieldset>
-              <legend>Qty</legend>
+            <fieldset class="animated fadeInUp">
+              <legend>Zip</legend>
               <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message">Error message</span>
-                <input type="number" name="quantity" id="quantity" placeholder="Quantity">
-                <label for="quantity">Quantity</label>
+                <input type="text" name="loss-zip" id="loss-zip" placeholder="Zip">
+                <label for="loss-zip">Zip</label>
                 <span class="valid"><i class="la la-check-circle-o"></i></span>
               </div>
             </fieldset>
           </div>
           <fieldset class="animated fadeInUp">
-            <legend>Room</legend>
+            <legend>Peril Type</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
               <span class="error-message">Error message</span>
-              <input type="text" name="room" id="room" placeholder="Room (optional)">
-              <label for="room">Room</label>
+              <select name="peril" id="peril">
+                <option value="0">Choose a option</option>
+                <option value="Explosion">Explosion</option>
+                <option value="Fire">Fire</option>
+                <option value="Smoke">Smoke</option>
+              </select>
+              <div class="select-icon"><i class="la la-angle-down"></i></div>
+              <span class="select valid"><i class="la la-check-circle-o"></i></span>
+              <label for="peril">Peril Type</label>
+            </div>
+          </fieldset>
+          <fieldset class="animated fadeInUp">
+            <legend>Contents Limit</legend>
+            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message">Error message</span>
+              <input style="width: 50%;" type="number" name="contents-limit" id="contents-limit" placeholder="Contents Limit">
+              <label for="contents-limit">Contents Limit</label>
               <span class="valid"><i class="la la-check-circle-o"></i></span>
             </div>
           </fieldset>
-          <div class="button-box animated fadeInUp">
-            <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
-          </div>
-          <div class="button-box animated fadeInUp">
-            <a id="next-item" class="button color-one save"><span class="button-label">Next Item<span class="post"><i class="la la-arrow-right"></i></span></span></a>
-          </div>
-          <div class="button-box animated fadeInUp" style="padding-top: 1rem;">
-            <a href="../products-finish/index.html" id="done" class="button secondary color-two"><span class="button-label">Done</span></a>
+          <div class="button-box">
+            <a href="../rooms/index.html" id="next" class="button color-one animated fadeInUp"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
           </div>
         </form>
       </section>

@@ -50,7 +50,7 @@
       </div>
     </section>
     <main>
-      <section id="settlement">
+      <section id="rooms">
         <div class="chat">
           <ul>
             <li class="animated fadeInUp">
@@ -58,28 +58,51 @@
                 <img src="../../../src/images/guide.jpg" align="Your Guide">
               </div>
               <div class="bubble">
-                <p>Excellent. What is the insured's email address?</p>
+                <p>Cool. Would you rather pick a room as you go?</p>
               </div>
             </li>
           </ul>
         </div>
         <div class="questions">
           <form>
+            <h1 class="animated fadeInUp">Pick a Room</h1>
             <fieldset class="animated fadeInUp">
-              <legend>Email Address</legend>
+              <legend>Room</legend>
               <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message">Error message</span>
-                <input type="email" name="email" id="email" placeholder="Email address">
-                <label for="email">Email Address</label>
-                <span class="valid"><i class="la la-check-circle-o"></i></span>
+                <select name="room" id="room">
+                  <option value="0">Choose a room</option>
+                  <option value="Attic">Attic</option>
+                  <option value="Basement">Basement</option>
+                  <option value="Bedroom">Bedroom</option>
+                  <option value="Garage">Garage</option>
+                  <option value="Kitchen">Kitchen</option>
+                  <option value="Living Room">Living Room</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div class="select-icon"><i class="la la-angle-down"></i></div>
+                <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                <label for="room">Room</label>
               </div>
             </fieldset>
-            <div class="button-box animated fadeInUp">
-              <a id="cancel" class="button secondary color-one"><span class="button-label">Cancel</span></a>
-              <a href="../sent/index.html" id="send" class="button color-one"><span class="button-label">Send</span></a>
+            <div class="button-box">
+<!--               <a href="../loss-setup/index.html" id="prev" class="button color-one animated fadeInUp"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a> -->
+              <a href="../products-bedroom/index.html" id="next" class="button color-one animated fadeInUp"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
             </div>
           </form>
         </div>
+      </section>
+      <section id="help" class="help chat reverse">
+        <ul>
+          <li class="animated fadeInUp" style="animation-delay: 2s;">
+            <div class="small-avatar">
+              <a href="../products-intro/index.html"><img src="../../../src/images/guide.jpg" align="Your Guide"></a>
+            </div>
+            <div class="bubble">
+              <p>How about no rooms at all? Just tap my face.</p>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
     <!-- scripts -->
