@@ -3146,6 +3146,55 @@ span.error-message {
 .loading-screen footer a:focus {
   color: #0f4a92; }
 
+main.security {
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0; }
+
+.log-in, .register {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  padding: 0 0 2rem;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s; }
+
+.log-in {
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%); }
+
+.log-in.hide {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%); }
+
+.register {
+  display: none;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%); }
+
+.register.show {
+  display: block;
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%); }
+
 .greeting {
   display: flex;
   flex-direction: column;
@@ -3203,19 +3252,19 @@ span.error-message {
 .chat ul li .bubble p:last-of-type {
   padding: 0; }
 
-.help.chat {
-  position: absolute;
-  right: 0;
-  bottom: 1rem;
-  left: 0; }
+.chat ul li.help {
+  display: flex;
+  flex-direction: row-reverse;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  -ms-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s; }
 
-.chat.reverse ul li {
-  flex-direction: row-reverse; }
+.chat ul li.help .small-avatar {
+  margin: 0 0 0 1rem; }
 
-.chat.reverse ul li .small-avatar {
-  margin: 0 auto 0 1rem; }
-
-.chat.reverse ul li .bubble {
+.chat ul li.help .bubble {
   border-radius: 0.25rem 0.25rem 0 0.25rem; }
 
 .questions {

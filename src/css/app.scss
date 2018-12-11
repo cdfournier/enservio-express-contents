@@ -125,6 +125,39 @@ span.error-message {
 .loading-screen footer a:focus {color: $color-two;}
 
 
+// LOG IN & REGISTRATION
+main.security {
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0;
+}
+
+.log-in, .register {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  padding: 0 0 2rem;
+  @include transition(all, 0.5s, ease);
+}
+
+.log-in {@include transform(translateX(0%));}
+
+.log-in.hide {@include transform(translateX(-100%));}
+
+.register {
+  display: none;
+  @include transform(translateX(100%));
+}
+
+.register.show {
+  display: block;
+  @include transform(translateX(0%))
+;}
+
+
 // GREETING
 .greeting {
   display: flex;
@@ -190,20 +223,15 @@ span.error-message {
 
 .chat ul li .bubble p:last-of-type {padding: 0;}
 
-
-// REVERSE CHAT>HELP CHAT
-.help.chat {
-  position: absolute;
-  right: 0;
-  bottom: 1rem;
-  left: 0;
+.chat ul li.help {
+  display: flex;
+  flex-direction: row-reverse;
+  @include transition(all, 0.25s, ease-in-out);
 }
 
-.chat.reverse ul li {flex-direction: row-reverse;}
+.chat ul li.help .small-avatar {margin: 0 0 0 1rem;}
 
-.chat.reverse ul li .small-avatar {margin: 0 auto 0 1rem;}
-
-.chat.reverse ul li .bubble {border-radius: 0.25rem 0.25rem 0 0.25rem;}
+.chat ul li.help .bubble {border-radius: 0.25rem 0.25rem 0 0.25rem;}
 
 
 // QUESTIONS

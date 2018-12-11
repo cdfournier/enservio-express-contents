@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio Express Contents</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../../../src/css/app.css">
+  </head>
+  <body class="animated">
+    <section id="alerts" class="alerts">
+      <div class="alert-bar error">
+        <div class="alert-bar-details">
+          <span><i class="la la-exclamation-circle"></i></span>
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss error"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="alert-bar success">
+        <div class="alert-bar-details">
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss success"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="alert-bar system">
+        <div class="alert-bar-details">
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss system"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="timeout">
+        <div class="text center md">
+          <h1>Timeout Warning</h1>
+          <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the <b>Continue</b> button to keep working.</p>
+        </div>
+        <div class="button-box">
+          <button class="button color-one continue"><span class="button-label">Continue</span></button>
+        </div>
+      </div>
+    </section>
+    <main>
+      <div class="limits-meter animated fadeInUp">
+        <h1>Contents Limit</h1>
+        <div class="limit-gauge">
+          <span class="high" style="width: 90%;"></span>
+        </div>
+        <div class="range">
+          <small>{$min}</small>
+          <small>{$max}</small>
+        </div>
+      </div>
+      <section id="rooms-summary" class="chat">
+        <ul>
+          <li class="animated fadeInUp">
+            <div class="small-avatar">
+              <img src="../../../src/images/guide.jpg" align="Your Guide">
+            </div>
+            <div class="bubble">
+              <p>Awesome! We've gone through every room and every product type that you checked.</p>
+            </div>
+          </li>
+          <li class="animated fadeInUp">
+            <div class="small-avatar">
+              <img src="../../../src/images/guide.jpg" align="Your Guide">
+            </div>
+            <div class="bubble">
+            <p>When you're ready to review the inventory, tap the <b>Review Inventory</b> button. You'll also be able to make changes to the inventory details on that screen.</p>
+            </div>
+          </li>
+          <li class="animated fadeInUp">
+            <div class="small-avatar">
+              <img src="../../../src/images/guide.jpg" align="Your Guide">
+            </div>
+            <div class="bubble">
+            <p>If you want to go back to the room setup, just tap the <b>Go Back</b> button.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="button-box" style="flex-direction: column-reverse; padding-top: 1rem;">
+          <a href="../rooms-setup/index.html" id="no" class="button secondary color-one animated fadeInUp"><span class="button-label">Go Back</span></a>
+          <a href="../collating/index.html" id="yet" class="button color-one animated fadeInUp"><span class="button-label">Review Inventory</span></a>
+        </div>
+      </div>
+      </section>
+    </main>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../assets/scripts/app.js"></script>
+  </body>
+</html>
