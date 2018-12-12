@@ -150,27 +150,43 @@ main.security {
 }
 
 .log-in {@include transform(translateX(0%));}
-
-.log-in.hide {@include transform(translateX(-100%));}
+.log-in.fadeOutRight {@include transform(translateX(-100%));}
+.log-in.fadeInLeft {@include transform(translateX(0%));}
 
 .register.one {
   display: none;
+  max-height: 0;
   @include transform(translateX(100%));
 }
 
-.register.one.show {
+.register.one.fadeInRight {
   display: block;
+  max-height: 100%;
   @include transform(translateX(0%));
+}
+
+.register.one.fadeOutLeft {
+  display: none;
+  max-height: 0;
+  @include transform(translateX(100%));
 }
 
 .register.two {
   display: none;
+  max-height: 0;
   @include transform(translateX(100%));
 }
 
-.register.two.show {
+.register.two.fadeInRight {
   display: block;
+  max-height: 100%;
   @include transform(translateX(0%));
+}
+
+.register.two.fadeOutLeft {
+  display: none;
+  max-height: 0;
+  @include transform(translateX(100%));
 }
 
 
