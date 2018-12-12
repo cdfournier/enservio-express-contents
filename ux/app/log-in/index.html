@@ -99,13 +99,13 @@
           </div>
         </div>
       </section>
-      <section id="register" class="register">
-        <div class="text first center animated fadeInUp">
+      <section id="register-one" class="register one animated fadeInRight">
+        <div class="text first center">
           <h1>Greetings</h1>
           <p>Please create an account to continue.</p>
         </div>
         <form class="sm" novalidate>
-          <fieldset class="animated fadeInUp">
+          <fieldset>
             <legend>First Name</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
               <span class="error-message"></span>
@@ -113,7 +113,7 @@
               <label for="first-name">First Name&#42;</label>
             </div>
           </fieldset>
-          <fieldset class="animated fadeInUp">
+          <fieldset>
             <legend>Last Name</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
               <span class="error-message"></span>
@@ -121,7 +121,7 @@
               <label for="last-name">Last Name&#42;</label>
             </div>
           </fieldset>
-          <fieldset class="animated fadeInUp">
+          <fieldset>
             <legend>Carrier</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
               <span class="error-message"></span>
@@ -129,7 +129,16 @@
               <label for="carrier">Carrier&#42;</label>
             </div>
           </fieldset>
-          <fieldset class="animated fadeInUp">
+          <div class="button-box">
+            <a id="cancel-one" class="button secondary color-two"><span class="button-label">Cancel</span></a>
+            <a id="new-account-next" class="button color-one"><span class="button-label">Next</span></a>
+          </div>
+        </form>
+      </section>
+
+      <section id="register-two" class="register two animated fadeInRight">
+        <form class="sm" novalidate>
+          <fieldset>
             <legend>Email Address</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
               <span class="error-message"></span>
@@ -137,7 +146,7 @@
               <label for="new-email-address">Email Address&#42;</label>
             </div>
           </fieldset>
-          <fieldset class="animated fadeInUp">
+          <fieldset>
             <legend>Password</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
               <span class="error-message">This password does not meet the minimum requirements below</span>
@@ -147,7 +156,7 @@
               <span class="valid password"><i class="la la-check-circle-o"></i></span>
             </div>
           </fieldset>
-          <fieldset class="animated fadeInUp">
+          <fieldset>
             <legend>Confirm Password</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
               <span class="error-message">Your passwords do not match</span>
@@ -157,7 +166,7 @@
               <span class="valid password"><i class="la la-check-circle-o"></i></span>
             </div>
           </fieldset>
-          <fieldset class="animated fadeInUp">
+          <fieldset>
             <legend>Terms &amp; Conditions</legend>
             <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
               <span class="error-message checkbox">You must check this box to continue</span>
@@ -165,9 +174,12 @@
               <label class="checkbox" for="terms"><span>I agree to this site's&nbsp;<a id="terms">Terms &amp; Conditions</a></span></label>
             </div>
           </fieldset>
-          <div class="button-box animated fadeInUp">
-            <a id="cancel" class="button secondary color-one"><span class="button-label">Cancel</span></a>
+          <div class="button-box">
             <a href="../start/index.html" id="new-account" class="button color-one"><span class="button-label">Create Account</span></a>
+          </div>
+          <div class="button-box">
+            <a id="new-account-back" class="button secondary color-one"><span class="button-label">back</span></a>
+            <a id="cancel-two" class="button secondary color-two"><span class="button-label">Cancel</span></a>
           </div>
         </form>
       </section>
