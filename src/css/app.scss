@@ -127,66 +127,31 @@ span.error-message {
 
 // LOG IN & REGISTRATION
 main.security {
-  flex-direction: row;
-  justify-content: flex-start;
-  position: relative;
-  padding: 0;
-  overflow: hidden;
-  max-width: 100%;
-  height: 100vh;
-  max-height: 100vh;
-}
-
-.log-in, .register {
   display: block;
-  position: absolute;
-  top: 0;
-  overflow: hidden;
+  position: relative;
+  overflow-x: hidden;
   width: 100%;
   max-width: 100%;
-  height: auto;
+  margin: 0 auto;
   padding: 0 0 2rem;
+}
+
+.authentication {
+  display: flex;
+  width: 300%;
   @include transition(all, 0.5s, ease);
 }
 
-.log-in {@include transform(translateX(0%));}
-.log-in.fadeOutRight {@include transform(translateX(-100%));}
-.log-in.fadeInLeft {@include transform(translateX(0%));}
+.authentication.p1 {@include transform(translateX(0%));}
+.authentication.p2 {@include transform(translateX(-33.3%));}
+.authentication.p3 {@include transform(translateX(-66.3%));}
 
-.register.one {
-  display: none;
-  max-height: 0;
-  @include transform(translateX(100%));
-}
-
-.register.one.fadeInRight {
+.log-in, .register {
   display: block;
-  max-height: 100%;
-  @include transform(translateX(0%));
-}
-
-.register.one.fadeOutLeft {
-  display: none;
-  max-height: 0;
-  @include transform(translateX(100%));
-}
-
-.register.two {
-  display: none;
-  max-height: 0;
-  @include transform(translateX(100%));
-}
-
-.register.two.fadeInRight {
-  display: block;
-  max-height: 100%;
-  @include transform(translateX(0%));
-}
-
-.register.two.fadeOutLeft {
-  display: none;
-  max-height: 0;
-  @include transform(translateX(100%));
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
 }
 
 

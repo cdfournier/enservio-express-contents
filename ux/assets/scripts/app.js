@@ -6,33 +6,23 @@ window.setTimeout(function(){
 
 // LOG IN AND REGISTRATION FORMS
 $('#create-account').click(function() {
-  $('.log-in').addClass('hide');
-  setTimeout(function() {
-    $('.register.one').addClass('show'); }, 10);
-});
-
-$('#new-account-next').click(function() {
-  $('.register.one').removeClass('show');
-  setTimeout(function() {
-    $('.register.two').addClass('show'); }, 10);
-});
-
-$('#new-account-back').click(function() {
-  $('.register.two').removeClass('show');
-  setTimeout(function() {
-    $('.register.one').addClass('show'); }, 10);
+  $('.authentication').addClass('p2');
 });
 
 $('#cancel-one').click(function() {
-  $('.register.one').removeClass('show');
-  setTimeout(function() {
-    $('.log-in').removeClass('hide'); }, 10);
+  $('.authentication').removeClass('p2').addClass('p1');
+});
+
+$('#new-account-next').click(function() {
+  $('.authentication').removeClass('p2').addClass('p3');
+});
+
+$('#new-account-back').click(function() {
+  $('.authentication').removeClass('p3').addClass('p2');
 });
 
 $('#cancel-two').click(function() {
-  $('.register.two').removeClass('show');
-  setTimeout(function() {
-    $('.log-in').removeClass('hide'); }, 10);
+  $('.authentication').removeClass('p3').addClass('p1');
 });
 
 

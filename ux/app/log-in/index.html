@@ -56,133 +56,137 @@
         </div>
     </header>
     <main class="security">
-      <section id="log-in" class="log-in animated fadeInUp">
-        <div class="text first center">
-          <h1>Welcome</h1>
-          <p>Please log in to continue.</p>
-        </div>
-        <form class="sm" novalidate>
-          <fieldset>
-            <legend>Email Address</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message"></span>
-              <input type="email" name="email-address" id="email-address" class="email-address" placeholder="Enter your email address">
-              <label for="email-address">Email Address&#42;</label>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Password</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message">This password is not correct. Please try again.</span>
-              <input type="password" name="password" id="password" placeholder="Choose a password" maxlength="50" minlength="8" autocomplete="new-password">
-              <label for="password">Password&#42;</label>
-              <span toggle="#password" class="la la-eye-slash show-hide-password"></span>
-              <span class="valid password"><i class="la la-check-circle-o"></i></span>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Remember Me</legend>
-            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message checkbox"></span>
-              <input type="checkbox" name="remember-me" id="remember-me">
-              <label class="checkbox" for="remember-me" style="justify-content: space-between; width: 100%;">Remember me<span><a href="../../password/forgot-password-form/index.html">Forgot Password?</a></span></label>
-            </div>
-          </fieldset>
-          <div class="button-box">
-            <a href="../start/index.html" class="button color-one animated fadeInUp"><span class="button-label">Log In</a>
-          </div>
-        </form>
-        <div class="text center">
-          <p class="animated fadeInUp" style="padding: 0;">Don't have an account? Create one now.</p>
-          <div class="button-box animated fadeInUp">
-            <a id="create-account" class="button secondary color-two"><span class="button-label">Create Account</span></a>
-          </div>
-        </div>
-      </section>
+      <section id="authentication" class="authentication">
 
-      <section id="register-one" class="register one animated">
-        <div class="text first center">
-          <h1>Greetings</h1>
-          <p>Please create an account to continue.</p>
+        <div id="log-in" class="log-in">
+          <div class="text first center">
+            <h1>Welcome</h1>
+            <p>Please log in to continue.</p>
+          </div>
+          <form class="sm" novalidate>
+            <fieldset>
+              <legend>Email Address</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message"></span>
+                <input type="email" name="email-address" id="email-address" class="email-address" placeholder="Enter your email address">
+                <label for="email-address">Email Address&#42;</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Password</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">This password is not correct. Please try again.</span>
+                <input type="password" name="password" id="password" placeholder="Choose a password" maxlength="50" minlength="8" autocomplete="new-password">
+                <label for="password">Password&#42;</label>
+                <span toggle="#password" class="la la-eye-slash show-hide-password"></span>
+                <span class="valid password"><i class="la la-check-circle-o"></i></span>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Remember Me</legend>
+              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message checkbox"></span>
+                <input type="checkbox" name="remember-me" id="remember-me">
+                <label class="checkbox" for="remember-me" style="justify-content: space-between; width: 100%;">Remember me<span><a href="../../password/forgot-password-form/index.html">Forgot Password?</a></span></label>
+              </div>
+            </fieldset>
+            <div class="button-box">
+              <a href="../start/index.html" class="button color-one animated fadeInUp"><span class="button-label">Log In</a>
+            </div>
+          </form>
+          <div class="text center">
+            <p class="animated fadeInUp" style="padding: 0;">Don't have an account? Create one now.</p>
+            <div class="button-box animated fadeInUp">
+              <a id="create-account" class="button secondary color-two"><span class="button-label">Create Account</span></a>
+            </div>
+          </div>
         </div>
-        <form class="sm" novalidate>
-          <fieldset>
-            <legend>First Name</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message"></span>
-              <input type="text" name="first-name" id="first-name" class="first-name" placeholder="First Name">
-              <label for="first-name">First Name&#42;</label>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Last Name</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message"></span>
-              <input type="text" name="last-name" id="last-name" class="last-name" placeholder="Last Name">
-              <label for="last-name">Last Name&#42;</label>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Carrier</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message"></span>
-              <input type="text" name="carrier" id="carrier" class="carrier" placeholder="Carrier">
-              <label for="carrier">Carrier&#42;</label>
-            </div>
-          </fieldset>
-          <div class="button-box">
-            <a id="cancel-one" class="button secondary color-two"><span class="button-label">Cancel</span></a>
-            <a id="new-account-next" class="button color-one"><span class="button-label">Next</span></a>
+  
+        <div id="register-one" class="register one">
+          <div class="text first center">
+            <h1>Greetings</h1>
+            <p>Please create an account to continue.</p>
           </div>
-        </form>
-      </section>
+          <form class="sm" novalidate>
+            <fieldset>
+              <legend>First Name</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message"></span>
+                <input type="text" name="first-name" id="first-name" class="first-name" placeholder="First Name">
+                <label for="first-name">First Name&#42;</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Last Name</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message"></span>
+                <input type="text" name="last-name" id="last-name" class="last-name" placeholder="Last Name">
+                <label for="last-name">Last Name&#42;</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Carrier</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message"></span>
+                <input type="text" name="carrier" id="carrier" class="carrier" placeholder="Carrier">
+                <label for="carrier">Carrier&#42;</label>
+              </div>
+            </fieldset>
+            <div class="button-box">
+              <a id="cancel-one" class="button secondary color-two"><span class="button-label">Cancel</span></a>
+              <a id="new-account-next" class="button color-one"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+            </div>
+          </form>
+        </div>
+  
+        <div id="register-two" class="register two">
+          <form class="sm" novalidate>
+            <fieldset>
+              <legend>Email Address</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message"></span>
+                <input type="email" name="new-email-address" id="new-email-address" class="new-email-address" placeholder="Enter your email address">
+                <label for="new-email-address">Email Address&#42;</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Password</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">This password does not meet the minimum requirements below</span>
+                <input type="password" name="new-password" id="new-password" placeholder="Choose a password" maxlength="50" minlength="8" autocomplete="new-password">
+                <label for="new-password">Password&#42;</label>
+                <span toggle="#new-password" class="la la-eye-slash show-hide-password"></span>
+                <span class="valid password"><i class="la la-check-circle-o"></i></span>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Confirm Password</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Your passwords do not match</span>
+                <input type="password" name="new-confirm-password" id="new-confirm-password" placeholder="Confirm your password" maxlength="50" minlength="8" autocomplete="new-password">
+                <label for="new-confirm-password">Confirm Password&#42;</label>
+                <span toggle="#new-confirm-password" class="la la-eye-slash show-hide-password"></span>
+                <span class="valid password"><i class="la la-check-circle-o"></i></span>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Terms &amp; Conditions</legend>
+              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message checkbox">You must check this box to continue</span>
+                <input type="checkbox" name="terms" id="terms">
+                <label class="checkbox" for="terms"><span>I agree to this site's&nbsp;<a id="terms">Terms &amp; Conditions</a></span></label>
+              </div>
+            </fieldset>
+            <div class="button-box">
+              <a href="../start/index.html" id="new-account" class="button color-one"><span class="button-label">Create Account</span></a>
+            </div>
+            <div class="button-box">
+              <a id="new-account-back" class="button secondary color-one"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Back</span></a>
+              <a id="cancel-two" class="button secondary color-two"><span class="button-label">Cancel</span></a>
+            </div>
+          </form>
+        </div>
 
-      <section id="register-two" class="register two animated">
-        <form class="sm" novalidate>
-          <fieldset>
-            <legend>Email Address</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message"></span>
-              <input type="email" name="new-email-address" id="new-email-address" class="new-email-address" placeholder="Enter your email address">
-              <label for="new-email-address">Email Address&#42;</label>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Password</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message">This password does not meet the minimum requirements below</span>
-              <input type="password" name="new-password" id="new-password" placeholder="Choose a password" maxlength="50" minlength="8" autocomplete="new-password">
-              <label for="new-password">Password&#42;</label>
-              <span toggle="#new-password" class="la la-eye-slash show-hide-password"></span>
-              <span class="valid password"><i class="la la-check-circle-o"></i></span>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Confirm Password</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message">Your passwords do not match</span>
-              <input type="password" name="new-confirm-password" id="new-confirm-password" placeholder="Confirm your password" maxlength="50" minlength="8" autocomplete="new-password">
-              <label for="new-confirm-password">Confirm Password&#42;</label>
-              <span toggle="#new-confirm-password" class="la la-eye-slash show-hide-password"></span>
-              <span class="valid password"><i class="la la-check-circle-o"></i></span>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Terms &amp; Conditions</legend>
-            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message checkbox">You must check this box to continue</span>
-              <input type="checkbox" name="terms" id="terms">
-              <label class="checkbox" for="terms"><span>I agree to this site's&nbsp;<a id="terms">Terms &amp; Conditions</a></span></label>
-            </div>
-          </fieldset>
-          <div class="button-box">
-            <a href="../start/index.html" id="new-account" class="button color-one"><span class="button-label">Create Account</span></a>
-          </div>
-          <div class="button-box">
-            <a id="new-account-back" class="button secondary color-one"><span class="button-label">back</span></a>
-            <a id="cancel-two" class="button secondary color-two"><span class="button-label">Cancel</span></a>
-          </div>
-        </form>
       </section>
     </main>
     <!-- scripts -->
