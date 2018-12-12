@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio Express Contents</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../../../src/css/app.css">
+  </head>
+  <body class="animated">
+    <section id="alerts" class="alerts">
+      <div class="alert-bar error">
+        <div class="alert-bar-details">
+          <span><i class="la la-exclamation-circle"></i></span>
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss error"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="alert-bar success">
+        <div class="alert-bar-details">
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss success"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="alert-bar system">
+        <div class="alert-bar-details">
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss system"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="timeout">
+        <div class="text center md">
+          <h1>Timeout Warning</h1>
+          <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the <b>Continue</b> button to keep working.</p>
+        </div>
+        <div class="button-box">
+          <button class="button color-one continue"><span class="button-label">Continue</span></button>
+        </div>
+      </div>
+    </section>
+    <main>
+      <div class="limits-meter animated fadeInUp">
+        <h1>Contents Limit</h1>
+        <div class="limit-gauge">
+          <span class="high" style="width: 90%;"></span>
+        </div>
+        <div class="range">
+          <small>{$min}</small>
+          <small>{$max}</small>
+        </div>
+      </div>
+      <section id="inventory" class="express-contents-list">
+        <h1 class="animated fadeInUp">Living Room Inventory</h1>
+        <ul>
+          <li class="animated fadeInUp">
+            <input id="item-1" type="checkbox" name="item-1" class="accordian">
+            <label for="item-1" class="top-line">
+              <span class="item-number">1</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Chairs</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$1,000</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>1</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Chairs">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="value" id="value" value="1000">
+                      <label for="value">Value</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="1">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="animated fadeInUp">
+            <input id="item-2" type="checkbox" name="item-2" class="accordian">
+            <label for="item-2" class="top-line">
+              <span class="item-number">2</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Coffee Table</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$2,5000</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>1</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Coffee Table">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="value" id="value" value="2500">
+                      <label for="value">Value</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="1">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="animated fadeInUp">
+            <input id="item-3" type="checkbox" name="item-3" class="accordian">
+            <label for="item-3" class="top-line">
+              <span class="item-number">3</span>
+              <div class="description">
+                <span>Desc</span>
+                <span>Sofa</span>
+              </div>
+              <div class="value">
+                <span>Value</span>
+                <span>$8,000</span>
+              </div>
+              <div class="quantity">
+                <span>Qty</span>
+                <span>1</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="edit-product-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Error message</span>
+                    <input type="text" name="description" id="description" value="Sofa">
+                    <label for="description">Description</label>
+                    <span class="valid"><i class="la la-check-circle-o"></i></span>
+                  </div>
+                </fieldset>
+                <div class="small">
+                  <fieldset>
+                    <legend>Value</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="value" id="value" value="8000">
+                      <label for="value">Value</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Qty</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Error message</span>
+                      <input type="number" name="quantity" id="quantity" value="1">
+                      <label for="quantity">Quantity</label>
+                      <span class="valid"><i class="la la-check-circle-o"></i></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="button-box">
+                  <span id="photo" class="button upload round color-two"><input type="file" id="files" name="files[]" multiple><i class="la la-camera-retro"></i></span>
+                  <a id="save" class="button color-two"><span class="button-label">Save</span></a>
+                </div>
+              </form>
+            </div>
+          </li>
+        </ul>
+        <div class="button-box submit">
+          <a href="../processing/index.html" id="next" class="button color-one animated fadeInUp"><span class="button-label">Submit</span></a>
+        </div>
+      </section>
+    </main>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../assets/scripts/app.js"></script>
+  </body>
+</html>

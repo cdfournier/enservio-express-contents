@@ -3379,7 +3379,7 @@ main.security {
   list-style-type: none; }
 
 .express-contents-list ul:last-of-type {
-  padding: 0 0 6rem; }
+  padding: 0 0 10rem; }
 
 .express-contents-list ul h2 {
   padding: 0 0 1rem;
@@ -3471,7 +3471,7 @@ main.security {
 .express-contents-list ul li .top-line .quantity,
 .express-contents-list ul li .top-line .photos,
 .express-contents-list ul li .top-line .value {
-  text-align: center; }
+  text-align: right; }
 
 .express-contents-list ul li i.la.la-angle-down {
   line-height: 1.25;
@@ -3508,6 +3508,7 @@ main.security {
   padding: 2rem 0 0; }
 
 .express-contents-list .button-box.submit {
+  flex-direction: column;
   position: fixed;
   right: 0;
   bottom: 0;
