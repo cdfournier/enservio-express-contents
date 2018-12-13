@@ -84,6 +84,26 @@ span.error-message {
 }
 
 
+// BIG ROUND BUTTONS COUNTER
+span.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -1.5rem;
+  left: -1.25rem;
+  width: 1.5rem;
+  max-width: 1.5rem;
+  height: 1.5rem;
+  max-height: 1.5rem;
+  border-radius: 100%;
+  font-size: 0.833rem;
+  font-weight: 500;
+  color: $white;
+  background-color: $color-two;
+}
+
+
 // LOADING SCREEN
 .bg-color-one {background-color: $color-one;}
 

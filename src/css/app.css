@@ -2811,6 +2811,23 @@ span.error-message {
   font-size: 2rem;
   line-height: 1; }
 
+span.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -1.5rem;
+  left: -1.25rem;
+  width: 1.5rem;
+  max-width: 1.5rem;
+  height: 1.5rem;
+  max-height: 1.5rem;
+  border-radius: 100%;
+  font-size: 0.833rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #0f4a92; }
+
 .bg-color-one {
   background-color: #2e84ed; }
 
