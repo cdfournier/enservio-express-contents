@@ -323,6 +323,7 @@ main.security {
 .limits-meter .limit-gauge > span {
   display: block;
   height: inherit;
+  @include transition(width, 0.5s, ease);
 }
 
 .limits-meter .limit-gauge > span.low {background-color: $valid;}
