@@ -3597,11 +3597,11 @@ main.security {
 .limits-meter .limit-gauge > span {
   display: block;
   height: inherit;
-  -webkit-transition: width 0.5s ease 0s;
-  -moz-transition: width 0.5s ease 0s;
-  -ms-transition: width 0.5s ease 0s;
-  -o-transition: width 0.5s ease 0s;
-  transition: width 0.5s ease 0s; }
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s; }
 
 .limits-meter .limit-gauge > span.low {
   background-color: #008000; }
