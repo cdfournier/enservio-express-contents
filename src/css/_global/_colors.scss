@@ -1,0 +1,802 @@
+// COLOR PALETTE
+$black: #000000;
+$white: #ffffff;
+
+$tango: #f27e20;
+$hover: #e17319;
+$shark: #1b1e24;
+$mako: #444853;
+$palesky: #6d7881;
+$iron: #cccece;
+$silver: #ededed;
+$smoke: #f9f9f9;
+$keppel: #36aba6;
+$grassland: #1dbd55;
+$saffron: #f7b617;
+$monza: #d0021b;
+$bluesky: #0d31f5;
+$indigo: #2b387f;
+$purplerain: #992a8c;
+
+
+// ACCENT COLOR BACKGROUNDS
+// TANGO
+.bg-tango {
+  color: $white;
+  background-color: $tango;
+}
+
+.bg-tango .button {
+  border: 1px solid $white;
+  color: $tango;
+  background-color: $white;
+}
+
+.bg-tango .button:hover, .bg-tango .button:focus {
+  color: $white;
+  background-color: $tango;
+}
+
+.bg-tango .button span.number {
+  color: $white;
+  background-color: $tango;
+}
+
+.bg-tango .button:hover span.number, .bg-tango .button:focus span.number {
+  color: $tango;
+  background-color: $white;
+}
+
+.bg-tango a {color: $white;}
+
+.bg-tango a:hover, .bg-tango a:focus {color: $shark;}
+
+.bg-tango input {
+  border-bottom: 1px solid $white;
+  color: $white;
+}
+
+.bg-tango input::placeholder {color: $white;}
+
+.bg-tango input:focus {border-bottom: 1px solid $shark;}
+
+.bg-tango input[type="checkbox"] {
+  border: 1px solid $white;
+  background-color: $tango;
+}
+
+.bg-tango input[type="checkbox"]:checked:before {color: $tango;}
+
+.bg-tango input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $white;
+  background-color: $white;
+}
+
+
+// KEPPEL
+.bg-keppel {
+  color: $white;
+  background-color: $keppel;
+}
+
+.bg-keppel .button {
+  border: 1px solid $white;
+  color: $keppel;
+  background-color: $white;
+}
+
+.bg-keppel .button:hover, .bg-keppel .button:focus {
+  color: $white;
+  background-color: $keppel;
+}
+
+.bg-keppel .button span.number {
+  color: $white;
+  background-color: $keppel;
+}
+
+.bg-keppel .button:hover span.number, .bg-keppel .button:focus span.number {
+  color: $keppel;
+  background-color: $white;
+}
+
+.bg-keppel a {color: $white;}
+
+.bg-keppel a:hover, .bg-keppel a:focus {color: $shark;}
+
+.bg-keppel input {
+  border-bottom: 1px solid $white;
+  color: $white;
+}
+
+.bg-keppel input::placeholder {color: $white;}
+
+.bg-keppel input:focus {border-bottom: 1px solid $shark;}
+
+.bg-keppel input[type="checkbox"] {
+  border: 1px solid $white;
+  background-color: $keppel;
+}
+
+.bg-keppel input[type="checkbox"]:checked:before {color: $keppel;}
+
+.bg-keppel input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $white;
+  background-color: $white;
+}
+
+
+// GRASSLAND
+.bg-grassland {
+  color: $white;
+  background-color: $grassland;
+}
+
+.bg-grassland .button {
+  border: 1px solid $white;
+  color: $grassland;
+  background-color: $white;
+}
+
+.bg-grassland .button:hover, .bg-grassland .button:focus {
+  color: $white;
+  background-color: $grassland;
+}
+
+.bg-grassland .button span.number {
+  color: $white;
+  background-color: $grassland;
+}
+
+.bg-grassland .button:hover span.number, .bg-grassland .button:focus span.number {
+  color: $grassland;
+  background-color: $white;
+}
+
+.bg-grassland a {color: $white;}
+
+.bg-grassland a:hover, .bg-grassland a:focus {color: $shark;}
+
+.bg-grassland input {
+  border-bottom: 1px solid $white;
+  color: $white;
+}
+
+.bg-grassland input::placeholder {color: $white;}
+
+.bg-grassland input:focus {border-bottom: 1px solid $shark;}
+
+.bg-grassland input[type="checkbox"] {
+  border: 1px solid $white;
+  background-color: $grassland;
+}
+
+.bg-grassland input[type="checkbox"]:checked:before {color: $grassland;}
+
+.bg-grassland input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $white;
+  background-color: $white;
+}
+
+
+// SAFFRON
+.bg-saffron {
+  color: $white;
+  background-color: $saffron;
+}
+
+.bg-saffron .button {
+  border: 1px solid $white;
+  color: $saffron;
+  background-color: $white;
+}
+
+.bg-saffron .button:hover, .bg-saffron .button:focus {
+  color: $white;
+  background-color: $saffron;
+}
+
+.bg-saffron .button span.number {
+  color: $white;
+  background-color: $saffron;
+}
+
+.bg-saffron .button:hover span.number, .bg-saffron .button:focus span.number {
+  color: $saffron;
+  background-color: $white;
+}
+
+.bg-saffron a {color: $white;}
+
+.bg-saffron a:hover, .bg-saffron a:focus {color: $shark;}
+
+.bg-saffron input {
+  border-bottom: 1px solid $white;
+  color: $white;
+}
+
+.bg-saffron input::placeholder {color: $white;}
+
+.bg-saffron input:focus {border-bottom: 1px solid $shark;}
+
+.bg-saffron input[type="checkbox"] {
+  border: 1px solid $white;
+  background-color: $saffron;
+}
+
+.bg-saffron input[type="checkbox"]:checked:before {color: $saffron;}
+
+.bg-saffron input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $white;
+  background-color: $white;
+}
+
+
+// MONZA
+.bg-monza {
+  color: $white;
+  background-color: $monza;
+}
+
+.bg-monza .button {
+  border: 1px solid $white;
+  color: $monza;
+  background-color: $white;
+}
+
+.bg-monza .button:hover, .bg-monza .button:focus {
+  color: $white;
+  background-color: $monza;
+}
+
+.bg-monza .button span.number {
+  color: $white;
+  background-color: $monza;
+}
+
+.bg-monza .button:hover span.number, .bg-monza .button:focus span.number {
+  color: $monza;
+  background-color: $white;
+}
+
+.bg-monza a {color: $white;}
+
+.bg-monza a:hover, .bg-monza a:focus {color: $iron;}
+
+.bg-monza input {
+  border-bottom: 1px solid $white;
+  color: $white;
+}
+
+.bg-monza input::placeholder {color: $white;}
+
+.bg-monza input:focus {border-bottom: 1px solid $iron;}
+
+.bg-monza input[type="checkbox"] {
+  border: 1px solid $white;
+  background-color: $monza;
+}
+
+.bg-monza input[type="checkbox"]:checked:before {color: $monza;}
+
+.bg-monza input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $white;
+  background-color: $white;
+}
+
+
+// BLUESKY
+.bg-bluesky {
+  color: $white;
+  background-color: $bluesky;
+}
+
+.bg-bluesky .button {
+  border: 1px solid $white;
+  color: $bluesky;
+  background-color: $white;
+}
+
+.bg-bluesky .button:hover, .bg-bluesky .button:focus {
+  color: $white;
+  background-color: $bluesky;
+}
+
+.bg-bluesky .button span.number {
+  color: $white;
+  background-color: $bluesky;
+}
+
+.bg-bluesky .button:hover span.number, .bg-bluesky .button:focus span.number {
+  color: $bluesky;
+  background-color: $white;
+}
+
+.bg-bluesky a {color: $white;}
+
+.bg-bluesky a:hover, .bg-bluesky a:focus {color: $iron;}
+
+.bg-bluesky input {
+  border-bottom: 1px solid $white;
+  color: $white;
+}
+
+.bg-bluesky input::placeholder {color: $white;}
+
+.bg-bluesky input:focus {border-bottom: 1px solid $iron;}
+
+.bg-bluesky input[type="checkbox"] {
+  border: 1px solid $white;
+  background-color: $bluesky;
+}
+
+.bg-bluesky input[type="checkbox"]:checked:before {color: $bluesky;}
+
+.bg-bluesky input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $white;
+  background-color: $white;
+}
+
+
+// INDIGO
+.bg-indigo {
+  color: $white;
+  background-color: $indigo;
+}
+
+.bg-indigo .button {
+  border: 1px solid $white;
+  color: $indigo;
+  background-color: $white;
+}
+
+.bg-indigo .button:hover, .bg-indigo .button:focus {
+  color: $white;
+  background-color: $indigo;
+}
+
+.bg-indigo .button span.number {
+  color: $white;
+  background-color: $indigo;
+}
+
+.bg-indigo .button:hover span.number, .bg-indigo .button:focus span.number {
+  color: $indigo;
+  background-color: $white;
+}
+
+.bg-indigo a {color: $white;}
+
+.bg-indigo a:hover, .bg-indigo a:focus {color: $iron;}
+
+.bg-indigo input {
+  border-bottom: 1px solid $white;
+  color: $white;
+}
+
+.bg-indigo input::placeholder {color: $white;}
+
+.bg-indigo input:focus {border-bottom: 1px solid $iron;}
+
+.bg-indigo input[type="checkbox"] {
+  border: 1px solid $white;
+  background-color: $indigo;
+}
+
+.bg-indigo input[type="checkbox"]:checked:before {color: $indigo;}
+
+.bg-indigo input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $white;
+  background-color: $white;
+}
+
+
+// PURPLE RAIN
+.bg-purplerain {
+  color: $white;
+  background-color: $purplerain;
+}
+
+.bg-purplerain .button {
+  border: 1px solid $white;
+  color: $purplerain;
+  background-color: $white;
+}
+
+.bg-purplerain .button:hover, .bg-purplerain .button:focus {
+  color: $white;
+  background-color: $purplerain;
+}
+
+.bg-purplerain .button span.number {
+  color: $white;
+  background-color: $purplerain;
+}
+
+.bg-purplerain .button:hover span.number, .bg-purplerain .button:focus span.number {
+  color: $purplerain;
+  background-color: $white;
+}
+
+.bg-purplerain a {color: $white;}
+
+.bg-purplerain a:hover, .bg-purplerain a:focus {color: $iron;}
+
+.bg-purplerain input {
+  border-bottom: 1px solid $white;
+  color: $white;
+}
+
+.bg-purplerain input::placeholder {color: $white;}
+
+.bg-purplerain input:focus {border-bottom: 1px solid $iron;}
+
+.bg-purplerain input[type="checkbox"] {
+  border: 1px solid $white;
+  background-color: $purplerain;
+}
+
+.bg-purplerain input[type="checkbox"]:checked:before {color: $purplerain;}
+
+.bg-purplerain input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $white;
+  background-color: $white;
+}
+
+
+// NEUTRAL COLOR BACKGROUNDS
+// BLACK
+.bg-black {
+  color: $white;
+  background-color: $black;
+}
+
+.bg-black .button {
+  border: 1px solid $white;
+  color: $black;
+  background-color: $white;
+}
+
+.bg-black .button:hover, .bg-black .button:focus {
+  color: $white;
+  background-color: $black;
+}
+
+.bg-black .button span.number {
+  color: $white;
+  background-color: $black;
+}
+
+.bg-black .button:hover span.number, .bg-black .button:focus span.number {
+  color: $black;
+  background-color: $white;
+}
+
+.bg-black a {color: $white;}
+
+.bg-black a:hover, .bg-black a:focus {color: $iron;}
+
+.bg-black input {
+  border-bottom: 1px solid $white;
+  color: $white;
+}
+
+.bg-black input::placeholder {color: $white;}
+
+.bg-black input[type="checkbox"] {
+  border: 1px solid $white;
+  background-color: $black;
+}
+
+.bg-black input[type="checkbox"]:checked:before {color: $black;}
+
+.bg-black input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $white;
+  background-color: $white;
+}
+
+
+// SHARK
+.bg-shark {
+  color: $white;
+  background-color: $shark;
+}
+
+.bg-shark .button {
+  border: 1px solid $white;
+  color: $shark;
+  background-color: $white;
+}
+
+.bg-shark .button:hover, .bg-shark .button:focus {
+  color: $white;
+  background-color: $shark;
+}
+
+.bg-shark .button span.number {
+  color: $white;
+  background-color: $shark;
+}
+
+.bg-shark .button:hover span.number, .bg-shark .button:focus span.number {
+  color: $shark;
+  background-color: $white;
+}
+
+.bg-shark a {color: $white;}
+
+.bg-shark a:hover, .bg-shark a:focus {color: $tango;}
+
+.bg-shark input {
+  border-bottom: 1px solid $white;
+  color: $white;
+}
+
+.bg-shark input::placeholder {color: $white;}
+
+.bg-shark input[type="checkbox"] {
+  border: 1px solid $white;
+  background-color: $shark;
+}
+
+.bg-shark input[type="checkbox"]:checked:before {color: $shark;}
+
+.bg-shark input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $white;
+  background-color: $white;
+}
+
+
+// MAKO
+.bg-mako {
+  color: $white;
+  background-color: $mako;
+}
+
+.bg-mako .button {
+  border: 1px solid $white;
+  color: $mako;
+  background-color: $white;
+}
+
+.bg-mako .button:hover, .bg-mako .button:focus {
+  color: $white;
+  background-color: $mako;
+}
+
+.bg-mako .button span.number {
+  color: $white;
+  background-color: $mako;
+}
+
+.bg-mako .button:hover span.number, .bg-mako .button:focus span.number {
+  color: $mako;
+  background-color: $white;
+}
+
+.bg-mako a {color: $white;}
+
+.bg-mako a:hover, .bg-mako a:focus {color: $tango;}
+
+.bg-mako input {
+  border-bottom: 1px solid $white;
+  color: $white;
+}
+
+.bg-mako input::placeholder {color: $white;}
+
+.bg-mako input[type="checkbox"] {
+  border: 1px solid $white;
+  background-color: $mako;
+}
+
+.bg-mako input[type="checkbox"]:checked:before {color: $mako;}
+
+.bg-mako input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $white;
+  background-color: $white;
+}
+
+
+// PALE SKY
+.bg-palesky {
+  color: $white;
+  background-color: $palesky;
+}
+
+.bg-palesky .button {
+  border: 1px solid $white;
+  color: $palesky;
+  background-color: $white;
+}
+
+.bg-palesky .button:hover, .bg-palesky .button:focus {
+  color: $white;
+  background-color: $palesky;
+}
+
+.bg-palesky .button span.number {
+  color: $white;
+  background-color: $palesky;
+}
+
+.bg-palesky .button:hover span.number, .bg-palesky .button:focus span.number {
+  color: $palesky;
+  background-color: $white;
+}
+
+.bg-palesky a {color: $white;}
+
+.bg-palesky a:hover, .bg-palesky a:focus {color: $tango;}
+
+.bg-palesky input {
+  border-bottom: 1px solid $white;
+  color: $white;
+}
+
+.bg-palesky input::placeholder {color: $white;}
+
+.bg-palesky input[type="checkbox"] {
+  border: 1px solid $white;
+  background-color: $palesky;
+}
+
+.bg-palesky input[type="checkbox"]:checked:before {color: $palesky;}
+
+.bg-palesky input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $white;
+  background-color: $white;
+}
+
+
+// IRON
+.bg-iron {
+  color: $black;
+  background-color: $iron;
+}
+
+.bg-iron .button {
+  border: 1px solid $black;
+  color: $iron;
+  background-color: $black;
+}
+
+.bg-iron .button:hover, .bg-iron .button:focus {
+  color: $black;
+  background-color: $iron;
+}
+
+.bg-iron .button span.number {
+  color: $black;
+  background-color: $iron;
+}
+
+.bg-iron .button:hover span.number, .bg-iron .button:focus span.number {
+  color: $iron;
+  background-color: $black;
+}
+
+.bg-iron a {color: $black;}
+
+.bg-iron a:hover, .bg-iron a:focus {color: $tango;}
+
+.bg-iron input {
+  border-bottom: 1px solid $black;
+  color: $black;
+}
+
+.bg-iron input::placeholder {color: $black;}
+
+.bg-iron input[type="checkbox"] {
+  border: 1px solid $black;
+  background-color: $iron;
+}
+
+.bg-iron input[type="checkbox"]:checked:before {color: $white;}
+
+.bg-iron input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $black;
+  background-color: $black;
+}
+
+
+// SILVER
+.bg-silver {
+  color: $black;
+  background-color: $silver;
+}
+
+.bg-silver .button {
+  border: 1px solid $black;
+  color: $silver;
+  background-color: $black;
+}
+
+.bg-silver .button:hover, .bg-silver .button:focus {
+  color: $black;
+  background-color: $silver;
+}
+
+.bg-silver .button span.number {
+  color: $black;
+  background-color: $silver;
+}
+
+.bg-silver .button:hover span.number, .bg-silver .button:focus span.number {
+  color: $silver;
+  background-color: $black;
+}
+
+.bg-silver a {color: $black;}
+
+.bg-silver a:hover, .bg-silver a:focus {color: $tango;}
+
+.bg-silver input {
+  border-bottom: 1px solid $black;
+  color: $black;
+}
+
+.bg-silver input::placeholder {color: $black;}
+
+.bg-silver input[type="checkbox"] {
+  border: 1px solid $black;
+  background-color: $silver;
+}
+
+.bg-silver input[type="checkbox"]:checked:before {color: $silver;}
+
+.bg-silver input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $black;
+  background-color: $black;
+}
+
+
+// SMOKE
+.bg-smoke {
+  color: $black;
+  background-color: $smoke;
+}
+
+.bg-smoke .button {
+  border: 1px solid $black;
+  color: $smoke;
+  background-color: $black;
+}
+
+.bg-smoke .button:hover, .bg-smoke .button:focus {
+  color: $black;
+  background-color: $smoke;
+}
+
+.bg-smoke .button span.number {
+  color: $black;
+  background-color: $smoke;
+}
+
+.bg-smoke .button:hover span.number, .bg-smoke .button:focus span.number {
+  color: $smoke;
+  background-color: $black;
+}
+
+.bg-smoke a {color: $tango;}
+
+.bg-smoke a:hover, .bg-smoke a:focus {color: $black;}
+
+.bg-smoke input {
+  border-bottom: 1px solid $black;
+  color: $black;
+}
+
+.bg-smoke input::placeholder {color: $black;}
+
+.bg-smoke input[type="checkbox"] {
+  border: 1px solid $black;
+  background-color: $smoke;
+}
+
+.bg-smoke input[type="checkbox"]:checked:before {color: $smoke;}
+
+.bg-smoke input[type="checkbox"]:checked:not(:disabled) {
+  border-color: $black;
+  background-color: $black;
+}
