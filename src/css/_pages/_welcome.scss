@@ -31,3 +31,7 @@
 .loading .logo .l-dot {fill: $monza;}
 
 .loading.loaded {@include transform(translateY(-100%));}
+
+
+// WELCOME
+.welcome {max-width: 100vw;}

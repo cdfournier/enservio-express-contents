@@ -42,27 +42,17 @@
             </div>
           </div>
         </div>
-        <div class="voice one hidden">
+        <div class="voice hidden">
           <a id="listen" class="icon inactive"><i class="la la-microphone"></i></a>
+          <!-- <a href="../onsite/index.html" id="listen" class="icon inactive"><i class="la la-microphone"></i></a> -->
         </div>
         <div class="chat two hidden">
           <div class="chat-bot reverse">
             <div class="small-avatar"><img src="../../src/images/guide-melisandre.jpg" align="You"></div>
             <div class="bubble">
-              <p>I need to do an onsite inventory</p>
+              <p>Onsite inventory</p>
             </div>
           </div>
-        </div>
-        <div class="chat three hidden">
-          <div class="chat-bot">
-            <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
-            <div class="bubble">
-              <p>Okay. Let's do an onsite inventory. Where do you want to start?</p>
-            </div>
-          </div>
-        </div>
-        <div class="voice two hidden">
-          <a id="listen" class="icon inactive"><i class="la la-microphone"></i></a>
         </div>
       </section>
       <section data-qa="loading" class="loading">
@@ -90,23 +80,24 @@
         }, 6500);
         setTimeout(function() {
           $('.chat.one').removeClass('hidden')
-          $('.voice.one').removeClass('hidden')
-          $('.voice.one .icon').removeClass('inactive')
-          $('.voice.one .icon').addClass('active animated pulse infinite')
+        }, 7000);
+        setTimeout(function() {
+          $('.voice').removeClass('hidden')
+          $('.voice .icon').removeClass('inactive')
+          $('.voice .icon').addClass('active animated pulse infinite')
         }, 7500);
       });
 
       $('#listen').click(function() {
-        $('.voice.one .icon').removeClass('active animated pulse infinite')
-        $('.voice.one .icon').addClass('inactive')
+        $('.voice .icon').removeClass('active animated pulse infinite')
+        $('.voice .icon').addClass('inactive')
         $('.chat.two').removeClass('hidden')
           setTimeout(function() {
-            $('.chat.three').removeClass('hidden')
-            $('.voice.two').removeClass('hidden')
-            $('.voice.two .icon').removeClass('inactive')
-            $('.voice.two .icon').addClass('active animated pulse infinite')
-          }, 2500);
+            $(window.location.href = "../onsite/index.html");
+          }, 3000);
       });
     </script>
+    <script>
+	</script>
   </body>
 </html>

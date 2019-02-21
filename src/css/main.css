@@ -1667,7 +1667,9 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
   margin: 0;
   padding: 0 0 2rem; }
 
@@ -1799,8 +1801,12 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 100%;
   max-width: 100%;
+  min-width: 100%;
+  height: auto;
+  max-height: 100rem;
   margin: 0 auto;
   padding: 1rem 1rem 0;
   opacity: 1;
@@ -1808,9 +1814,16 @@ main {
   -moz-transition: all 0.5s ease 0s;
   -ms-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s; }
+  transition: all 0.5s ease 0s;
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%); }
 
 .chat.hidden {
+  position: absolute;
+  max-width: 0;
   opacity: 0;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
@@ -2079,6 +2092,9 @@ main {
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%); }
+
+.welcome {
+  max-width: 100vw; }
 
 .onsite {
   display: flex;
