@@ -17,37 +17,7 @@
 }
 
 
-// ONSITE SETUP SLIDER
-.onsite .slider.int {min-width: 200%;}
-.onsite .slider.int.slide-two {@include transform(translateX(-50%));}
-
-
-// SIGN IN SLIDER
-.sign-in .slider.int {min-width: 300%;}
-.sign-in .slider.int.slide-two {@include transform(translateX(-33.3%));}
-.sign-in .slider.int.slide-three {@include transform(translateX(-66.6%));}
-
-
-// SIGN UP SLIDER
-.sign-up .slider.int {min-width: 200%;}
-.sign-up .slider.int.slide-two {@include transform(translateX(-50%));}
-
-
-// INTRODUCTION SLIDER
-.introduction .slider.int {min-width: 600%;}
-.introduction .slider.int.slide-two {@include transform(translateX(-16.6%));}
-.introduction .slider.int.slide-three {@include transform(translateX(-33.2%));}
-.introduction .slider.int.slide-four {@include transform(translateX(-49.8%));}
-.introduction .slider.int.slide-five {@include transform(translateX(-66.4%));}
-.introduction .slider.int.slide-six {@include transform(translateX(-83%));}
-
-
-/*
-.introduction .slider-dots {background-color: $white;}
-.slider-dots ul li.slider-dot.one.show {background-color: $color-one;}
-.slider-dots ul li.slider-dot.two.show {background-color: $color-one;}
-.slider-dots ul li.slider-dot.three.show {background-color: $color-one;}
-.slider-dots ul li.slider-dot.four.show {background-color: $color-one;}
-.slider-dots ul li.slider-dot.five.show {background-color: $color-one;}
-.slider-dots ul li.slider-dot.six.show {background-color: $color-one;}
-*/
+// WELCOME SETUP SLIDER
+.welcome .slider.int {min-width: 300%;}
+.welcome .slider.int.slide-two {@include transform(translateX(-33.3%));}
+.welcome .slider.int.slide-three {@include transform(translateX(-66.6%));}

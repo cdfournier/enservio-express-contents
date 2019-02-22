@@ -23,15 +23,53 @@
 }
 
 .loading .logo {
-  width: 50%;
-  max-width: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.loading .logo .l-bod {fill: $white;}
-.loading .logo .l-dot {fill: $monza;}
+.loading .logo svg {
+  max-width: 16rem;
+  margin: 0 auto;
+}
 
-.loading.loaded {@include transform(translateY(-100%));}
+.loading .logo .l-bod {
+  fill: $white;
+  @include animation-delay(0.5s);
+  @include animation-duration(0.5s);
+}
+
+.loading .logo .l-dot {
+  fill: $monza;
+  @include animation-delay(1s);
+  @include animation-duration(0.5s);
+}
+
+.loading .logo .express-contents {
+  fill: $white;
+  @include animation-delay(1.5s);
+}
+
+.loading.loaded {@include transform(translateY(-100rem));}
 
 
 // WELCOME
-.welcome {max-width: 100vw;}
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100%;
+}
+
+.welcome .setup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  padding: 0 0 2rem;
+}

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio | Express Contents Onsite Inventory</title>
+    <title>Enservio | Onsite Inventory Capture</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -33,49 +33,20 @@
         </div>
       </section>
       <section data-qa="onsite" class="onsite">
-        <div class="slider ext">
-          <div class="slider int">
-            <div class="setup one">
-              <div class="chat">
-                <div class="chat-bot animated fadeInUp">
-                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
-                  <div class="bubble">
-                    <p>Okay. I'm ready to help you with your Onsite Inventory.</p>
-                  </div>
-                </div>
-                <div class="chat-bot animated fadeInUp delay-1s">
-                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
-                  <div class="bubble">
-                    <p>Tap <em>Start</em> whenever you're ready.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="button-box animated fadeInUp delay-2s">
-                <a class="button slide--two"><span class="button-label">Start</span></a>
-              </div>
+        <div class="chat one animated slideInDown">
+          <div class="chat-bot">
+            <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+            <div class="bubble">
+              <p>Ready when you are.</p>
             </div>
-            <div class="setup two">
-              <div class="chat one hidden">
-                <div class="chat-bot">
-                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
-                  <div class="bubble">
-                    <p>Which room do you want to start with?</p>
-                  </div>
-                </div>
-              </div>
-              <div class="voice hidden">
-                <div id="waveform" class="waveform"></div>
-                <a id="listen" class="icon inactive slide--three"><i class="la la-microphone"></i></a>
-              </div>
-              <div class="chat two hidden">
-                <div class="chat-bot reverse">
-                  <div class="small-avatar"><img src="../../src/images/guide-melisandre.jpg" align="You"></div>
-                  <div class="bubble">
-                    <p>The bedroom.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
+        </div>
+        <div class="voice one hidden">
+          <a id="listen-one" class="icon active animated pulse infinite listen one"><i class="la la-microphone"></i></a>
+        </div>
+        <div class="indicator one hidden">
+          <div class="indicator-gauge">
+            <span></span>
           </div>
         </div>
       </section>
@@ -85,21 +56,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="../../src/scripts/express-contents.js"></script>
     <script>
-      $('.slide--two').click(function() {
-        $('.slider.int').addClass('slide-two');
-        $('.chat.one').removeClass('hidden')
-
-          setTimeout(function() {
-            $('.voice').removeClass('hidden')
-            $('.voice .icon').removeClass('inactive')
-            $('.voice .icon').addClass('active animated pulse infinite')
-          }, 500);
+      $(document).ready(function() {
+        setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1000);
       });
 
-      $('#listen').click(function() {
-        $('.voice .icon').removeClass('active animated pulse infinite')
-        $('.voice .icon').addClass('inactive')
-        $('.chat.two').removeClass('hidden')
+      $('#listen-one').click(function() {
+        $('.voice.one .icon').removeClass('active animated pulse infinite');
+        $('.voice.one .icon').addClass('inactive');
+        $('.indicator.one').removeClass('hidden');
+          setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1000);
+          setTimeout(function() {$(window.location.href = '../item-summary/index.html')}, 6000);
       });
     </script>
   </body>
