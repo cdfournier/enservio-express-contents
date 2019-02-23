@@ -73,7 +73,7 @@ input {
   width: 100%;
   height: 2.5rem;
   margin: 0;
-  padding: 0 0 0 3rem;
+  padding: 0;
   border-bottom: 1px solid $mako;
   font-weight: 400;
   cursor: text;
@@ -97,84 +97,6 @@ input:focus::placeholder {opacity: 0.5;}
 
 input[type="password"],
 input[type="search"] {padding: 0 3rem 0 0;}
-
-
-// FORM LABEL ICONS
-label[for="description"]:before {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 2.25rem;
-  height: 2.25rem;
-  border: 1px solid $tango;
-  font-family: "LineAwesome";
-  font-size: 1.5rem;
-  font-weight: normal;
-  color: $white;
-  background-color: $tango;
-  content: "\f18e";
-}
-
-label[for="value"]:before {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 2.25rem;
-  height: 2.25rem;
-  border: 1px solid $tango;
-  font-family: "LineAwesome";
-  font-size: 1.5rem;
-  font-weight: normal;
-  color: $white;
-  background-color: $tango;
-  content: "\f294";
-}
-
-label[for="quantity"]:before {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 2.25rem;
-  height: 2.25rem;
-  border: 1px solid $tango;
-  font-family: "LineAwesome";
-  font-size: 1.5rem;
-  font-weight: normal;
-  color: $white;
-  background-color: $tango;
-  content: "\f2c4";
-}
-
-label[for="age"]:before {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 2.25rem;
-  height: 2.25rem;
-  border: 1px solid $tango;
-  font-family: "LineAwesome";
-  font-size: 1.5rem;
-  font-weight: normal;
-  color: $white;
-  background-color: $tango;
-  content: "\f18f";
-}
 
 
 // CHECKBOX
@@ -283,6 +205,13 @@ label.toggle {
   width: auto;
   min-height: 1.75rem;
   padding: 0 4rem 0 0;
+}
+
+
+// AGE
+.age-data {
+  display: flex;
+  flex-direction: row;
 }
 
 

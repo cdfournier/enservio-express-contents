@@ -5,8 +5,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 100%;
-  min-width: 100%;
+  max-width: 32rem;
   height: auto;
   max-height: 100vh;
   margin: 0 auto;
@@ -59,3 +58,7 @@
 .chat-bot.reverse {flex-direction: row-reverse;}
 .chat-bot.reverse .small-avatar {margin: 0 0 0 1rem;}
 .chat-bot.reverse .bubble {border-radius: 0.25rem 0.25rem 0 0.25rem;}
+
+
+// ONSITE CHAT
+.onsite .chat.two {padding: 0 1rem;}

@@ -26,13 +26,32 @@ main {
   display: block;
   position: relative;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 2rem 2rem 0;
 }
 
 .text.center {text-align: center;}
 
 .text.right {text-align: right;}
+
+.text.action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  @include transition(all, 0.325s, ease);
+  @include transform(translateY(0%));
+}
+
+.text.action.hidden {
+  display: none;
+  @include transition(all, 0.325s, ease);
+  @include transform(translateX(200rem));
+}
+
+.text.action.hidden.loaded {display: flex;}
 
 
 // FORM CONTAINER
@@ -41,7 +60,7 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 2rem 2rem 0;
   @include transition(all, 0.325s, ease);
   @include transform(translateY(0%));
@@ -50,7 +69,7 @@ main {
 .form-container.hidden {
   display: none;
   @include transition(all, 0.325s, ease);
-  @include transform(translateY(-200rem));
+  @include transform(translateX(200rem));
 }
 
 .form-container.hidden.loaded {display: flex;}

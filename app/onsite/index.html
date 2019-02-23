@@ -44,6 +44,14 @@
         <div class="voice one hidden">
           <a id="listen-one" class="icon active animated pulse infinite listen one"><i class="la la-microphone"></i></a>
         </div>
+        <div class="chat two hidden">
+          <div class="chat-bot">
+            <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+            <div class="bubble">
+              <p>Give me a second&hellip;</p>
+            </div>
+          </div>
+        </div>
         <div class="indicator one hidden">
           <div class="indicator-gauge">
             <span></span>
@@ -59,11 +67,11 @@
       $(document).ready(function() {
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1000);
       });
-
       $('#listen-one').click(function() {
         $('.voice.one .icon').removeClass('active animated pulse infinite');
         $('.voice.one .icon').addClass('inactive');
-        $('.indicator.one').removeClass('hidden');
+        $('.chat.two').removeClass('hidden');
+          setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 1000);
           setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1000);
           setTimeout(function() {$(window.location.href = '../item-summary/index.html')}, 6000);
       });

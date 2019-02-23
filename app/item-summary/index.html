@@ -18,7 +18,7 @@
       <section data-qa="notifications">
         <div class="notification error">
           <div class="message">
-            <p>This is where the error message goes</p>
+            <p></p>
           </div>
           <span class="dismiss error"><i class="la la-times-circle"></i></span>
         </div>
@@ -33,29 +33,49 @@
         </div>
       </section>
       <section data-qa="item-summary" class="item-summary">
-        <div class="form-container">
+        <div class="chat one">
+          <div class="chat-bot">
+            <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+            <div class="bubble">
+              <p>Here's what I've got so far:</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-container hidden md">
           <form>
-            <fieldset class="animated slideInDown">
+            <fieldset class="description">
               <legend>Description</legend>
-              <label for="description">Description<input type="text" name="description" class="description" placeholder="Description" value="Queen size mattress and box spring"><span class="is-valid"></span></label>
-              <span class="error-message">This is where the error message goes</span>
+              <label for="description">Description<input type="text" name="description" placeholder="Description" value="Queen size mattress and box spring"><span class="is-valid"></span></label>
+              <span class="error-message"></span>
             </fieldset>
-            <fieldset class="half animated slideInDown">
+            <fieldset class="value">
               <legend>Value</legend>
-              <label for="value">Value<input type="number" name="value" class="value" placeholder="Value" value="301.17"><span class="is-valid"></span></label>
-              <span class="error-message">This is where the error message goes</span>
+              <label for="value">Value<input type="text" name="value" placeholder="Value" value="$301.17"><span class="is-valid"></span></label>
+              <span class="error-message"></span>
             </fieldset>
-            <fieldset class="half animated slideInDown">
+            <fieldset class="quantity">
               <legend>Quantity</legend>
-              <label for="quantity">Quantity<input type="number" name="quantity" class="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
-              <span class="error-message">This is where the error message goes</span>
+              <label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+              <span class="error-message"></span>
             </fieldset>
-            <fieldset class="half animated slideInDown">
-              <legend>Age</legend>
-              <label for="age">Age<input type="number" name="age" class="age" placeholder="Age" value="5.4"><span class="is-valid"></span></label>
-              <span class="error-message">This is where the error message goes</span>
+            <fieldset class="years">
+              <legend>Age: Years</legend>
+              <label for="years">Age: Years<input type="number" name="years" class="years" placeholder="Years" value="5"></label>
+              <span class="error-message"></span>
             </fieldset>
+            <fieldset class="months">
+              <legend>Age: Months</legend>
+              <label for="months">Age: Months<input type="number" name="months" class="months" placeholder="Months" min="0" max="11" value="3"></label>
+              <span class="error-message"></span>
+            </fieldset>
+            <div class="button-box">
+              <span class="button camera"><input type="file" id="files" name="files[]"><span class="button-label"><i class="la la-camera"></i></span></span>
+            </div>
           </form>
+        </div>
+        <div class="text action hidden md">
+          <span class="next--done"><a href="#!">Done</a></span>
+          <span class="next--item"><a href="#!">Next Item</a></span>
         </div>
       </section>
     </main>
@@ -64,7 +84,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="../../src/scripts/express-contents.js"></script>
     <script>
-
+      $(document).ready(function() {
+        setTimeout(function() {
+          $('.form-container').addClass('loaded')
+          $('.text.action').addClass('loaded')
+        }, 1000);
+        setTimeout(function() {
+          $('.form-container').removeClass('hidden loaded')
+          $('.text.action').removeClass('hidden loaded')
+        }, 1100);
+      });
     </script>
   </body>
 </html>
