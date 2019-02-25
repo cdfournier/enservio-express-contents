@@ -30,9 +30,12 @@
 }
 
 .item-summary .form-container form input {
-  border-bottom: none;
+  border-bottom: 1px solid $white;
   text-align: center;
+  @include transition(all, 0.25s, ease-in-out);
 }
+
+.item-summary .form-container form input:focus {border-bottom: 1px solid $tango;}
 
 fieldset.quantity, fieldset.years, fieldset.months {width: calc(33% - 1rem);}
 

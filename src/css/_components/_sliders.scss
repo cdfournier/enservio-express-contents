@@ -18,6 +18,10 @@
 
 
 // WELCOME SETUP SLIDER
-.welcome .slider.int {min-width: 300%;}
-.welcome .slider.int.slide-two {@include transform(translateX(-33.3%));}
-.welcome .slider.int.slide-three {@include transform(translateX(-66.6%));}
+.welcome .slider.int {min-width: 200%;}
+.welcome .slider.int.slide-two {@include transform(translateX(-50%));}
+
+
+// ONSITE SETUP SLIDER
+.onsite .slider.int {min-width: 200%;}
+.onsite .slider.int.slide-two {@include transform(translateX(-50%));}

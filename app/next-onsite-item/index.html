@@ -40,7 +40,7 @@
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
-                    <p>Okay. Let's do an onsite inventory. Where do you want to start?</p>
+                    <p>I'm ready for the next item. What room are we in?</p>
                   </div>
                 </div>
               </div>
@@ -64,7 +64,7 @@
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
-                    <p>Okay. We'll start in the bedroom. Tap the <em>Start</em> button when you're ready to begin.</p>
+                    <p>Okay. We're still in the bedroom. Tap the <em>Start</em> button when you're ready to begin.</p>
                   </div>
                 </div>
               </div>
@@ -124,17 +124,17 @@
 
       $('.start').click(function() {
         $('.slider.int').addClass('slide-two');
-          setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
-          setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
+          setTimeout(function() {$('.chat.five').removeClass('hidden')}, 1000);
+          setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1500);
       });
 
       $('#listen-two').click(function() {
         $('.voice.two .icon').removeClass('active animated pulse infinite');
         $('.voice.two .icon').addClass('inactive');
-        setTimeout(function() {$('.chat.six').removeClass('hidden')}, 1000);
-        setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 1500);
-          setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 2500);
-          setTimeout(function() {$(window.location.href = '../item-summary/index.html')}, 7500);
+        $('.chat.six').removeClass('hidden');
+        $('.indicator.two').removeClass('hidden');
+          setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 1000);
+          setTimeout(function() {$(window.location.href = '../item-summary/index.html')}, 6000);
       });
     </script>
   </body>

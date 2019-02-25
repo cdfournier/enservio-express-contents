@@ -311,7 +311,9 @@ form .button-box {
   max-width: 56rem; }
 
 .xs, .sm, .md, .lg, .xl {
-  margin: 0 auto; }
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden; }
 
 main {
   display: flex;
@@ -403,6 +405,16 @@ main {
 
 .form-container.hidden.loaded {
   display: flex; }
+
+.setup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 2rem; }
 
 input[type="password"],
 input[type="checkbox"],
@@ -861,12 +873,13 @@ fieldset.valid .show-hide-password {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #ffffff; }
+  background-color: #f27e20; }
 
 .indicator-gauge > span {
   display: block;
   width: 0%;
   height: inherit;
+  background-color: #ffffff;
   -webkit-transition: all 2.5s ease 0s;
   -moz-transition: all 2.5s ease 0s;
   -ms-transition: all 2.5s ease 0s;
@@ -876,26 +889,25 @@ fieldset.valid .show-hide-password {
 .indicator-gauge > span.loaded {
   width: 100%; }
 
+.loading .indicator .indicator-gauge {
+  background-color: #ffffff; }
+
 .loading .indicator .indicator-gauge > span {
   background-color: #f27e20; }
 
-.welcome .indicator {
-  padding: 1rem 2rem; }
+.welcome .indicator.two.hidden {
+  padding: 0; }
 
-.welcome .indicator .indicator-gauge {
-  background-color: #f27e20; }
-
-.welcome .indicator .indicator-gauge > span {
-  background-color: #ffffff; }
-
-.onsite .indicator {
+.welcome .indicator.two {
   padding: 4rem 2rem; }
 
-.onsite .indicator .indicator-gauge {
-  background-color: #f27e20; }
+.onsite .indicator.two.hidden {
+  padding: 0; }
 
-.onsite .indicator .indicator-gauge > span {
-  background-color: #ffffff;
+.onsite .indicator.two {
+  padding: 4rem 2rem; }
+
+.onsite .indicator.two .indicator-gauge > span {
   -webkit-transition: all 5s ease 0s;
   -moz-transition: all 5s ease 0s;
   -ms-transition: all 5s ease 0s;
@@ -1137,21 +1149,24 @@ fieldset.valid .show-hide-password {
   transform: translateX(0%); }
 
 .welcome .slider.int {
-  min-width: 300%; }
+  min-width: 200%; }
 
 .welcome .slider.int.slide-two {
-  -webkit-transform: translateX(-33.3%);
-  -moz-transform: translateX(-33.3%);
-  -ms-transform: translateX(-33.3%);
-  -o-transform: translateX(-33.3%);
-  transform: translateX(-33.3%); }
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
 
-.welcome .slider.int.slide-three {
-  -webkit-transform: translateX(-66.6%);
-  -moz-transform: translateX(-66.6%);
-  -ms-transform: translateX(-66.6%);
-  -o-transform: translateX(-66.6%);
-  transform: translateX(-66.6%); }
+.onsite .slider.int {
+  min-width: 200%; }
+
+.onsite .slider.int.slide-two {
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
 
 .loading {
   display: flex;
@@ -1262,8 +1277,16 @@ fieldset.valid .show-hide-password {
   align-items: center; }
 
 .item-summary .form-container form input {
-  border-bottom: none;
-  text-align: center; }
+  border-bottom: 1px solid #ffffff;
+  text-align: center;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  -ms-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s; }
+
+.item-summary .form-container form input:focus {
+  border-bottom: 1px solid #f27e20; }
 
 fieldset.quantity, fieldset.years, fieldset.months {
   width: calc(33% - 1rem); }

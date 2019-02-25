@@ -24,13 +24,14 @@
   display: block;
   width: 100%;
   height: 2px;
-  background-color: $white;
+  background-color: $tango;
 }
 
 .indicator-gauge > span {
   display: block;
   width: 0%;
   height: inherit;
+  background-color: $white;
   @include transition(all, 2.5s, ease);
 }
 
@@ -38,19 +39,16 @@
 
 
 // LOADING INDICATOR
+.loading .indicator .indicator-gauge {background-color: $white;}
 .loading .indicator .indicator-gauge > span {background-color: $tango;}
 
 
 // WELCOME/SETUP INDICATOR
-.welcome .indicator {padding: 1rem 2rem;}
-.welcome .indicator .indicator-gauge {background-color: $tango;}
-.welcome .indicator .indicator-gauge > span {background-color: $white;}
+.welcome .indicator.two.hidden {padding: 0;}
+.welcome .indicator.two {padding: 4rem 2rem;}
 
 
 // ONSITE INDICATOR
-.onsite .indicator {padding: 4rem 2rem;}
-.onsite .indicator .indicator-gauge {background-color: $tango;}
-.onsite .indicator .indicator-gauge > span {
-  background-color: $white;
-  @include transition(all, 5s, ease);
-}
+.onsite .indicator.two.hidden {padding: 0;}
+.onsite .indicator.two {padding: 4rem 2rem;}
+.onsite .indicator.two .indicator-gauge > span {@include transition(all, 5s, ease);}
