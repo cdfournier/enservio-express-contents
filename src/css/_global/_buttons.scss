@@ -65,7 +65,7 @@
 // CAMERA BUTTON
 span.button.camera input[type="file"] {
   position: absolute;
-  width: auto;
+  width: 4rem;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -80,14 +80,12 @@ span.button.camera {
   height: 4rem;
   max-height: 4rem;
   min-height: 4rem;
-  margin: 0;
+  margin: 1rem 0 0 0;
   padding: 0;
   border-radius: 100%;
 }
 
-span.button.camera span.button-label {
-  font-size: 2rem;
-}
+span.button.camera span.button-label {font-size: 2rem;}
 
 
 // PRIMARY BUTTON DEFAULT COLOR

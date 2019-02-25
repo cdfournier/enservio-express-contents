@@ -25,15 +25,16 @@
 .loading .logo {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-end;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
 }
 
 .loading .logo svg {
   max-width: 16rem;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .loading .logo .l-bod {

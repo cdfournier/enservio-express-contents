@@ -69,13 +69,14 @@
               <span class="error-message"></span>
             </fieldset>
             <div class="button-box">
+              <label>Add Photo</label>
               <span class="button camera"><input type="file" id="files" name="files[]"><span class="button-label"><i class="la la-camera"></i></span></span>
             </div>
           </form>
         </div>
         <div class="text action hidden md">
+          <span class="next--item"><a href="../onsite/index.html">Next Item</a></span>
           <span class="next--done"><a href="#!">Done</a></span>
-          <span class="next--item"><a href="#!">Next Item</a></span>
         </div>
       </section>
     </main>
@@ -94,6 +95,13 @@
           $('.text.action').removeClass('hidden loaded')
         }, 1100);
       });
+
+/*
+      $(".camera").on('change', function() {
+        $(".slider.int").removeClass("slide-three");
+        $('.slider.int').addClass('slide-four');
+      });
+*/
     </script>
   </body>
 </html>
