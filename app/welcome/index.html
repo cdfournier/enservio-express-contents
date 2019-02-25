@@ -87,18 +87,27 @@
         setTimeout(function() {$('.loading').addClass('loaded')}, 5000);
         setTimeout(function() {$('.chat.one').removeClass('hidden')}, 5500);
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 6000);
-      });
-      $('#listen-one').click(function() {
-        var ctrl = new anycontrol()
-        ctrl.stop();
-        $('.voice.one .icon').removeClass('active animated pulse infinite');
-        $('.voice.one .icon').addClass('inactive');
-        $('.indicator.one').removeClass('hidden');
-          setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1000);
-          setTimeout(function() {$('.chat.two').removeClass('hidden')}, 3500);
-          setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 4000);
-          setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 4500);
-          setTimeout(function() {$(window.location.href = '../onsite/index.html')}, 7000);
+/*
+        setTimeout(function() {var ctrl = new anycontrol()
+          ctrl.addCommand("previous page", function() {
+            console.log('Go to previous page')
+          });
+          ctrl.addCommand("next page", function () {
+            console.log('Go to next page')
+          });
+          ctrl.start();
+        }, 6500);
+*/
+        $('#listen-one').click(function() {
+          $('.voice.one .icon').removeClass('active animated pulse infinite');
+          $('.voice.one .icon').addClass('inactive');
+          $('.indicator.one').removeClass('hidden');
+            setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1000);
+            setTimeout(function() {$('.chat.two').removeClass('hidden')}, 3500);
+            setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 4000);
+            setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 4500);
+            setTimeout(function() {$(window.location.href = '../onsite/index.html')}, 7000);
+        });
       });
     </script>
   </body>
