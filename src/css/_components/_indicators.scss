@@ -10,14 +10,14 @@
   @include animation-delay(2.5s);
   @include animation-duration(0.325s);
   @include transition(all, 0.325s, ease);
-  @include transform(translateX(0%));
+  @include transform(translateX(0rem));
 }
 
 .indicator.hidden {
   max-height: 0;
   padding: 0;
   @include transition(max-height, 0.325s, ease);
-  @include transform(translateX(200%));
+  @include transform(translateX(100rem));
 }
 
 .indicator-gauge {

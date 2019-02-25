@@ -51,8 +51,8 @@
           </div>
         </div>
         <div class="chat two hidden">
-          <div class="chat-bot reverse">
-            <div class="small-avatar"><img src="../../src/images/guide-melisandre.jpg" align="You"></div>
+          <div class="chat-bot onsite reverse">
+            <div class="small-avatar"><img src="../../src/images/user.jpg" align="You"></div>
             <div class="bubble">
               <p>I need to do an onsite inventory.</p>
             </div>
@@ -79,6 +79,7 @@
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://unpkg.com/anycontrol/dist/index.umd.min.js"></script>
     <script src="../../src/scripts/express-contents.js"></script>
     <script>
       $(document).ready(function() {
@@ -87,8 +88,9 @@
         setTimeout(function() {$('.chat.one').removeClass('hidden')}, 5500);
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 6000);
       });
-
       $('#listen-one').click(function() {
+        var ctrl = new anycontrol()
+        ctrl.stop();
         $('.voice.one .icon').removeClass('active animated pulse infinite');
         $('.voice.one .icon').addClass('inactive');
         $('.indicator.one').removeClass('hidden');

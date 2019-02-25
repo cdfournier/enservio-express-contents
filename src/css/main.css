@@ -849,11 +849,11 @@ fieldset.valid .show-hide-password {
   -ms-transition: all 0.325s ease 0s;
   -o-transition: all 0.325s ease 0s;
   transition: all 0.325s ease 0s;
-  -webkit-transform: translateX(0%);
-  -moz-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  -o-transform: translateX(0%);
-  transform: translateX(0%); }
+  -webkit-transform: translateX(0rem);
+  -moz-transform: translateX(0rem);
+  -ms-transform: translateX(0rem);
+  -o-transform: translateX(0rem);
+  transform: translateX(0rem); }
 
 .indicator.hidden {
   max-height: 0;
@@ -863,11 +863,11 @@ fieldset.valid .show-hide-password {
   -ms-transition: max-height 0.325s ease 0s;
   -o-transition: max-height 0.325s ease 0s;
   transition: max-height 0.325s ease 0s;
-  -webkit-transform: translateX(200%);
-  -moz-transform: translateX(200%);
-  -ms-transform: translateX(200%);
-  -o-transform: translateX(200%);
-  transform: translateX(200%); }
+  -webkit-transform: translateX(100rem);
+  -moz-transform: translateX(100rem);
+  -ms-transform: translateX(100rem);
+  -o-transform: translateX(100rem);
+  transform: translateX(100rem); }
 
 .indicator-gauge {
   display: block;
@@ -1003,20 +1003,20 @@ fieldset.valid .show-hide-password {
   -ms-transition: all 0.325s ease 0s;
   -o-transition: all 0.325s ease 0s;
   transition: all 0.325s ease 0s;
-  -webkit-transform: translateX(0%);
-  -moz-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  -o-transform: translateX(0%);
-  transform: translateX(0%); }
+  -webkit-transform: translateX(0rem);
+  -moz-transform: translateX(0rem);
+  -ms-transform: translateX(0rem);
+  -o-transform: translateX(0rem);
+  transform: translateX(0rem); }
 
 .chat.hidden {
   max-height: 0;
   padding: 0;
-  -webkit-transform: translateX(200%);
-  -moz-transform: translateX(200%);
-  -ms-transform: translateX(200%);
-  -o-transform: translateX(200%);
-  transform: translateX(200%); }
+  -webkit-transform: translateX(100rem);
+  -moz-transform: translateX(100rem);
+  -ms-transform: translateX(100rem);
+  -o-transform: translateX(100rem);
+  transform: translateX(100rem); }
 
 .chat-bot {
   display: flex;
@@ -1080,11 +1080,11 @@ fieldset.valid .show-hide-password {
   -ms-transition: all 0.325s ease 0s;
   -o-transition: all 0.325s ease 0s;
   transition: all 0.325s ease 0s;
-  -webkit-transform: translateX(0%);
-  -moz-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  -o-transform: translateX(0%);
-  transform: translateX(0%); }
+  -webkit-transform: translateX(0rem);
+  -moz-transform: translateX(0rem);
+  -ms-transform: translateX(0rem);
+  -o-transform: translateX(0rem);
+  transform: translateX(0rem); }
 
 .voice.hidden {
   max-height: 0;
@@ -1094,11 +1094,11 @@ fieldset.valid .show-hide-password {
   -ms-transition: max-height 0.325s ease 0s;
   -o-transition: max-height 0.325s ease 0s;
   transition: max-height 0.325s ease 0s;
-  -webkit-transform: translateX(200%);
-  -moz-transform: translateX(200%);
-  -ms-transform: translateX(200%);
-  -o-transform: translateX(200%);
-  transform: translateX(200%); }
+  -webkit-transform: translateX(100rem);
+  -moz-transform: translateX(100rem);
+  -ms-transform: translateX(100rem);
+  -o-transform: translateX(100rem);
+  transform: translateX(100rem); }
 
 .voice .icon {
   display: flex;
