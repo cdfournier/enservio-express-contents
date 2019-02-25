@@ -263,7 +263,7 @@ fieldset.valid .show-hide-password { right: 2rem; }
 
 .welcome .indicator .indicator-gauge > span { background-color: #ffffff; }
 
-.onsite .indicator { padding: 2rem; }
+.onsite .indicator { padding: 4rem 2rem; }
 
 .onsite .indicator .indicator-gauge { background-color: #f27e20; }
 
