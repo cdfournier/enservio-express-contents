@@ -59,7 +59,7 @@
               </div>
             </div>
             <div class="setup two">
-              <div class="form-container hidden">
+              <div class="form-container one hidden">
                 <form class="wrap" style="justify-content: space-between;">
                   <h1>Loss Information</h1>
                   <fieldset class="description">
@@ -98,7 +98,77 @@
                     <span class="error-message"></span>
                   </fieldset>
                   <div class="button-box row">
-                    <a class="button"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                    <a class="button next"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="setup three">
+              <div class="chat four hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Next let's make a list of all of the affected rooms.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-container two hidden">
+                <form class="wrap" style="justify-content: space-between;">
+                  <h1>Affected Rooms</h1>
+                  <p>Please check all that apply.</p>
+                  <fieldset class="half">
+                    <legend>Attic</legend>
+                    <label for="attic" class="checkbox">Attic<input type="checkbox" name="remember" id="remember"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Basement</legend>
+                    <label for="basement" class="checkbox">Basement<input type="checkbox" name="basement" id="basement"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Bathroom</legend>
+                    <label for="bathroom" class="checkbox">Bathroom<input type="checkbox" name="bathroom" id="bathroom"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Bedroom</legend>
+                    <label for="bedroom" class="checkbox">Bedroom<input type="checkbox" name="bedroom" id="bedroom"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Garage</legend>
+                    <label for="garage" class="checkbox">Garage<input type="checkbox" name="garage" id="garage"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Kitchen</legend>
+                    <label for="kitchen" class="checkbox">Kitchen<input type="checkbox" name="kitchen" id="kitchen"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Laundry</legend>
+                    <label for="laundry" class="checkbox">Laundry<input type="checkbox" name="laundry" id="laundry"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Living Room</legend>
+                    <label for="living-room" class="checkbox">Living Room<input type="checkbox" name="living-room" id="living-room"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Office</legend>
+                    <label for="office" class="checkbox">Office<input type="checkbox" name="office" id="office"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Other</legend>
+                    <label for="other" class="checkbox">Other<input type="checkbox" name="other" id="other"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <div class="button-box row">
+                    <a class="button previous"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+                    <a class="button next"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
                   </div>
                 </form>
               </div>
@@ -119,10 +189,21 @@
 
       $('.start').click(function() {
         $('.slider.int').addClass('slide-two');
-          setTimeout(function() {$('.form-container').addClass('loaded')}, 1000);
-          setTimeout(function() {$('.form-container').removeClass('hidden loaded')}, 1100);
+          setTimeout(function() {$('.form-container.one').addClass('loaded')}, 500);
+          setTimeout(function() {$('.form-container.one').removeClass('hidden loaded')}, 600);
       });
 
+      $('.next').click(function() {
+        $('.slider.int').addClass('slide-three');
+          setTimeout(function() {$('.chat.four').removeClass('hidden')}, 500);
+          setTimeout(function() {$('.form-container.two').addClass('loaded')}, 1500);
+          setTimeout(function() {$('.form-container.two').removeClass('hidden loaded')}, 1600);
+      });
+
+      $('.previous').click(function() {
+        $('.slider.int').removeClass('slide-three');
+        $('.slider.int').addClass('slide-two');
+      });
     </script>
   </body>
 </html>
