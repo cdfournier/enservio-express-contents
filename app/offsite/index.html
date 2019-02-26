@@ -98,7 +98,7 @@
                     <span class="error-message"></span>
                   </fieldset>
                   <div class="button-box row">
-                    <a class="button next"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                    <a class="button next one"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
                   </div>
                 </form>
               </div>
@@ -118,7 +118,7 @@
                   <p>Please check all that apply.</p>
                   <fieldset class="half">
                     <legend>Attic</legend>
-                    <label for="attic" class="checkbox">Attic<input type="checkbox" name="remember" id="remember"></label>
+                    <label for="attic" class="checkbox">Attic<input type="checkbox" name="attic" id="attic"></label>
                     <span class="error-message"></span>
                   </fieldset>
                   <fieldset class="half">
@@ -167,8 +167,73 @@
                     <span class="error-message"></span>
                   </fieldset>
                   <div class="button-box row">
-                    <a class="button previous"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
-                    <a class="button next"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                    <a class="button previous one"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+                    <a class="button next two"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="setup four">
+              <div class="chat five hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Now let's make a list of the types of items in each room. We'll start in the bedroom.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-container three hidden">
+                <form class="wrap" style="justify-content: space-between;">
+                  <h1>Bedroom Items</h1>
+                  <p>Please check all that apply.</p>
+                  <fieldset class="half">
+                    <legend>Bed</legend>
+                    <label for="bed" class="checkbox">Bed<input type="checkbox" name="bed" id="bed"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Box Spring</legend>
+                    <label for="box-spring" class="checkbox">Box Spring<input type="checkbox" name="box-spring" id="box-spring"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Drapery</legend>
+                    <label for="drapery" class="checkbox">Drapery<input type="checkbox" name="drapery" id="drapery"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Lighting</legend>
+                    <label for="lighting" class="checkbox">Lighting<input type="checkbox" name="lighting" id="lighting"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Linen</legend>
+                    <label for="linen" class="checkbox">Linen<input type="checkbox" name="linen" id="linen"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Mattress</legend>
+                    <label for="mattress" class="checkbox">Mattress<input type="checkbox" name="mattress" id="mattress"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Pillows</legend>
+                    <label for="pillows" class="checkbox">Pillows<input type="checkbox" name="pillows" id="pillows"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Television</legend>
+                    <label for="television" class="checkbox">Television<input type="checkbox" name="television" id="television"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Other</legend>
+                    <label for="other" class="checkbox">Other<input type="checkbox" name="other" id="other"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <div class="button-box row">
+                    <a class="button previous two"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+                    <a class="button next three"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
                   </div>
                 </form>
               </div>
@@ -193,16 +258,30 @@
           setTimeout(function() {$('.form-container.one').removeClass('hidden loaded')}, 600);
       });
 
-      $('.next').click(function() {
+      $('.next.one').click(function() {
+        $('.slider.int').removeClass('slide-two');
         $('.slider.int').addClass('slide-three');
           setTimeout(function() {$('.chat.four').removeClass('hidden')}, 500);
           setTimeout(function() {$('.form-container.two').addClass('loaded')}, 1500);
           setTimeout(function() {$('.form-container.two').removeClass('hidden loaded')}, 1600);
       });
 
-      $('.previous').click(function() {
+      $('.previous.one').click(function() {
         $('.slider.int').removeClass('slide-three');
         $('.slider.int').addClass('slide-two');
+      });
+
+      $('.next.two').click(function() {
+        $('.slider.int').removeClass('slide-three');
+        $('.slider.int').addClass('slide-four');
+          setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
+          setTimeout(function() {$('.form-container.three').addClass('loaded')}, 1500);
+          setTimeout(function() {$('.form-container.three').removeClass('hidden loaded')}, 1600);
+
+      $('.previous.two').click(function() {
+        $('.slider.int').removeClass('slide-four');
+        $('.slider.int').addClass('slide-three');
+      });
       });
     </script>
   </body>
