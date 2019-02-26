@@ -32,3 +32,8 @@
 .offsite .slider.int.slide-two {@include transform(translateX(-25%));}
 .offsite .slider.int.slide-three {@include transform(translateX(-50%));}
 .offsite .slider.int.slide-four {@include transform(translateX(-75%));}
+
+
+// ROOM INVENTORY SLIDER
+.inventory .slider.int {min-width: 100%;}
+.inventory .slider.int.slide-two {@include transform(translateX(-50%));}
