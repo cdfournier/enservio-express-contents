@@ -65,7 +65,7 @@ h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right { tex
 
 .button span.number, .button.secondary span.number { display: inline-flex; align-items: center; justify-content: center; width: 1.325rem; height: 1.325rem; margin: 0 0 0 0.5rem; border-radius: 100%; font-size: 0.694rem; font-weight: 700; }
 
-span.button.camera input[type="file"] { position: absolute; width: 4rem; overflow: hidden; margin: 0; padding: 0; opacity: 0; cursor: pointer; }
+span.button.camera input[type="file"] { position: absolute; z-index: 10; width: 4rem; height: 4rem; margin: 0; padding: 0; opacity: 0; cursor: pointer; }
 
 span.button.camera { width: 4rem; max-width: 4rem; min-width: 4rem; height: 4rem; max-height: 4rem; min-height: 4rem; margin: 1rem 0 0 0; padding: 0; border-radius: 100%; }
 
