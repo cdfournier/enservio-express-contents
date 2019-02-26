@@ -25,3 +25,8 @@
 // ONSITE SETUP SLIDER
 .onsite .slider.int {min-width: 200%;}
 .onsite .slider.int.slide-two {@include transform(translateX(-50%));}
+
+
+// OFFSITE SETUP SLIDER
+.offsite .slider.int {min-width: 200%;}
+.offsite .slider.int.slide-two {@include transform(translateX(-50%));}

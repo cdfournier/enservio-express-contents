@@ -32,12 +32,76 @@
           </div>
         </div>
       </section>
-      <section data-qa="offsite" class="offsite">
-        <div class="chat one">
-          <div class="chat-bot">
-            <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
-            <div class="bubble">
-              <p>Ready when you are.</p>
+      <section data-qa="offsite" class="offsite md">
+        <div class="slider ext">
+          <div class="slider int">
+            <div class="setup one">
+              <div class="chat one">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Okay. Let's create an onsite inventory.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat two hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Let's start  by filling out the claim information. Tap the <em>Start</em> button when you're ready to begin.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat three hidden">
+                <div class="button-box">
+                  <a class="button start"><span class="button-label">Start</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="setup two">
+              <div class="form-container hidden">
+                <form class="wrap" style="justify-content: space-between;">
+                  <h1>Loss Information</h1>
+                  <fieldset class="description">
+                    <legend>Insured Name</legend>
+                    <label for="name">Insured Name<input type="text" name="name" placeholder="Insured Name"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="street">
+                    <legend>Loss Street</legend>
+                    <label for="street">Loss Street<input type="text" name="street" placeholder="Loss Street"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half state">
+                    <legend>State</legend>
+                    <label for="state">State<input type="text" name="state" placeholder="State"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half zip">
+                    <legend>Zip</legend>
+                    <label for="zip">Zip<input type="text" name="zip" placeholder="Zip"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="peril">
+                    <legend>Peril Type</legend>
+                    <label for="peril">Peril Type
+                      <select name="peril" id="peril">
+                        <option value="0">Choose an option</option>
+                      </select>
+                    </label>
+                    <span class="select-icon"><i class="la la-angle-down"></i></span>
+                    <span class="error-message">This is where the error message goes</span>
+                  </fieldset>
+                  <fieldset class="half limit">
+                    <legend>Content Limit</legend>
+                    <label for="limit">Content Limit<input type="text" name="limit" placeholder="Content Limit"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <div class="button-box row">
+                    <a class="button"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -48,6 +112,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="../../src/scripts/express-contents.js"></script>
     <script>
+      $(document).ready(function() {
+        setTimeout(function() {$('.chat.two').removeClass('hidden')}, 1000);
+        setTimeout(function() {$('.chat.three').removeClass('hidden')}, 2000);
+      });
+
+      $('.start').click(function() {
+        $('.slider.int').addClass('slide-two');
+          setTimeout(function() {$('.form-container').addClass('loaded')}, 1000);
+          setTimeout(function() {$('.form-container').removeClass('hidden loaded')}, 1100);
+      });
 
     </script>
   </body>

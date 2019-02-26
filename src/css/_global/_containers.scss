@@ -74,10 +74,11 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  height: auto;
   margin: 0 auto;
   padding: 2rem 2rem 0;
   @include transition(all, 0.325s, ease);
-  @include transform(translateY(0%));
+  @include transform(translateX(0rem));
 }
 
 .form-container.hidden {

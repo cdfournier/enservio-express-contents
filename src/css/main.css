@@ -29,7 +29,7 @@ img { width: 100%; height: auto; margin: 0; }
 
 h1, h2, h3 { display: block; width: 100%; margin: 0; padding: 0; font-family: "Raleway", sans-serif; font-style: normal; font-weight: normal; }
 
-h1 { font-size: 2rem; font-weight: 400; text-transform: capitalize; }
+h1 { padding: 0 0 1rem; font-size: 2rem; font-weight: 400; text-transform: capitalize; }
 
 h2, h3 { font-size: 1.5rem; font-weight: 400; text-transform: capitalize; }
 
@@ -141,7 +141,7 @@ main { display: flex; flex-direction: column; justify-content: center; max-width
 
 .text.action.hidden { max-height: 0; -webkit-transition: all 0.325s ease 0s; -moz-transition: all 0.325s ease 0s; -ms-transition: all 0.325s ease 0s; -o-transition: all 0.325s ease 0s; transition: all 0.325s ease 0s; -webkit-transform: translateX(200rem); -moz-transform: translateX(200rem); -ms-transform: translateX(200rem); -o-transform: translateX(200rem); transform: translateX(200rem); }
 
-.form-container { display: flex; flex-direction: row; flex-wrap: wrap; width: 100%; margin: 0 auto; padding: 2rem 2rem 0; -webkit-transition: all 0.325s ease 0s; -moz-transition: all 0.325s ease 0s; -ms-transition: all 0.325s ease 0s; -o-transition: all 0.325s ease 0s; transition: all 0.325s ease 0s; -webkit-transform: translateY(0%); -moz-transform: translateY(0%); -ms-transform: translateY(0%); -o-transform: translateY(0%); transform: translateY(0%); }
+.form-container { display: flex; flex-direction: row; flex-wrap: wrap; width: 100%; height: auto; margin: 0 auto; padding: 2rem 2rem 0; -webkit-transition: all 0.325s ease 0s; -moz-transition: all 0.325s ease 0s; -ms-transition: all 0.325s ease 0s; -o-transition: all 0.325s ease 0s; transition: all 0.325s ease 0s; -webkit-transform: translateX(0rem); -moz-transform: translateX(0rem); -ms-transform: translateX(0rem); -o-transform: translateX(0rem); transform: translateX(0rem); }
 
 .form-container.hidden { display: none; -webkit-transition: all 0.325s ease 0s; -moz-transition: all 0.325s ease 0s; -ms-transition: all 0.325s ease 0s; -o-transition: all 0.325s ease 0s; transition: all 0.325s ease 0s; -webkit-transform: translateX(200rem); -moz-transform: translateX(200rem); -ms-transform: translateX(200rem); -o-transform: translateX(200rem); transform: translateX(200rem); }
 
@@ -159,7 +159,7 @@ fieldset { position: relative; width: 100%; margin: 0 0 1rem; padding: 0; border
 
 fieldset:last-of-type { margin: 0; }
 
-fieldset.half input { width: calc(50% - 1rem); }
+fieldset.half { width: calc(50% - 1rem); }
 
 fieldset.inline-button { width: calc(60% - 1rem); }
 
@@ -174,8 +174,6 @@ input:placeholder-shown { overflow: hidden; text-overflow: ellipsis; white-space
 input::placeholder { opacity: 1; -webkit-transition: all 0.125s ease 0s; -moz-transition: all 0.125s ease 0s; -ms-transition: all 0.125s ease 0s; -o-transition: all 0.125s ease 0s; transition: all 0.125s ease 0s; }
 
 input:focus { border-color: #f27e20; }
-
-input:focus::placeholder { opacity: 0.5; }
 
 input[type="password"], input[type="search"] { padding: 0 3rem 0 0; }
 
@@ -340,6 +338,10 @@ fieldset.valid .show-hide-password { right: 2rem; }
 .onsite .slider.int { min-width: 200%; }
 
 .onsite .slider.int.slide-two { -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); }
+
+.offsite .slider.int { min-width: 200%; }
+
+.offsite .slider.int.slide-two { -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); }
 
 .loading { display: flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; max-width: 100%; min-width: 100%; height: 100vh; max-height: 100vh; min-height: 100vh; overflow: hidden; margin: 0; padding: 0; background-color: #f27e20; -webkit-transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -ms-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; transition: all 0.5s ease 0s; }
 
