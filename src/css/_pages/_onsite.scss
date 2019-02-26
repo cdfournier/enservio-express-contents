@@ -1,0 +1,66 @@
+// ONSITE
+ul.inventory-checklist {
+  margin: 0 auto;
+  padding: 0 0 2rem;
+  list-style-type: none;
+}
+
+ul.inventory-checklist li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 0 1rem;
+  line-height: 1.5;
+  @include transition(all, 0.325s, ease);
+}
+
+ul.inventory-checklist li:first-of-type {
+  justify-content: flex-start;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+ul.inventory-checklist li:last-of-type {padding: 0;}
+
+ul.inventory-checklist li span {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 4rem;
+  min-width: 4rem;
+  max-width: 4rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  @include transition(all, 0.325s, ease);
+}
+
+ul.inventory-checklist li span i.la.la-check-circle,
+ul.inventory-checklist li span i.la.la-exclamation-circle {display: none;}
+
+
+// INVENTORY CHECKLIST ITEM COMPLETE
+ul.inventory-checklist li.complete {color: $grassland;}
+
+ul.inventory-checklist li.complete span i.la.la-check-circle {
+  display: flex;
+  color: $grassland;
+}
+
+ul.inventory-checklist li.complete span i.la.la-circle,
+ul.inventory-checklist li.complete span i.la.la-exclamation-circle {display: none;}
+
+
+// INVENTORY CHECKLIST ITEM INCOMPLETE
+ul.inventory-checklist li.incomplete {color: $monza;}
+
+ul.inventory-checklist li.incomplete span i.la.la-exclamation-circle {
+  display: flex;
+  color: $monza;
+}
+
+ul.inventory-checklist li.incomplete span i.la.la-circle,
+ul.inventory-checklist li.incomplete span i.la.la-check-circle {display: none;}

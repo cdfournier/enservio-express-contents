@@ -68,6 +68,11 @@
               <label for="months">Age: Months<input type="number" name="months" class="months" placeholder="Months" min="0" max="11" value="3"></label>
               <span class="error-message"></span>
             </fieldset>
+            <fieldset class="room">
+              <legend>Room</legend>
+              <label for="room">Room<input type="text" name="room" placeholder="Room" value="Master bedroom"><span class="is-valid"></span></label>
+              <span class="error-message"></span>
+            </fieldset>
             <div class="button-box">
               <label>Add Photo</label>
               <span class="button camera"><input type="file" id="files" name="files[]"><span class="button-label"><i class="la la-camera"></i></span></span>
@@ -92,7 +97,7 @@
         }, 1000);
         setTimeout(function() {
           $('.form-container').removeClass('hidden loaded')
-          $('.text.action').removeClass('hidden loaded')
+          $('.text.action').removeClass('hidden')
         }, 1100);
       });
 

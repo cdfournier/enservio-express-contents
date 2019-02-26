@@ -30,8 +30,18 @@ main {
   display: block;
   position: relative;
   width: 100%;
+  height: auto;
+  max-height: 100rem;
   margin: 0 auto;
   padding: 2rem 2rem 0;
+  @include transition(all, 0.325s, ease);
+  @include transform(translateY(0rem));
+}
+
+.text.hidden {
+  max-height: 0;
+  @include transition(all, 0.325s, ease);
+  @include transform(translateX(200rem));
 }
 
 .text.center {text-align: center;}
@@ -42,20 +52,20 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: auto;
+  max-height: 100vh;
   padding: 0 2rem;
   font-size: 0.875rem;
   text-transform: uppercase;
   @include transition(all, 0.325s, ease);
-  @include transform(translateY(0%));
+  @include transform(translateY(0rem));
 }
 
 .text.action.hidden {
-  display: none;
+  max-height: 0;
   @include transition(all, 0.325s, ease);
   @include transform(translateX(200rem));
 }
-
-.text.action.hidden.loaded {display: flex;}
 
 
 // FORM CONTAINER
