@@ -37,6 +37,8 @@
 
 .item-summary .form-container form input:focus {border-bottom: 1px solid $tango;}
 
-fieldset.quantity, fieldset.years, fieldset.months {width: calc(33% - 1rem);}
+.item-summary .form-container form fieldset.quantity,
+.item-summary .form-container form fieldset.years,
+.item-summary .form-container form fieldset.months {width: calc(33% - 1rem);}
 
-fieldset.value input {font-size: 2rem;}
+.item-summary .form-container form fieldset.value input {font-size: 2rem;}

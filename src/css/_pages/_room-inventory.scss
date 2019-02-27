@@ -5,19 +5,3 @@
 }
 
 .inventory-list > h1 {padding: 0 0 2rem;}
-
-.inventory fieldset {padding: 0 1rem 0 0;}
-
-.inventory .button-box {padding: 0 0 2rem;}
-
-.inventory .text.action {padding: 0;}
-
-
-// ROOM INVENTORY ITEM FORM
-@media (min-width: 46rem) {
-.inventory fieldset {
-  width: 50%;
-  padding: 0 1rem 0 0;
-}
-.inventory fieldset:last-of-type {padding: 0;}
-.inventory fieldset.half {width: 25%;}}

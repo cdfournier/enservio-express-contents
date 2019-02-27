@@ -60,7 +60,7 @@
   @include transform(rotate(0turn));
 }
 
-.accordion input.accordion:checked ~ label .item-header:after {
+input.accordion:checked ~ label .item-header:after {
   @include transition(all, 0.325s, ease-in-out, 0s);
   @include transform(rotate(-0.5turn));
 }
@@ -90,24 +90,66 @@
 }}
 
 
-// ACCORDION ITEM DETAILS
-.item-details {
-  width: 100%;
-  max-height: 0;
-  padding: 0;
-  @include transition(max-height, 0.325s, ease-in-out);
+// INVENTORY ITEM HEADER
+.accordion.inventory .item-number {padding: 0 1rem;}
+
+.accordion.inventory .item-header {
+  min-height: inherit;
+  padding: 0 1rem;
 }
 
-.item-details:before {
+.accordion.inventory .item-header .description,
+.accordion.inventory .item-header .cost,
+.accordion.inventory .item-header .qty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem 0.5rem 0 0;
+}
+
+.accordion.inventory .item-header .description {width: calc(100% - 1.5rem);}
+
+.accordion.inventory .item-header .description span,
+.accordion.inventory .item-header .cost span,
+.accordion.inventory .item-header .qty span {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.accordion.inventory .item-header .description p,
+.accordion.inventory .item-header .cost p,
+.accordion.inventory .item-header .qty p {
   display: block;
-  width: 100%;
-  height: 1px;
-  margin: 1rem auto;
-  background-color: $iron;
-  content: "";
+  padding: 0;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.accordion input:checked ~ .item-details {
+.accordion.inventory .item-header .cost,
+.accordion.inventory .item-header .qty {display: none;}
+
+@media (min-width: 48rem) {
+.accordion.inventory .item-header .description {width: calc(80% - 1.5rem);}
+.accordion.inventory .item-header .cost {
+  display: flex;
+  width: calc(25% - 1.5rem);
+}}
+
+@media (min-width: 64rem) {
+.accordion.inventory .item-header .description {width: calc(70% - 1.5rem);}
+.accordion.inventory .item-header .cost {width: calc(22% - 1.5rem);}
+.accordion.inventory .item-header .qty {
+  display: flex;
+  width: calc(18% - 1.5rem);
+}}
+
+
+// ACCORDION ITEM SUMMARY
+.accordion.inventory .item-summary {max-height: 0;}
+
+.accordion input:checked ~ .item-summary {
   max-height: 500rem;
   @include transition(max-height, 0.325s, ease-in-out);
 }
@@ -183,62 +225,8 @@
 .button.small span {position: absolute;}
 
 
-// INVENTORY ITEM HEADER
-.inventory .item-number {padding: 0 1rem;}
-
-.inventory .item-header {
-  min-height: inherit;
-  padding: 0 1rem;
-}
-
-.inventory .description,
-.inventory .cost,
-.inventory .qty {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0.5rem 0.5rem 0 0;
-}
-
-.inventory .description {width: calc(100% - 1.5rem);}
-
-.inventory .description span,
-.inventory .cost span,
-.inventory .qty span {
-  font-size: 0.875rem;
-  font-weight: 700;
-}
-
-.inventory .description p,
-.inventory .cost p,
-.inventory .qty p {
-  display: block;
-  padding: 0;
-  overflow: hidden;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.inventory .cost, .inventory .qty {display: none;}
-
-@media (min-width: 48rem) {
-.inventory .description {width: calc(80% - 1.5rem);}
-.inventory .cost {
-  display: flex;
-  width: calc(25% - 1.5rem);
-}}
-
-@media (min-width: 64rem) {
-.inventory .description {width: calc(70% - 1.5rem);}
-.inventory .cost {width: calc(22% - 1.5rem);}
-.inventory .qty {
-  display: flex;
-  width: calc(18% - 1.5rem);
-}}
-
-
 // INVENTORY ITEM DETAILS
+/*
 .inventory .item-details:before {
   display: block;
   width: calc(100% - 2rem);
@@ -249,6 +237,7 @@
 }
 
 .inventory .item-details form {padding: 2rem 0 0;}
+*/
 
 
 // DISABLED INVENTORY ITEMS
