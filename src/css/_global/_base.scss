@@ -7,6 +7,14 @@ $head: "Raleway", sans-serif;
 $body: "Montserrat", sans-serif;
 
 
+// COLOR APPLICATION
+:root {
+  --accent-color: $keppel;
+}
+
+:export {accent-color: $keppel;};
+
+
 // BASE
 html {
   width: 100%;

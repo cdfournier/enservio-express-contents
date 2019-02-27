@@ -43,6 +43,6 @@
 }
 
 .voice .icon.active {
-  border: 1px solid $tango;
-  color: $tango;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
 }

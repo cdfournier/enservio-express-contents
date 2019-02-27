@@ -27,6 +27,7 @@
 
 .item-summary .form-container form label {
   align-items: center;
+  text-align: center;
 }
 
 .item-summary .form-container form input {
@@ -35,7 +36,7 @@
   @include transition(all, 0.25s, ease-in-out);
 }
 
-.item-summary .form-container form input:focus {border-bottom: 1px solid $tango;}
+.item-summary .form-container form input:focus {border-bottom: 1px solid var(--accent-color);}
 
 .item-summary .form-container form fieldset.quantity,
 .item-summary .form-container form fieldset.years,

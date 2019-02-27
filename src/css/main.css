@@ -1,8 +1,14 @@
 a {
-  color: #f27e20; }
+  color: var(--accent-color); }
 
 a:hover, a:focus {
   color: #444853; }
+
+:root {
+  --accent-color: #36aba6; }
+
+:export {
+  accent-color: #36aba6; }
 
 html {
   width: 100%;
@@ -228,37 +234,37 @@ span.button.camera span.button-label {
   cursor: pointer; }
 
 .button {
-  border: 1px solid #f27e20;
+  border: 1px solid var(--accent-color);
   color: #ffffff;
-  background-color: #f27e20; }
+  background-color: var(--accent-color); }
 
 .button:hover, .button:focus {
-  color: #f27e20;
+  color: var(--accent-color);
   background-color: #ffffff; }
 
 .button span.number {
-  color: #f27e20;
+  color: var(--accent-color);
   background-color: #ffffff; }
 
 .button:hover span.number, .button:focus span.number {
   color: #ffffff;
-  background-color: #f27e20; }
+  background-color: var(--accent-color); }
 
 .button.secondary {
-  border: 1px solid #f27e20;
-  color: #f27e20;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
   background-color: #ffffff; }
 
 .button.secondary:hover, .button.secondary:focus {
   color: #ffffff;
-  background-color: #f27e20; }
+  background-color: var(--accent-color); }
 
 .button.secondary span.number {
   color: #ffffff;
-  background-color: #f27e20; }
+  background-color: var(--accent-color); }
 
 .button.secondary:hover span.number, .button.secondary:focus span.number {
-  color: #f27e20;
+  color: var(--accent-color);
   background-color: #ffffff; }
 
 .button-box {
@@ -564,7 +570,7 @@ input::placeholder {
   transition: all 0.125s ease 0s; }
 
 input:focus {
-  border-color: #f27e20; }
+  border-color: var(--accent-color); }
 
 input[type="password"],
 input[type="search"] {
@@ -613,8 +619,8 @@ input[type="checkbox"]:checked:before {
   content: '\f17b'; }
 
 input[type="checkbox"]:checked:not(:disabled) {
-  border-color: #f27e20;
-  background-color: #f27e20; }
+  border-color: var(--accent-color);
+  background-color: var(--accent-color); }
 
 input.toggle[type="checkbox"] {
   -webkit-appearance: none;
@@ -667,11 +673,11 @@ input.toggle[type="checkbox"]:after {
 
 input.toggle[type="checkbox"]:checked {
   border-color: transparent;
-  background-color: #f27e20; }
+  background-color: var(--accent-color); }
 
 input.toggle[type="checkbox"]:checked:after {
   left: calc(100% - 1.25rem);
-  color: #f27e20;
+  color: var(--accent-color);
   content: "\f17b"; }
 
 label.toggle {
@@ -756,7 +762,7 @@ select:disabled + .select-icon {
   color: #444853; }
 
 select:focus {
-  border-color: #f27e20;
+  border-color: var(--accent-color);
   outline: none; }
 
 .search-icon {
@@ -794,7 +800,7 @@ span.forgot-password-prompt {
   width: auto;
   height: calc(100% - 0.925rem);
   font-size: 1.5rem;
-  color: #f27e20;
+  color: var(--accent-color);
   cursor: pointer;
   -webkit-transition: all 0.25s ease 0s;
   -moz-transition: all 0.25s ease 0s;
@@ -917,7 +923,7 @@ fieldset.valid .show-hide-password {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #f27e20; }
+  background-color: var(--accent-color); }
 
 .indicator-gauge > span {
   display: block;
@@ -937,7 +943,7 @@ fieldset.valid .show-hide-password {
   background-color: #ffffff; }
 
 .loading .indicator .indicator-gauge > span {
-  background-color: #f27e20; }
+  background-color: var(--accent-color); }
 
 .welcome .indicator.two.hidden {
   padding: 0; }
@@ -1167,8 +1173,8 @@ fieldset.valid .show-hide-password {
   color: #cccece; }
 
 .voice .icon.active {
-  border: 1px solid #f27e20;
-  color: #f27e20; }
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color); }
 
 .slider {
   display: flex;
@@ -1516,7 +1522,7 @@ input.accordion:checked ~ label .item-header:after {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  background-color: #f27e20;
+  background-color: var(--accent-color);
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   -ms-transition: all 0.5s ease 0s;
@@ -1673,7 +1679,8 @@ ul.inventory-checklist li.incomplete span i.la.la-check-circle {
   justify-content: space-between; }
 
 .item-summary .form-container form label {
-  align-items: center; }
+  align-items: center;
+  text-align: center; }
 
 .item-summary .form-container form input {
   border-bottom: 1px solid #ffffff;
@@ -1685,7 +1692,7 @@ ul.inventory-checklist li.incomplete span i.la.la-check-circle {
   transition: all 0.25s ease-in-out 0s; }
 
 .item-summary .form-container form input:focus {
-  border-bottom: 1px solid #f27e20; }
+  border-bottom: 1px solid var(--accent-color); }
 
 .item-summary .form-container form fieldset.quantity,
 .item-summary .form-container form fieldset.years,

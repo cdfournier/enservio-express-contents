@@ -18,5 +18,5 @@ $bluesky: #0d31f5;
 $indigo: #2b387f;
 $purplerain: #992a8c;
 
-a {color: $tango;}
+a {color: var(--accent-color);}
 a:hover, a:focus {color: $mako;}

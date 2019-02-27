@@ -24,7 +24,7 @@
   display: block;
   width: 100%;
   height: 2px;
-  background-color: $tango;
+  background-color: var(--accent-color);
 }
 
 .indicator-gauge > span {
@@ -40,7 +40,7 @@
 
 // LOADING INDICATOR
 .loading .indicator .indicator-gauge {background-color: $white;}
-.loading .indicator .indicator-gauge > span {background-color: $tango;}
+.loading .indicator .indicator-gauge > span {background-color: var(--accent-color);}
 
 
 // WELCOME/SETUP INDICATOR

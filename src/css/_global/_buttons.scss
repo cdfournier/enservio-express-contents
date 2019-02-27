@@ -109,46 +109,46 @@ span.button.camera span.button-label {font-size: 2rem;}
 
 // PRIMARY BUTTON DEFAULT COLOR
 .button {
-  border: 1px solid $tango;
+  border: 1px solid var(--accent-color);
   color: $white;
-  background-color: $tango;
+  background-color: var(--accent-color);
 }
 
 .button:hover, .button:focus {
-  color: $tango;
+  color: var(--accent-color);
   background-color: $white;
 }
 
 .button span.number {
-  color: $tango;
+  color: var(--accent-color);
   background-color: $white;
 }
 
 .button:hover span.number, .button:focus span.number {
   color: $white;
-  background-color: $tango;
+  background-color: var(--accent-color);
 }
 
 
 // SECONDARY BUTTON DEFAULT COLOR
 .button.secondary {
-  border: 1px solid $tango;
-  color: $tango;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
   background-color: $white;
 }
 
 .button.secondary:hover, .button.secondary:focus {
   color: $white;
-  background-color: $tango;
+  background-color: var(--accent-color);
 }
 
 .button.secondary span.number {
   color: $white;
-  background-color: $tango;
+  background-color: var(--accent-color);
 }
 
 .button.secondary:hover span.number, .button.secondary:focus span.number {
-  color: $tango;
+  color: var(--accent-color);
   background-color: $white;
 }
 
@@ -171,23 +171,16 @@ form .button-box {padding: 1rem 0 0;}
 .text .button-box {padding: 1rem 0 0;}
 
 .button-box.right {align-items: flex-end;}
-
 .button-box.right .button {margin: 1rem 0 0 1rem;}
 
 .button-box.left {align-items: flex-start;}
-
 .button-box.left .button {margin: 1rem 1rem 0 0;}
 
 .button-box.row {flex-direction: row;}
-
 .button-box.row.left {justify-content: flex-start;}
-
 .button-box.row.left .button {margin: 1rem 1rem 0 0;}
-
 .button-box.row.left .button:last-of-type {margin: 1rem 0 0 0;}
 
 .button-box.row.right {justify-content: flex-end;}
-
 .button-box.row.right .button {margin: 1rem 0 0 1rem;}
-
 .button-box.row.right .button:first-of-type {margin: 1rem 0 0 0;}

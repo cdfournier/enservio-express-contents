@@ -91,7 +91,7 @@ input::placeholder {
   @include transition(all, 0.125s, ease);
 }
 
-input:focus {border-color: $tango;}
+input:focus {border-color: var(--accent-color);}
 
 input[type="password"],
 input[type="search"] {padding: 0 3rem 0 0;}
@@ -137,8 +137,8 @@ input[type="checkbox"]:checked:before {
 }
 
 input[type="checkbox"]:checked:not(:disabled) {
-  border-color: $tango;
-  background-color: $tango;
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 
@@ -187,12 +187,12 @@ input.toggle[type="checkbox"]:after {
 
 input.toggle[type="checkbox"]:checked {
   border-color: transparent;
-  background-color: $tango;
+  background-color: var(--accent-color);
 }
 
 input.toggle[type="checkbox"]:checked:after {
   left: calc(100% - 1.25rem);
-  color: $tango;
+  color: var(--accent-color);
   content: "\f17b";
 }
 
@@ -287,7 +287,7 @@ select:disabled {
 select:disabled + .select-icon {color: $mako;}
 
 select:focus {
-  border-color: $tango;
+  border-color: var(--accent-color);
   outline: none;
 }
 
@@ -334,7 +334,7 @@ span.forgot-password-prompt {
   width: auto;
   height: calc(100% - 0.925rem);
   font-size: 1.5rem;
-  color: $tango;
+  color: var(--accent-color);
   cursor: pointer;
   @include transition(all, 0.25s, ease);
 }
