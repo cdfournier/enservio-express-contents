@@ -5,10 +5,10 @@ a:hover, a:focus {
   color: #444853; }
 
 :root {
-  --accent-color: #36aba6; }
+  --accent-color: #f27e20; }
 
 :export {
-  accent-color: #36aba6; }
+  accent-color: #f27e20; }
 
 html {
   width: 100%;
