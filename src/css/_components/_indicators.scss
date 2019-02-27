@@ -49,6 +49,6 @@
 
 
 // ONSITE INDICATOR
-.onsite .indicator.one.hidden {padding: 0;}
-.onsite .indicator.one {padding: 4rem 2rem;}
-.onsite .indicator.one .indicator-gauge > span {@include transition(all, 5s, ease);}
+.onsite .indicator.two.hidden {padding: 0;}
+.onsite .indicator.two {padding: 4rem 2rem;}
+.onsite .indicator.two .indicator-gauge > span {@include transition(all, 5s, ease);}

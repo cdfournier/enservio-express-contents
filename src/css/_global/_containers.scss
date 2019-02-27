@@ -96,7 +96,7 @@ main {
 
 
 // SETUP CONTAINER
-.setup, .room-inventory {
+.setup, .room-item, .room-inventory {
   display: flex;
   flex-direction: column;
   align-items: center;

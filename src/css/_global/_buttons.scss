@@ -11,7 +11,7 @@
   margin: 1rem 0.5rem 0;
   padding: 0 1.728rem;
   border-radius: 4rem;
-  font-size: 0.694rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 2.25rem;
@@ -61,7 +61,7 @@
   min-height: 1.325rem;
   margin: 0 0 0 0.5rem;
   border-radius: 100%;
-  font-size: 0.694rem;
+  font-size: 0.75rem;
   font-weight: 700;
   line-height: 1.325rem;
 }
@@ -80,12 +80,14 @@ span.button.camera input[type="file"] {
 }
 
 span.button.camera {
+  position: relative;
   width: 4rem;
   max-width: 4rem;
   min-width: 4rem;
   height: 4rem;
   max-height: 4rem;
   min-height: 4rem;
+  overflow: visible;
   margin: 1rem 0 0 0;
   padding: 0;
   border-radius: 100%;
@@ -151,6 +153,30 @@ span.button.camera span.button-label {font-size: 2rem;}
   color: var(--accent-color);
   background-color: $white;
 }
+
+
+// BUTTON COUNT
+span.count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid $white;
+  border-radius: 100%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  text-align: center;
+  color: $white;
+  background-color: var(--accent-color);
+}
+
+span.count.hidden {display: none;}
 
 
 // BUTTON BOXES
