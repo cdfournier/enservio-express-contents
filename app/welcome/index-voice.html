@@ -42,10 +42,25 @@
             </div>
           </div>
         </div>
+        <div class="voice one hidden">
+          <a id="listen-one" class="icon active animated pulse infinite"><i class="la la-microphone"></i></a>
+        </div>
+        <div class="indicator one hidden">
+          <div class="indicator-gauge">
+            <span></span>
+          </div>
+        </div>
         <div class="chat two hidden">
-          <div class="button-box">
-            <a href="../onsite/index.html" class="button"><span class="button-label">Onsite Inventory</span></a>
-            <a href="../offsite/index.html" class="button"><span class="button-label">Offsite Inventory</span></a>
+          <div class="chat-bot onsite reverse">
+            <div class="small-avatar"><img src="../../src/images/user.jpg" align="You"></div>
+            <div class="bubble">
+              <p>I need to do an onsite inventory.</p>
+            </div>
+          </div>
+        </div>
+        <div class="indicator two hidden">
+          <div class="indicator-gauge">
+            <span></span>
           </div>
         </div>
       </section>
@@ -71,7 +86,28 @@
         setTimeout(function() {$('.loading .indicator-gauge span').addClass('loaded')}, 2500);
         setTimeout(function() {$('.loading').addClass('loaded')}, 5000);
         setTimeout(function() {$('.chat.one').removeClass('hidden')}, 5500);
-        setTimeout(function() {$('.chat.two').removeClass('hidden')}, 6500);
+        setTimeout(function() {$('.voice.one').removeClass('hidden')}, 6000);
+/*
+        setTimeout(function() {var ctrl = new anycontrol()
+          ctrl.addCommand("previous page", function() {
+            console.log('Go to previous page')
+          });
+          ctrl.addCommand("next page", function () {
+            console.log('Go to next page')
+          });
+          ctrl.start();
+        }, 6500);
+*/
+        $('#listen-one').click(function() {
+          $('.voice.one .icon').removeClass('active animated pulse infinite');
+          $('.voice.one .icon').addClass('inactive');
+          $('.indicator.one').removeClass('hidden');
+            setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1000);
+            setTimeout(function() {$('.chat.two').removeClass('hidden')}, 3500);
+            setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 4000);
+            setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 4500);
+            setTimeout(function() {$(window.location.href = '../onsite/index.html')}, 7000);
+        });
       });
     </script>
   </body>
