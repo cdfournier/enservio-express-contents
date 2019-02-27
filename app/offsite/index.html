@@ -32,12 +32,211 @@
           </div>
         </div>
       </section>
-      <section data-qa="offsite" class="offsite">
-        <div class="chat one animated slideInDown">
-          <div class="chat-bot">
-            <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
-            <div class="bubble">
-              <p>Ready when you are.</p>
+      <section data-qa="offsite" class="offsite md">
+        <div class="slider ext">
+          <div class="slider int">
+            <div class="setup one">
+              <div class="chat one">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Okay. Let's create an onsite inventory.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat two hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Let's start  by filling out the claim information. Tap the <em>Start</em> button when you're ready to begin.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat three hidden">
+                <div class="button-box">
+                  <a class="button start"><span class="button-label">Start</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="setup two">
+              <div class="form-container one hidden">
+                <form class="wrap" style="justify-content: space-between;">
+                  <h1>Loss Information</h1>
+                  <fieldset class="description">
+                    <legend>Insured Name</legend>
+                    <label for="name">Insured Name<input type="text" name="name" placeholder="Insured Name"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="street">
+                    <legend>Loss Street</legend>
+                    <label for="street">Loss Street<input type="text" name="street" placeholder="Loss Street"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half state">
+                    <legend>State</legend>
+                    <label for="state">State<input type="text" name="state" placeholder="State"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half zip">
+                    <legend>Zip</legend>
+                    <label for="zip">Zip<input type="text" name="zip" placeholder="Zip"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="peril">
+                    <legend>Peril Type</legend>
+                    <label for="peril">Peril Type
+                      <select name="peril" id="peril">
+                        <option value="0">Choose an option</option>
+                      </select>
+                    </label>
+                    <span class="select-icon"><i class="la la-angle-down"></i></span>
+                    <span class="error-message">This is where the error message goes</span>
+                  </fieldset>
+                  <fieldset class="half limit">
+                    <legend>Content Limit</legend>
+                    <label for="limit">Content Limit<input type="text" name="limit" placeholder="Content Limit"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <div class="button-box row">
+                    <a class="button next one"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="setup three">
+              <div class="chat four hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Next let's make a list of all of the affected rooms.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-container two hidden">
+                <form class="wrap" style="justify-content: space-between;">
+                  <h1>Affected Rooms</h1>
+                  <p>Please check all that apply.</p>
+                  <fieldset class="half">
+                    <legend>Attic</legend>
+                    <label for="attic" class="checkbox">Attic<input type="checkbox" name="attic" id="attic"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Basement</legend>
+                    <label for="basement" class="checkbox">Basement<input type="checkbox" name="basement" id="basement"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Bathroom</legend>
+                    <label for="bathroom" class="checkbox">Bathroom<input type="checkbox" name="bathroom" id="bathroom"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Bedroom</legend>
+                    <label for="bedroom" class="checkbox">Bedroom<input type="checkbox" name="bedroom" id="bedroom"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Garage</legend>
+                    <label for="garage" class="checkbox">Garage<input type="checkbox" name="garage" id="garage"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Kitchen</legend>
+                    <label for="kitchen" class="checkbox">Kitchen<input type="checkbox" name="kitchen" id="kitchen"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Laundry</legend>
+                    <label for="laundry" class="checkbox">Laundry<input type="checkbox" name="laundry" id="laundry"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Living Room</legend>
+                    <label for="living-room" class="checkbox">Living Room<input type="checkbox" name="living-room" id="living-room"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Office</legend>
+                    <label for="office" class="checkbox">Office<input type="checkbox" name="office" id="office"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Other</legend>
+                    <label for="other" class="checkbox">Other<input type="checkbox" name="other" id="other"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <div class="button-box row">
+                    <a class="button previous one"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+                    <a class="button next two"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="setup four">
+              <div class="chat five hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Now let's make a list of the types of items in each room. We'll start in the bedroom.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-container three hidden">
+                <form class="wrap" style="justify-content: space-between;">
+                  <h1>Bedroom Items</h1>
+                  <p>Please check all that apply.</p>
+                  <fieldset class="half">
+                    <legend>Bed</legend>
+                    <label for="bed" class="checkbox">Bed<input type="checkbox" name="bed" id="bed"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Box Spring</legend>
+                    <label for="box-spring" class="checkbox">Box Spring<input type="checkbox" name="box-spring" id="box-spring"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Drapery</legend>
+                    <label for="drapery" class="checkbox">Drapery<input type="checkbox" name="drapery" id="drapery"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Lighting</legend>
+                    <label for="lighting" class="checkbox">Lighting<input type="checkbox" name="lighting" id="lighting"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Linen</legend>
+                    <label for="linen" class="checkbox">Linen<input type="checkbox" name="linen" id="linen"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Mattress</legend>
+                    <label for="mattress" class="checkbox">Mattress<input type="checkbox" name="mattress" id="mattress"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Pillows</legend>
+                    <label for="pillows" class="checkbox">Pillows<input type="checkbox" name="pillows" id="pillows"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Television</legend>
+                    <label for="television" class="checkbox">Television<input type="checkbox" name="television" id="television"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Other</legend>
+                    <label for="other" class="checkbox">Other<input type="checkbox" name="other" id="other"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <div class="button-box row">
+                    <a class="button previous two"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+                    <a href="../room-inventory/index.html" class="button next three"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -48,7 +247,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="../../src/scripts/express-contents.js"></script>
     <script>
+      $(document).ready(function() {
+        setTimeout(function() {$('.chat.two').removeClass('hidden')}, 1000);
+        setTimeout(function() {$('.chat.three').removeClass('hidden')}, 2000);
+      });
 
+      $('.start').click(function() {
+        $('.slider.int').addClass('slide-two');
+          setTimeout(function() {$('.form-container.one').addClass('loaded')}, 500);
+          setTimeout(function() {$('.form-container.one').removeClass('hidden loaded')}, 600);
+      });
+
+      $('.next.one').click(function() {
+        $('.slider.int').removeClass('slide-two');
+        $('.slider.int').addClass('slide-three');
+          setTimeout(function() {$('.chat.four').removeClass('hidden')}, 500);
+          setTimeout(function() {$('.form-container.two').addClass('loaded')}, 1500);
+          setTimeout(function() {$('.form-container.two').removeClass('hidden loaded')}, 1600);
+      });
+
+      $('.previous.one').click(function() {
+        $('.slider.int').removeClass('slide-three');
+        $('.slider.int').addClass('slide-two');
+      });
+
+      $('.next.two').click(function() {
+        $('.slider.int').removeClass('slide-three');
+        $('.slider.int').addClass('slide-four');
+          setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
+          setTimeout(function() {$('.form-container.three').addClass('loaded')}, 1500);
+          setTimeout(function() {$('.form-container.three').removeClass('hidden loaded')}, 1600);
+
+      $('.previous.two').click(function() {
+        $('.slider.int').removeClass('slide-four');
+        $('.slider.int').addClass('slide-three');
+      });
+      });
     </script>
   </body>
 </html>

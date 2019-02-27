@@ -40,42 +40,18 @@
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
-                    <p>Okay. Let's do an onsite inventory. Where do you want to start?</p>
+                    <p>Okay. Let's do an onsite inventory. Tap the <em>Start</em> button when you're ready to begin.</p>
                   </div>
-                </div>
-              </div>
-              <div class="voice one hidden">
-                <a id="listen-one" class="icon active animated pulse infinite"><i class="la la-microphone"></i></a>
-              </div>
-              <div class="indicator one hidden">
-                <div class="indicator-gauge">
-                  <span></span>
                 </div>
               </div>
               <div class="chat two hidden">
-                <div class="chat-bot reverse">
-                  <div class="small-avatar"><img src="../../src/images/user.jpg" align="You"></div>
-                  <div class="bubble">
-                    <p>The bedroom</p>
-                  </div>
-                </div>
-              </div>
-              <div class="chat three hidden">
-                <div class="chat-bot">
-                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
-                  <div class="bubble">
-                    <p>Okay. We'll start in the bedroom. Tap the <em>Start</em> button when you're ready to begin.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="chat four hidden">
                 <div class="button-box">
                   <a class="button start"><span class="button-label">Start</span></a>
                 </div>
               </div>
             </div>
             <div class="setup two">
-              <div class="chat five hidden">
+              <div class="chat three hidden">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
@@ -83,10 +59,20 @@
                   </div>
                 </div>
               </div>
-              <div class="voice two hidden">
-                <a id="listen-two" class="icon active animated pulse infinite listen one"><i class="la la-microphone"></i></a>
+              <div class="voice one hidden">
+                <a id="listen-one" class="icon active animated pulse infinite listen one"><i class="la la-microphone"></i></a>
               </div>
-              <div class="chat six hidden">
+              <div class="text hidden">
+                <ul class="inventory-checklist xs">
+                  <li>Item Number:&nbsp;<b>1</b></li>
+                  <li class="room">Room<span><i class="la la-circle"></i><i class="la la-check-circle"></i><i class="la la-exclamation-circle"></i></span></li>
+                  <li class="description">Description<span><i class="la la-circle"></i><i class="la la-check-circle"></i><i class="la la-exclamation-circle"></i></span></li>
+                  <li class="value">Value<span><i class="la la-circle"></i><i class="la la-check-circle"></i><i class="la la-exclamation-circle"></i></span></li>
+                  <li class="quantity">Quantity<span><i class="la la-circle"></i><i class="la la-check-circle"></i><i class="la la-exclamation-circle"></i></span></li>
+                  <li class="age">Age<span><i class="la la-circle"></i><i class="la la-check-circle"></i><i class="la la-exclamation-circle"></i></span></li>
+                </ul>
+              </div>
+              <div class="chat four hidden">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
@@ -94,7 +80,7 @@
                   </div>
                 </div>
               </div>
-              <div class="indicator two hidden">
+              <div class="indicator one hidden">
                 <div class="indicator-gauge">
                   <span></span>
                 </div>
@@ -110,31 +96,28 @@
     <script src="../../src/scripts/express-contents.js"></script>
     <script>
       $(document).ready(function() {
-        setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1000);
-      });
-      $('#listen-one').click(function() {
-        $('.voice.one .icon').removeClass('active animated pulse infinite');
-        $('.voice.one .icon').addClass('inactive');
-        $('.indicator.one').removeClass('hidden');
-          setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1000);
-          setTimeout(function() {$('.chat.two').removeClass('hidden')}, 3500);
-          setTimeout(function() {$('.chat.three').removeClass('hidden')}, 4500);
-          setTimeout(function() {$('.chat.four').removeClass('hidden')}, 5500);
+        setTimeout(function() {$('.chat.two').removeClass('hidden')}, 1000);
       });
 
       $('.start').click(function() {
         $('.slider.int').addClass('slide-two');
-          setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
-          setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
+          setTimeout(function() {$('.chat.three').removeClass('hidden')}, 500);
+          setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1000);
+          setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
+          setTimeout(function() {$('ul.inventory-checklist li.room').addClass('complete')}, 6500);
+          setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 11500);
+          setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 16500);
+          setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 21500);
+          setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 26500);
       });
 
-      $('#listen-two').click(function() {
-        $('.voice.two .icon').removeClass('active animated pulse infinite');
-        $('.voice.two .icon').addClass('inactive');
-        setTimeout(function() {$('.chat.six').removeClass('hidden')}, 1000);
-        setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 1500);
-          setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 2500);
-          setTimeout(function() {$(window.location.href = '../item-summary/index.html')}, 7500);
+      $('#listen-one').click(function() {
+        $('.voice.one .icon').removeClass('active animated pulse infinite');
+        $('.voice.one .icon').addClass('inactive');
+        setTimeout(function() {$('.chat.four').removeClass('hidden')}, 1000);
+        setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 1500);
+          setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 2500);
+          setTimeout(function() {$(window.location.href = '../item-summary-one/index.html')}, 7500);
       });
     </script>
   </body>

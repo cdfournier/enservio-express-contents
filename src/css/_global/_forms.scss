@@ -49,7 +49,7 @@ fieldset {
 
 fieldset:last-of-type {margin: 0;}
 
-fieldset.half input {width: calc(50% - 1rem);}
+fieldset.half {width: calc(50% - 1rem);}
 
 fieldset.inline-button {width: calc(60% - 1rem);}
 
@@ -92,8 +92,6 @@ input::placeholder {
 }
 
 input:focus {border-color: $tango;}
-
-input:focus::placeholder {opacity: 0.5;}
 
 input[type="password"],
 input[type="search"] {padding: 0 3rem 0 0;}

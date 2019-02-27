@@ -65,8 +65,9 @@
 // CAMERA BUTTON
 span.button.camera input[type="file"] {
   position: absolute;
+  z-index: 10;
   width: 4rem;
-  overflow: hidden;
+  height: 4rem;
   margin: 0;
   padding: 0;
   opacity: 0;
