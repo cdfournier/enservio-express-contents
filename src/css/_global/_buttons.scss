@@ -32,6 +32,7 @@
   position: relative;
   top: 0;
   width: auto;
+  height: 2.25rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -54,11 +55,15 @@
   align-items: center;
   justify-content: center;
   width: 1.325rem;
+  min-width: 1.325rem;
   height: 1.325rem;
+  max-height: 1.325rem;
+  min-height: 1.325rem;
   margin: 0 0 0 0.5rem;
   border-radius: 100%;
   font-size: 0.694rem;
   font-weight: 700;
+  line-height: 1.325rem;
 }
 
 
@@ -87,6 +92,19 @@ span.button.camera {
 }
 
 span.button.camera span.button-label {font-size: 2rem;}
+
+
+// ATTACHMENTS BUTTON
+.button.attachments input[type="file"] {
+  position: absolute;
+  z-index: 10;
+  width: auto;
+  height: 2.25rem;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+}
 
 
 // PRIMARY BUTTON DEFAULT COLOR

@@ -159,6 +159,7 @@ h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {
   position: relative;
   top: 0;
   width: auto;
+  height: 2.25rem;
   overflow: hidden;
   text-overflow: ellipsis; }
 
@@ -182,11 +183,15 @@ h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {
   align-items: center;
   justify-content: center;
   width: 1.325rem;
+  min-width: 1.325rem;
   height: 1.325rem;
+  max-height: 1.325rem;
+  min-height: 1.325rem;
   margin: 0 0 0 0.5rem;
   border-radius: 100%;
   font-size: 0.694rem;
-  font-weight: 700; }
+  font-weight: 700;
+  line-height: 1.325rem; }
 
 span.button.camera input[type="file"] {
   position: absolute;
@@ -211,6 +216,16 @@ span.button.camera {
 
 span.button.camera span.button-label {
   font-size: 2rem; }
+
+.button.attachments input[type="file"] {
+  position: absolute;
+  z-index: 10;
+  width: auto;
+  height: 2.25rem;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer; }
 
 .button {
   border: 1px solid #f27e20;
@@ -1462,18 +1477,6 @@ input.accordion:checked ~ label .item-header:after {
 .button.small span {
   position: absolute; }
 
-/*
-.inventory .item-details:before {
-  display: block;
-  width: calc(100% - 2rem);
-  height: 1px;
-  margin: 2rem 1rem 0;
-  background-color: $iron;
-  content: "";
-}
-
-.inventory .item-details form {padding: 2rem 0 0;}
-*/
 .accordion.inventory.disabled .item-number {
   color: #444853; }
 
@@ -1698,3 +1701,12 @@ ul.inventory-checklist li.incomplete span i.la.la-check-circle {
 
 .inventory-list > h1 {
   padding: 0 0 2rem; }
+
+.accordion.inventory .item-summary .form-container {
+  padding: 1rem; }
+
+.accordion.inventory .item-summary .form-container form .button-box {
+  padding: 0; }
+
+.accordion.inventory .item-summary .text.action {
+  padding: 0 1rem; }

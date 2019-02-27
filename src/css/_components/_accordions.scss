@@ -225,21 +225,6 @@ input.accordion:checked ~ label .item-header:after {
 .button.small span {position: absolute;}
 
 
-// INVENTORY ITEM DETAILS
-/*
-.inventory .item-details:before {
-  display: block;
-  width: calc(100% - 2rem);
-  height: 1px;
-  margin: 2rem 1rem 0;
-  background-color: $iron;
-  content: "";
-}
-
-.inventory .item-details form {padding: 2rem 0 0;}
-*/
-
-
 // DISABLED INVENTORY ITEMS
 .accordion.inventory.disabled {
   .item-number {color: $mako;}
