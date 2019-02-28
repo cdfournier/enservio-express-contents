@@ -92,17 +92,3 @@ main {
 .form-container h1 {padding: 0 0 1rem;}
 
 .form-container h1 + p, h1 + p:last-of-type {padding: 0 0 2rem;}
-
-
-
-// SETUP CONTAINER
-.setup, .room-item, .room-inventory {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 0 2rem;
-}

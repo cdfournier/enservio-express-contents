@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700">
-    <link rel="stylesheet" href="../../src/css/main.css">
+    <link rel="stylesheet" href="../../../src/css/main.css">
   </head>
   <body>
     <main>
@@ -38,7 +38,7 @@
             <div class="room-item">
               <div class="chat one">
                 <div class="chat-bot">
-                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
                     <p>Here are this item's details:</p>
                   </div>
@@ -83,14 +83,14 @@
                 </form>
               </div>
               <div class="text action hidden md">
-                <span class="next--item"><a href="#!">Next Item</a></span>
-                <span class="next--done"><a href="#!">Done</a></span>
+                <span><a  class="next--item">Next Item</a></span>
+                <span><a class="next--done">Done</a></span>
               </div>
             </div>
             <div class="room-item">
               <div class="chat two hidden">
                 <div class="chat-bot">
-                  <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
                     <p>Move to another room or stop adding items?</p>
                   </div>
@@ -98,8 +98,8 @@
               </div>
               <div class="chat three hidden">
                 <div class="button-box">
-                  <a href="../onsite-room-02/index.html" class="button"><span class="button-label">Next Room</span></a>
-                  <a class="button"><span class="button-label">Stop</span></a>
+                  <a href="../room-02/index.html" class="button"><span class="button-label">Next Room</span></a>
+                  <a href="../../dashboard/index.html" class="button"><span class="button-label">Stop</span></a>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="../../src/scripts/express-contents.js"></script>
+    <script src="../../../src/scripts/express-contents.js"></script>
     <script>
       $(document).ready(function() {
         setTimeout(function() {
@@ -127,7 +127,6 @@
         $('.slider.int').addClass('slide-two');
         setTimeout(function() {$('.chat.two').removeClass('hidden')
           $('.form-container').addClass('hidden')
-          $('.text.action').addClass('hidden')
         }, 500);
         setTimeout(function() {$('.chat.three').removeClass('hidden')}, 1000);
       });

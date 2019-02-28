@@ -1,0 +1,40 @@
+// DASHBOARD NAVIGATION
+.dashboard nav ul li.nav-settings {display: flex;}
+
+
+// OVERVIEW LIST
+.dashboard .text ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  list-style-type: none;
+  
+  li a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: auto;
+    margin: 0;
+    padding: 0 1rem 0 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: left;
+    color: $mako;
+    cursor: pointer;
+
+      span {
+        display: block;
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+  }
+  li:last-of-type {padding: 0;}
+  li a:hover, li a:focus {color: var(--accent-color);}
+}

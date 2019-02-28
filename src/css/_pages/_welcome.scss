@@ -86,7 +86,7 @@ nav {
   ul {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: nowrap;
     justify-content: space-between;
     width: 100%;
@@ -94,7 +94,10 @@ nav {
     padding: 0;
     list-style-type: none;
   }
-  ul li {padding: 0 1rem;}
+  ul li {
+    width: inherit;
+    padding: 0 1rem;
+  }
   ul li a {
     display: flex;
     flex-direction: column;
