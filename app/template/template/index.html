@@ -36,7 +36,9 @@
       </section>
     </main>
     <nav>
+      <a class="nav--open"><span class="menu"><i class="la la-bars"></i></span></a>
       <ul>
+        <li class="nav-close"><a class="nav--close"><span class="icon"><i class="la la-close"></i></span></a></li>
         <li class="nav-dashboard"><a href="../../dashboard/dashboard/index.html"><span class="icon"><i class="la la-dashboard"></i></span>Dashboard</a></li>
         <li class="nav-offsite"><a href="../../inventory/setup/index.html"><span class="icon"><i class="la la-keyboard-o"></i></span>Inventory</a></li>
         <li class="nav-profile"><a href="../../profile/profile/index.html"><span class="icon"><i class="la la-user"></i></span>Profile</a></li>
@@ -48,7 +50,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
     <script>
-
+      $('.nav--open').click(function() {$('nav').addClass('open');});
+      $('.nav--close').click(function() {$('nav').removeClass('open');});
     </script>
   </body>
 </html>
