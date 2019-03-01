@@ -29,13 +29,24 @@
   padding: 0 0 2rem;
 }
 
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 2rem;
+}
+
 
 // WELCOME SETUP SLIDER
 .welcome .slider.int {min-width: 200%;}
 .welcome .slider.int.slide-two {@include transform(translateX(-50%));}
 
 
-// ROOM ITEM SLIDER
+// ITEM SUMMARY SLIDER
 .item-summary .slider.int {min-width: 200%;}
 .item-summary .slider.int.slide-two {@include transform(translateX(-50%));}
 
@@ -63,3 +74,16 @@
 .dashboard .slider.int.slide-two {@include transform(translateX(-25%));}
 .dashboard .slider.int.slide-three {@include transform(translateX(-50%));}
 .dashboard .slider.int.slide-four {@include transform(translateX(-75%));}
+
+
+// EXPRESS SETUP
+.express-setup .slider.int {min-width: 400%;}
+.express-setup .slider.int.slide-two {@include transform(translateX(-25%));}
+.express-setup .slider.int.slide-three {@include transform(translateX(-50%));}
+.express-setup .slider.int.slide-four {@include transform(translateX(-75%));}
+
+
+// FIELD SETUP
+.field-setup .slider.int {min-width: 300%;}
+.field-setup .slider.int.slide-two {@include transform(translateX(-33.3%));}
+.field-setup .slider.int.slide-three {@include transform(translateX(-66.6%));}

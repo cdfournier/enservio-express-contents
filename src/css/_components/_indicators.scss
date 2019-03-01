@@ -52,3 +52,9 @@
 .onsite .indicator.two.hidden {padding: 0;}
 .onsite .indicator.two {padding: 4rem 2rem;}
 .onsite .indicator.two .indicator-gauge > span {@include transition(all, 5s, ease);}
+
+
+// FIELD SETUP INDICATOR
+.field-setup .indicator.two.hidden {padding: 0;}
+.field-setup .indicator.two {padding: 4rem 2rem;}
+.field-setup .indicator.two .indicator-gauge > span {@include transition(all, 5s, ease);}

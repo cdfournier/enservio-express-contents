@@ -9,7 +9,6 @@
 
 // ROOM INVENTORY ACCORDION ADJUSTMENTS
 .accordion.inventory .item-summary .form-container {padding: 1rem;}
-
+.accordion.inventory .item-summary .form-container form fieldset.room {width: calc(66% - 1rem);}
 .accordion.inventory .item-summary .form-container form .button-box {padding: 0;}
-
 .accordion.inventory .item-summary .text.action {padding: 0 1rem;}

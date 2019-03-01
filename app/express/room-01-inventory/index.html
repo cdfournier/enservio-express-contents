@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio | Room Inventory</title>
+    <title>Enservio | Express Contents Inventory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -22,6 +22,15 @@
           </div>
           <span class="dismiss error"><i class="la la-times-circle"></i></span>
         </div>
+        <div class="notification confirm delete">
+          <div class="message">
+            <p>Are you sure you want to delete this item?</p>
+            <div class="action">
+              <button class="button dismiss--yes"><span class="button-label">Yes</span></button>
+              <button class="button dismiss--no"><span class="button-label">No</span></button>
+            </div>
+          </div>
+        </div>
         <div class="notification confirm">
           <div class="message">
             <p>You have unsaved changes. If you continue those changes will be lost. Are you sure you want to continue?</p>
@@ -32,13 +41,12 @@
           </div>
         </div>
       </section>
-      <section data-qa="inventory" class="inventory">
+      <section data-qa="room-inventory" class="room-inventory">
         <div class="slider ext">
           <div class="slider int">
             <div class="room-inventory">
               <div class="inventory-list">
                 <h1>Bedroom Inventory</h1>
-
                 <div class="accordion inventory">
                   <input id="item-1" type="checkbox" name="items" class="accordion">
                   <label for="item-1">
@@ -67,19 +75,9 @@
                           <label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
                           <span class="error-message"></span>
                         </fieldset>
-                        <fieldset class="years">
-                          <legend>Age: Years</legend>
-                          <label for="years">Age: Years<input type="number" name="years" class="years" placeholder="Years" value="5"></label>
-                          <span class="error-message"></span>
-                        </fieldset>
-                        <fieldset class="months">
-                          <legend>Age: Months</legend>
-                          <label for="months">Age: Months<input type="number" name="months" class="months" placeholder="Months" min="0" max="11" value="3"></label>
-                          <span class="error-message"></span>
-                        </fieldset>
                         <fieldset class="room">
                           <legend>Room</legend>
-                          <label for="room">Room<input type="text" name="room" placeholder="Room" value="Master bedroom"><span class="is-valid"></span></label>
+                          <label for="room">Room<input type="text" name="room" placeholder="Room" value="Bedroom"><span class="is-valid"></span></label>
                           <span class="error-message"></span>
                         </fieldset>
                         <div class="button-box">
@@ -88,12 +86,11 @@
                       </form>
                     </div>
                     <div class="text action md">
-                      <span class="item--save"><a href="#!">Save</a></span>
-                      <span class="item--delete"><a href="#!">Delete</a></span>
+                      <span><a class="item--save">Save</a></span>
+                      <span><a class="item--delete">Delete</a></span>
                     </div>
                   </div>
                 </div>
-
                 <div class="accordion inventory">
                   <input id="item-2" type="checkbox" name="items" class="accordion">
                   <label for="item-2">
@@ -122,16 +119,6 @@
                           <label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
                           <span class="error-message"></span>
                         </fieldset>
-                        <fieldset class="years">
-                          <legend>Age: Years</legend>
-                          <label for="years">Age: Years<input type="number" name="years" class="years" placeholder="Years" value="5"></label>
-                          <span class="error-message"></span>
-                        </fieldset>
-                        <fieldset class="months">
-                          <legend>Age: Months</legend>
-                          <label for="months">Age: Months<input type="number" name="months" class="months" placeholder="Months" min="0" max="11" value="3"></label>
-                          <span class="error-message"></span>
-                        </fieldset>
                         <fieldset class="room">
                           <legend>Room</legend>
                           <label for="room">Room<input type="text" name="room" placeholder="Room" value="Master bedroom"><span class="is-valid"></span></label>
@@ -143,12 +130,11 @@
                       </form>
                     </div>
                     <div class="text action md">
-                      <span class="item--save"><a href="#!">Save</a></span>
-                      <span class="item--delete"><a href="#!">Delete</a></span>
+                      <span><a class="item--save">Save</a></span>
+                      <span><a class="item--delete">Delete</a></span>
                     </div>
                   </div>
                 </div>
-
                 <div class="accordion inventory">
                   <input id="item-3" type="checkbox" name="items" class="accordion">
                   <label for="item-3">
@@ -177,16 +163,6 @@
                           <label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="4"><span class="is-valid"></span></label>
                           <span class="error-message"></span>
                         </fieldset>
-                        <fieldset class="years">
-                          <legend>Age: Years</legend>
-                          <label for="years">Age: Years<input type="number" name="years" class="years" placeholder="Years" value="2"></label>
-                          <span class="error-message"></span>
-                        </fieldset>
-                        <fieldset class="months">
-                          <legend>Age: Months</legend>
-                          <label for="months">Age: Months<input type="number" name="months" class="months" placeholder="Months" min="0" max="11" value="6"></label>
-                          <span class="error-message"></span>
-                        </fieldset>
                         <fieldset class="room">
                           <legend>Room</legend>
                           <label for="room">Room<input type="text" name="room" placeholder="Room" value="Master bedroom"><span class="is-valid"></span></label>
@@ -198,12 +174,11 @@
                       </form>
                     </div>
                     <div class="text action md">
-                      <span class="item--save"><a href="#!">Save</a></span>
-                      <span class="item--delete"><a href="#!">Delete</a></span>
+                      <span><a class="item--save">Save</a></span>
+                      <span><a class="item--delete">Delete</a></span>
                     </div>
                   </div>
                 </div>
-
                 <div class="accordion inventory">
                   <input id="item-4" type="checkbox" name="items" class="accordion">
                   <label for="item-4">
@@ -232,16 +207,6 @@
                           <label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
                           <span class="error-message"></span>
                         </fieldset>
-                        <fieldset class="years">
-                          <legend>Age: Years</legend>
-                          <label for="years">Age: Years<input type="number" name="years" class="years" placeholder="Years" value="2"></label>
-                          <span class="error-message"></span>
-                        </fieldset>
-                        <fieldset class="months">
-                          <legend>Age: Months</legend>
-                          <label for="months">Age: Months<input type="number" name="months" class="months" placeholder="Months" min="0" max="11" value="6"></label>
-                          <span class="error-message"></span>
-                        </fieldset>
                         <fieldset class="room">
                           <legend>Room</legend>
                           <label for="room">Room<input type="text" name="room" placeholder="Room" value="Master bedroom"><span class="is-valid"></span></label>
@@ -253,28 +218,36 @@
                       </form>
                     </div>
                     <div class="text action md">
-                      <span class="item--save"><a href="#!">Save</a></span>
-                      <span class="item--delete"><a href="#!">Delete</a></span>
+                      <span><a class="item--save">Save</a></span>
+                      <span><a class="item--delete">Delete</a></span>
                     </div>
                   </div>
                 </div>
-
                 <div class="button-box row">
-                  <a class="button next one"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                  <a class="button"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <nav>
+      <ul>
+        <li class="nav-dashboard"><a href="../../dashboard/dashboard/index.html"><span class="icon"><i class="la la-dashboard"></i></span>Dashboard</a></li>
+        <li class="nav-inventory"><a href="../../inventory/setup/index.html"><span class="icon"><i class="la la-keyboard-o"></i></span>Inventory</a></li>
+        <li class="nav-profile"><a href="../../profile/profile/index.html"><span class="icon"><i class="la la-user"></i></span>Profile</a></li>
+        <li class="nav-settings"><a href="../settings/settings/index.html"><span class="icon"><i class="la la-sliders"></i></span>Settings</a></li>
+      </ul>
+    </nav>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
     <script>
-
+      $('.item--delete').click(function() {$('.notification.confirm.delete').addClass('show');});
+      $('.dismiss--yes').click(function() {$('.notification.confirm.delete').removeClass('show');});
+      $('.dismiss--no').click(function() {$('.notification.confirm.delete').removeClass('show');});
     </script>
   </body>
 </html>

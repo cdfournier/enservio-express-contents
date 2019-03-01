@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700">
-    <link rel="stylesheet" href="../../src/css/main.css">
+    <link rel="stylesheet" href="../../../src/css/main.css">
   </head>
   <body>
-    <main>
+    <main class="flex-start">
       <section data-qa="notifications">
         <div class="notification error">
           <div class="message">
@@ -32,10 +32,10 @@
           </div>
         </div>
       </section>
-      <section data-qa="dashboard" class="dashboard md">
+      <section data-qa="dashboard" class="dashboard">
         <div class="slider ext">
           <div class="slider int">
-            <div class="dashboard-item one">
+            <div class="slide">
               <div class="text">
                 <h1>Dashboard</h1>
                 <h2>Overview</h2>
@@ -46,20 +46,21 @@
                 </ul>
               </div>
             </div>
-            <div class="dashboard-item two">
+            <div class="slide">
               <div class="text">
-                <h1><a class="back--two"><i class="la la-angle-left"></i></a>Open Claims</h1>
+                <a class="back--two"><i class="la la-angle-left"></i></a>
+                <h1>Open Claims</h1>
                 <p>These claims are open and require your attention.</p>
               </div>
             </div>
-            <div class="dashboard-item three">
+            <div class="slide">
               <div class="text">
                 <a class="back--three"><i class="la la-angle-left"></i></a>
                 <h1>Pending Claims</h1>
                 <p>These claims are out for review.</p>
               </div>
             </div>
-            <div class="dashboard-item four">
+            <div class="slide">
               <div class="text">
                 <a class="back--four"><i class="la la-angle-left"></i></a>
                 <h1>Closed Claims</h1>
@@ -68,22 +69,20 @@
             </div>
           </div>
         </div>
-<!--
-        <nav>
-          <ul>
-            <li class="nav-onsite"><a href="../onsite/room-01/index.html"><span class="icon"><i class="la la-map-marker"></i></span>Onsite Inventory</a></li>
-            <li class="nav-offsite"><a href="../offsite/setup/index.html"><span class="icon"><i class="la la-keyboard-o"></i></span>Offsite Inventory</a></li>
-            <li class="nav-profile"><a href="#!"><span class="icon"><i class="la la-user"></i></span>Profile</a></li>
-            <li class="nav-settings"><a href="#!"><span class="icon"><i class="la la-sliders"></i></span>Settings</a></li>
-          </ul>
-        </nav>
--->
       </section>
     </main>
+    <nav>
+      <ul>
+        <li class="nav-dashboard"><a href="../../dashboard/dashboard/index.html" class="active"><span class="icon"><i class="la la-dashboard"></i></span>Dashboard</a></li>
+        <li class="nav-offsite"><a href="../../inventory/setup/index.html"><span class="icon"><i class="la la-keyboard-o"></i></span>Inventory</a></li>
+        <li class="nav-profile"><a href="../../profile/profile/index.html"><span class="icon"><i class="la la-user"></i></span>Profile</a></li>
+        <li class="nav-settings"><a href="../settings/settings/index.html"><span class="icon"><i class="la la-sliders"></i></span>Settings</a></li>
+      </ul>
+    </nav>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="../../src/scripts/express-contents.js"></script>
+    <script src="../../../src/scripts/express-contents.js"></script>
     <script>
       $('.claims--open').click(function() {$('.slider.int').addClass('slide-two');});
       $('.claims--pending').click(function() {$('.slider.int').addClass('slide-three');});

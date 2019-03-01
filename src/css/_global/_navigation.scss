@@ -1,0 +1,44 @@
+// NAVIGATION
+nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background-color: $white;
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+  }
+  ul li {
+    width: inherit;
+    padding: 0 1rem;
+  }
+  ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin: 0;
+    font-size: 0.625rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--accent-color);
+  }
+  ul li a:hover, ul li a:focus {color: $mako;}
+  ul li a span.icon {font-size: 2rem;}
+  ul li a.active {color: $mako;}
+}

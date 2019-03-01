@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio | Offsite Inventory Capture</title>
+    <title>Enservio | Express Contents Inventory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -32,15 +32,15 @@
           </div>
         </div>
       </section>
-      <section data-qa="offsite" class="offsite md">
+      <section data-qa="express-setup" class="express-setup">
         <div class="slider ext">
           <div class="slider int">
-            <div class="setup one">
+            <div class="slide one">
               <div class="chat one">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
-                    <p>Okay. Let's create an offsite inventory.</p>
+                    <p>Okay. Let's create an Express Contents inventory.</p>
                   </div>
                 </div>
               </div>
@@ -58,7 +58,7 @@
                 </div>
               </div>
             </div>
-            <div class="setup two">
+            <div class="slide two">
               <div class="form-container one hidden">
                 <form class="wrap" style="justify-content: space-between;">
                   <h1>Loss Information</h1>
@@ -120,12 +120,12 @@
                     <span class="error-message"></span>
                   </fieldset>
                   <div class="button-box row">
-                    <a class="button next one"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                    <a class="button next--one"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
                   </div>
                 </form>
               </div>
             </div>
-            <div class="setup three">
+            <div class="slide three">
               <div class="chat four hidden">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
@@ -189,13 +189,13 @@
                     <span class="error-message"></span>
                   </fieldset>
                   <div class="button-box row">
-                    <a class="button previous one"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
-                    <a class="button next two"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                    <a class="button previous--one"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+                    <a class="button next--two"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
                   </div>
                 </form>
               </div>
             </div>
-            <div class="setup four">
+            <div class="slide four">
               <div class="chat five hidden">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
@@ -254,8 +254,8 @@
                     <span class="error-message"></span>
                   </fieldset>
                   <div class="button-box row">
-                    <a class="button previous two"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
-                    <a href="../room-inventory/index.html" class="button next three"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                    <a class="button previous--two"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+                    <a href="../room-01-inventory/index.html" class="button"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
                   </div>
                 </form>
               </div>
@@ -264,6 +264,14 @@
         </div>
       </section>
     </main>
+    <nav>
+      <ul>
+        <li class="nav-dashboard"><a href="../../dashboard/dashboard/index.html"><span class="icon"><i class="la la-dashboard"></i></span>Dashboard</a></li>
+        <li class="nav-inventory"><a href="../../inventory/setup/index.html"><span class="icon"><i class="la la-keyboard-o"></i></span>Inventory</a></li>
+        <li class="nav-profile"><a href="../../profile/profile/index.html"><span class="icon"><i class="la la-user"></i></span>Profile</a></li>
+        <li class="nav-settings"><a href="../settings/settings/index.html"><span class="icon"><i class="la la-sliders"></i></span>Settings</a></li>
+      </ul>
+    </nav>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -280,7 +288,7 @@
           setTimeout(function() {$('.form-container.one').removeClass('hidden loaded')}, 600);
       });
 
-      $('.next.one').click(function() {
+      $('.next--one').click(function() {
         $('.slider.int').removeClass('slide-two');
         $('.slider.int').addClass('slide-three');
           setTimeout(function() {$('.chat.four').removeClass('hidden')}, 500);
@@ -288,19 +296,19 @@
           setTimeout(function() {$('.form-container.two').removeClass('hidden loaded')}, 1600);
       });
 
-      $('.previous.one').click(function() {
+      $('.previous--one').click(function() {
         $('.slider.int').removeClass('slide-three');
         $('.slider.int').addClass('slide-two');
       });
 
-      $('.next.two').click(function() {
+      $('.next--two').click(function() {
         $('.slider.int').removeClass('slide-three');
         $('.slider.int').addClass('slide-four');
           setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
           setTimeout(function() {$('.form-container.three').addClass('loaded')}, 1500);
           setTimeout(function() {$('.form-container.three').removeClass('hidden loaded')}, 1600);
 
-      $('.previous.two').click(function() {
+      $('.previous--two').click(function() {
         $('.slider.int').removeClass('slide-four');
         $('.slider.int').addClass('slide-three');
       });

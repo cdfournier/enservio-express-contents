@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio | Express Contents</title>
+    <title>Enservio | Welcome</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700">
-    <link rel="stylesheet" href="../../src/css/main.css">
+    <link rel="stylesheet" href="../../../src/css/main.css">
   </head>
   <body>
     <main>
@@ -35,29 +35,17 @@
       <section data-qa="welcome" class="welcome md">
         <div class="chat one hidden">
           <div class="chat-bot">
-            <div class="small-avatar"><img src="../../src/images/guide.jpg" align="Your Guide"></div>
+            <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
             <div class="bubble">
               <p>Welcome back <b>Ashley</b>! I am Khal Drogo. What do you want to do today?</p>
-              <!-- 3 options here: new onsite inventory; new offsite inventory; review previous inventory -->
             </div>
           </div>
         </div>
         <div class="chat two hidden">
           <div class="button-box">
-            <a href="../onsite/room-01/index.html" class="button"><span class="button-label">Onsite Inventory</span></a>
-            <a href="../offsite/setup/index.html" class="button"><span class="button-label">Offsite Inventory</span></a>
+            <a href="../../field/room-01-setup/index.html" class="button"><span class="button-label">New Field Inventory</span></a>
+            <a href="../../express/setup/index.html" class="button"><span class="button-label">New Express Inventory</span></a>
           </div>
-<!--
-          <nav>
-            <ul>
-              <li class="nav-onsite"><a href="../onsite/index.html"><span class="icon"><i class="la la-map-marker"></i></span>Onsite Inventory</a></li>
-              <li class="nav-offsite"><a href="../offsite/index.html"><span class="icon"><i class="la la-keyboard-o"></i></span>Offsite Inventory</a></li>
-              <li class="nav-dashboard"><a href="#!"><span class="icon"><i class="la la-dashboard"></i></span>Dashboard</a></li>
-              <li class="nav-profile"><a href="#!"><span class="icon"><i class="la la-user"></i></span>Profile</a></li>
-              <li class="nav-settings"><a href="#!"><span class="icon"><i class="la la-sliders"></i></span>Settings</a></li>
-            </ul>
-          </nav>
--->
         </div>
       </section>
       <section data-qa="loading" class="loading">
@@ -75,8 +63,7 @@
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="https://unpkg.com/anycontrol/dist/index.umd.min.js"></script>
-    <script src="../../src/scripts/express-contents.js"></script>
+    <script src="../../../src/scripts/express-contents.js"></script>
     <script>
       $(document).ready(function() {
         setTimeout(function() {$('.loading .indicator-gauge span').addClass('loaded')}, 2500);

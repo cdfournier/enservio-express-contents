@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio | Onsite Inventory Capture</title>
+    <title>Enservio | Enservio Field Notes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -32,15 +32,15 @@
           </div>
         </div>
       </section>
-      <section data-qa="onsite" class="onsite md">
+      <section data-qa="field-setup" class="field-setup">
         <div class="slider ext">
           <div class="slider int">
-            <div class="setup one">
+            <div class="slide one">
               <div class="chat one">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
-                    <p>Which room do you want to go through next?</p>
+                    <p>Okay. Let's do an onsite inventory. Which room do you want to start in?</p>
                   </div>
                 </div>
               </div>
@@ -53,13 +53,12 @@
                 </div>
               </div>
             </div>
-
-            <div class="setup two">
+            <div class="slide two">
               <div class="chat two hidden">
                 <div class="chat-bot onsite reverse">
                   <div class="small-avatar"><img src="../../../src/images/user.jpg" align="You"></div>
                   <div class="bubble">
-                    <p>The kitchen</p>
+                    <p>The bedroom</p>
                   </div>
                 </div>
               </div>
@@ -67,7 +66,7 @@
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
-                    <p>Okay. Let's add items from the kitchen. Tap the <em>Start</em> button when you're ready to add your first item.</p>
+                    <p>Okay. We'll start in the bedroom. Tap the <em>Start</em> button when you're ready to add your first item.</p>
                   </div>
                 </div>
               </div>
@@ -77,8 +76,7 @@
                 </div>
               </div>
             </div>
-
-            <div class="setup three">
+            <div class="slide three">
               <div class="chat five hidden">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
@@ -113,11 +111,18 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
     </main>
+    <nav>
+      <ul>
+        <li class="nav-dashboard"><a href="../../dashboard/dashboard/index.html"><span class="icon"><i class="la la-dashboard"></i></span>Dashboard</a></li>
+        <li class="nav-offsite"><a href="../../inventory/setup/index.html"><span class="icon"><i class="la la-keyboard-o"></i></span>Inventory</a></li>
+        <li class="nav-profile"><a href="../../profile/profile/index.html"><span class="icon"><i class="la la-user"></i></span>Profile</a></li>
+        <li class="nav-settings"><a href="../settings/settings/index.html"><span class="icon"><i class="la la-sliders"></i></span>Settings</a></li>
+      </ul>
+    </nav>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -144,11 +149,11 @@
           setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
           setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
           setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
-          setTimeout(function() {$('ul.inventory-checklist li.room').addClass('complete')}, 5000);
-          setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 9000);
-          setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 13000);
-          setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 17000);
-          setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 20000);
+          setTimeout(function() {$('ul.inventory-checklist li.room').addClass('complete')}, 4000);
+          setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 8000);
+          setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 12000);
+          setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 16000);
+          setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 19000);
       });
 
       $('#listen-two').click(function() {
@@ -157,7 +162,7 @@
         setTimeout(function() {$('.chat.six').removeClass('hidden')}, 1000);
         setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 1500);
           setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 2500);
-          setTimeout(function() {$(window.location.href = '../item-summary-01/index.html')}, 7500);
+          setTimeout(function() {$(window.location.href = '../room-01-item-01/index.html')}, 7500);
       });
     </script>
   </body>

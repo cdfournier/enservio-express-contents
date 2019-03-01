@@ -12,12 +12,13 @@ ul.inventory-checklist li {
   justify-content: space-between;
   width: 100%;
   padding: 0 0 1rem;
+  font-weight: 500;
   line-height: 1.5;
   @include transition(all, 0.325s, ease);
 }
 
 ul.inventory-checklist li:first-of-type {
-  justify-content: flex-start;
+  justify-content: center;
   font-size: 0.875rem;
   font-weight: 500;
   text-transform: uppercase;
