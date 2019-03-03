@@ -14,6 +14,18 @@
     <link rel="stylesheet" href="../../../src/css/main.css">
   </head>
   <body>
+    <header>
+      <nav>
+        <a class="nav--open"><i class="la la-bars"></i></a>
+        <ul>
+          <li class="nav-close"><a class="nav--close"><span class="icon"><i class="la la-close"></i></span></a></li>
+          <li class="nav-dashboard"><a href="../../dashboard/dashboard/index.html" class="active"><span class="icon"><i class="la la-dashboard"></i></span>Dashboard</a></li>
+          <li class="nav-offsite"><a href="../../inventory/setup/index.html"><span class="icon"><i class="la la-keyboard-o"></i></span>Inventory</a></li>
+          <li class="nav-profile"><a href="../../profile/profile/index.html"><span class="icon"><i class="la la-user"></i></span>Profile</a></li>
+          <li class="nav-settings"><a href="../../settings/settings/index.html"><span class="icon"><i class="la la-sliders"></i></span>Settings</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section data-qa="notifications">
         <div class="notification error">
@@ -232,19 +244,14 @@
         </div>
       </section>
     </main>
-    <nav>
-      <ul>
-        <li class="nav-dashboard"><a href="../../dashboard/dashboard/index.html"><span class="icon"><i class="la la-dashboard"></i></span>Dashboard</a></li>
-        <li class="nav-inventory"><a href="../../inventory/setup/index.html"><span class="icon"><i class="la la-keyboard-o"></i></span>Inventory</a></li>
-        <li class="nav-profile"><a href="../../profile/profile/index.html"><span class="icon"><i class="la la-user"></i></span>Profile</a></li>
-        <li class="nav-settings"><a href="../settings/settings/index.html"><span class="icon"><i class="la la-sliders"></i></span>Settings</a></li>
-      </ul>
-    </nav>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
     <script>
+      $('.nav--open').click(function() {$('nav').addClass('open');});
+      $('.nav--close').click(function() {$('nav').removeClass('open');});
+
       $('.item--delete').click(function() {$('.notification.confirm.delete').addClass('show');});
       $('.dismiss--yes').click(function() {$('.notification.confirm.delete').removeClass('show');});
       $('.dismiss--no').click(function() {$('.notification.confirm.delete').removeClass('show');});
