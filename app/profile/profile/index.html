@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio | Dashboard</title>
+    <title>Enservio | </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700">
-    <link rel="stylesheet" href="../../../src/css/main-nav-test.css">
+    <link rel="stylesheet" href="../../../src/css/main.css">
   </head>
   <body>
     <header>
@@ -26,7 +26,7 @@
         </ul>
       </nav>
     </header>
-    <main class="flex-start">
+    <main>
       <section data-qa="notifications">
         <div class="notification error">
           <div class="message">
@@ -44,43 +44,7 @@
           </div>
         </div>
       </section>
-      <section data-qa="dashboard" class="dashboard">
-        <div class="slider ext">
-          <div class="slider int">
-            <div class="slide">
-              <div class="text">
-                <h1>Dashboard</h1>
-                <h2>Overview</h2>
-                <ul>
-                  <li><a class="claims--open"><span>12</span>Open Claims</a></li>
-                  <li><a class="claims--pending"><span>6</span>Pending Claims</a></li>
-                  <li><a class="claims--closed"><span>35</span>Closed Claims</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="slide">
-              <div class="text">
-                <a class="back--two"><i class="la la-angle-left"></i></a>
-                <h1>Open Claims</h1>
-                <p>These claims are open and require your attention.</p>
-              </div>
-            </div>
-            <div class="slide">
-              <div class="text">
-                <a class="back--three"><i class="la la-angle-left"></i></a>
-                <h1>Pending Claims</h1>
-                <p>These claims are out for review.</p>
-              </div>
-            </div>
-            <div class="slide">
-              <div class="text">
-                <a class="back--four"><i class="la la-angle-left"></i></a>
-                <h1>Closed Claims</h1>
-                <p>These claims are complete.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <section data-qa="" class="">
       </section>
     </main>
     <!-- scripts -->
@@ -90,20 +54,6 @@
     <script>
       $('.nav--open').click(function() {$('nav').addClass('open');});
       $('.nav--close').click(function() {$('nav').removeClass('open');});
-
-      $('.claims--open').click(function() {$('.slider.int').addClass('slide-two');});
-      $('.claims--pending').click(function() {$('.slider.int').addClass('slide-three');});
-      $('.claims--closed').click(function() {$('.slider.int').addClass('slide-four');});
-
-      $('.back--two').click(function() {$('.slider.int').removeClass('slide-two');
-        $('.slider.int').addClass('slide-one');
-      });
-      $('.back--three').click(function() {$('.slider.int').removeClass('slide-three');
-        $('.slider.int').addClass('slide-one');
-      });
-      $('.back--four').click(function() {$('.slider.int').removeClass('slide-four');
-        $('.slider.int').addClass('slide-one');
-      });
     </script>
   </body>
 </html>

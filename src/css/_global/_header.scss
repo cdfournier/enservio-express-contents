@@ -8,9 +8,11 @@ header {
   width: 100%;
   max-width: 100%;
   max-height: calc(100vh - 2rem);
+  max-height: 100vh;
   overflow: hidden;
   margin: 0;
   padding: 1rem 1rem 0;
+  padding: 1rem;
   background-color: $white;
 }
 
@@ -48,6 +50,7 @@ nav {
       a {
         display: flex;
         align-items: center;
+        font-weight: 500;
       }
       span.icon {
         width: 4rem;

@@ -51,7 +51,7 @@ h1.center, h2.center, h3.center, p.center, strong.center, em.center, small.cente
 
 h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right { text-align: right; }
 
-header { display: flex; flex-direction: row; flex-wrap: nowrap; position: absolute; z-index: 100; width: 100%; max-width: 100%; max-height: calc(100vh - 2rem); overflow: hidden; margin: 0; padding: 1rem 1rem 0; background-color: #ffffff; }
+header { display: flex; flex-direction: row; flex-wrap: nowrap; position: absolute; z-index: 100; width: 100%; max-width: 100%; max-height: calc(100vh - 2rem); max-height: 100vh; overflow: hidden; margin: 0; padding: 1rem 1rem 0; padding: 1rem; background-color: #ffffff; }
 
 nav { display: flex; flex-direction: column; align-items: flex-start; flex-wrap: nowrap; justify-content: flex-start; width: 200%; -webkit-transition: all 0.325s ease 0s; -moz-transition: all 0.325s ease 0s; -ms-transition: all 0.325s ease 0s; -o-transition: all 0.325s ease 0s; transition: all 0.325s ease 0s; -webkit-transform: translateX(0%); -moz-transform: translateX(0%); -ms-transform: translateX(0%); -o-transform: translateX(0%); transform: translateX(0%); }
 
@@ -61,7 +61,7 @@ nav ul { display: flex; flex-direction: column; justify-content: space-between; 
 
 nav ul li { display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap; justify-content: flex-start; }
 
-nav ul li a { display: flex; align-items: center; }
+nav ul li a { display: flex; align-items: center; font-weight: 500; }
 
 nav ul li span.icon { width: 4rem; font-size: 2rem; text-align: center; }
 
