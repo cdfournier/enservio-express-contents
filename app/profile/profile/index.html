@@ -44,42 +44,96 @@
           </div>
         </div>
       </section>
-      <section data-qa="profile" class="profile">
+      <section data-qa="profile" class="profile md">
         <div class="slider ext">
           <div class="slider int">
-            <div class="slide one">
+            <div class="slide">
               <div class="text">
                 <h1>Your Profile</h1>
+                <ul>
+                  <li class="avatar"><img src="../../../src/images/user.jpg" alt="Your Avatar"><a class="edit--avatar">Edit</a></li>
+                  <li><span class="label">Name</span>Ashley Colella<a class="edit--name">Edit</a></li>
+                  <li><span class="label">Email Address</span>acolella@enservio.com<a class="edit--email">Edit</a></li>
+                  <li><span class="label">Password</span>&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;<a class="edit--password">Edit</a></li>
+                </ul>
               </div>
-              <ul>
-                <li class="avatar"><img src="../../../src/images/user.jpg" alt="Your Avatar"><a class="edit--avatar">Edit</a></li>
-                <li><span class="label">Name</span>Ashley Colella<a class="edit--name">Edit</a></li>
-                <li><span class="label">Email Address</span>acolella@enservio.com<a class="edit--email">Edit</a></li>
-                <li><span class="label">Password</span>&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;<a class="edit--password">Edit</a></li>
-              </ul>
             </div>
-            <div class="slide two">
+            <div class="slide">
               <div class="text">
                 <a class="back--two"><i class="la la-angle-left"></i></a>
                 <h1>Your Avatar</h1>
               </div>
+              <div class="avatar"><img src="../../../src/images/user.jpg" align="Your Avatar"></div>
+              <div class="button-box">
+                <a class="button attachments"><input type="file" id="files" name="files[]"><span class="button-label">Upload New</span></a>
+                <a class="button hide"><span class="button-label">Save</span></a>
+              </div>
             </div>
-            <div class="slide three">
+            <div class="slide">
               <div class="text">
                 <a class="back--three"><i class="la la-angle-left"></i></a>
                 <h1>Your Name</h1>
               </div>
+              <div class="form-container">
+                <form>
+                  <fieldset class="name">
+                    <legend>Name</legend>
+                    <label for="name">Name<input type="text" name="name" placeholder="Name" value="Ashley Colella"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <div class="button-box left">
+                    <a class="button"><span class="button-label">Save</span></a>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="slide four">
+            <div class="slide">
               <div class="text">
                 <a class="back--four"><i class="la la-angle-left"></i></a>
                 <h1>Your Email Address</h1>
               </div>
+              <div class="form-container">
+                <form>
+                  <fieldset class="email">
+                    <legend>Email Address</legend>
+                    <label for="email">Email Address<input type="email" name="email" placeholder="Email Address" value="acolella@enservio.com"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <div class="button-box left">
+                    <a class="button"><span class="button-label">Save</span></a>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="slide five">
+            <div class="slide">
               <div class="text">
                 <a class="back--five"><i class="la la-angle-left"></i></a>
                 <h1>Your Password</h1>
+              </div>
+              <div class="form-container">
+                <form>
+                  <fieldset class="old-password">
+                    <legend>Old Password</legend>
+                    <label for="old-password">Old Password<input type="password" id="old-password" name="old-password" placeholder="Old Password" value="password"><span class="is-valid"></span></label>
+                    <span toggle="#old-password" class="la la-eye-slash show-hide-password"></span>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="new-password">
+                    <legend>New Password</legend>
+                    <label for="new-password">New Password<input type="password" id="new-password" name="new-password" placeholder="New Password"><span class="is-valid"></span></label>
+                    <span toggle="#new-password" class="la la-eye-slash show-hide-password"></span>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="confirm-password">
+                    <legend>Confirm Password</legend>
+                    <label for="confirm-password">Confirm Password<input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password"><span class="is-valid"></span></label>
+                    <span toggle="#confirm-password" class="la la-eye-slash show-hide-password"></span>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <div class="button-box left">
+                    <a class="button"><span class="button-label">Save</span></a>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -99,18 +153,12 @@
       $('.edit--email').click(function() {$('.slider.int').addClass('slide-four');});
       $('.edit--password').click(function() {$('.slider.int').addClass('slide-five');});
 
-      $('.back--two').click(function() {$('.slider.int').removeClass('slide-two');
-        $('.slider.int').addClass('slide-one');
-      });
-      $('.back--three').click(function() {$('.slider.int').removeClass('slide-three');
-        $('.slider.int').addClass('slide-one');
-      });
-      $('.back--four').click(function() {$('.slider.int').removeClass('slide-four');
-        $('.slider.int').addClass('slide-one');
-      });
-      $('.back--five').click(function() {$('.slider.int').removeClass('slide-five');
-        $('.slider.int').addClass('slide-one');
-      });
+      $('.back--two').click(function() {$('.slider.int').removeClass('slide-two');});
+      $('.back--three').click(function() {$('.slider.int').removeClass('slide-three');});
+      $('.back--four').click(function() {$('.slider.int').removeClass('slide-four');});
+      $('.back--five').click(function() {$('.slider.int').removeClass('slide-five');});
+
+      $('.attachments').on('change', function() {$('.button.hide').removeClass('hide')});
     </script>
   </body>
 </html>

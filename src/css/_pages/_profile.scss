@@ -4,7 +4,7 @@
   flex-direction: column;
   width: 100%;
   margin: 0;
-  padding: 1rem 2rem 0;
+  padding: 1rem 0 0;
   list-style-type: none;
   li {
     display: flex;
@@ -57,4 +57,21 @@
   display: block;
   padding: 0 0 1rem;
   font-size: 1.75rem;
+}
+
+
+// PROFILE AVATAR
+.avatar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  img {
+    display: inline-flex;
+    width: 6rem;
+    height: 6rem;
+    margin: 1rem auto 0;
+    border-radius: 100%;
+  }
 }

@@ -91,6 +91,7 @@
 
 // PROFILE SLIDER
 .profile .slider.int {min-width: 500%;}
+.profile .slider.int .slide {justify-content: flex-start;}
 .profile .slider.int.slide-two {@include transform(translateX(-20%));}
 .profile .slider.int.slide-three {@include transform(translateX(-40%));}
 .profile .slider.int.slide-four {@include transform(translateX(-60%));}

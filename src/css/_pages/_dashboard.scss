@@ -13,14 +13,12 @@
   margin: 0 auto;
   padding: 1rem 0;
   list-style-type: none;
-
   li {
     width: 30%;
     padding: 0.5rem;
     border: 1px solid $silver;
     border-radius: 0.25rem;
   }
-
   li a {
     display: flex;
     flex-direction: column;
@@ -34,13 +32,12 @@
     text-align: left;
     color: $mako;
     cursor: pointer;
-
-      span {
-        display: block;
-        width: 100%;
-        font-size: 2rem;
-        font-weight: 400;
-      }
+    span {
+      display: block;
+      width: 100%;
+      font-size: 2rem;
+      font-weight: 400;
+    }
   }
   li a:hover, li a:focus {color: var(--accent-color);}
 }
