@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio | </title>
+    <title>Enservio | Your Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -26,7 +26,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="flex-start">
       <section data-qa="notifications">
         <div class="notification error">
           <div class="message">
@@ -44,7 +44,46 @@
           </div>
         </div>
       </section>
-      <section data-qa="" class="">
+      <section data-qa="profile" class="profile">
+        <div class="slider ext">
+          <div class="slider int">
+            <div class="slide one">
+              <div class="text">
+                <h1>Your Profile</h1>
+              </div>
+              <ul>
+                <li class="avatar"><img src="../../../src/images/user.jpg" alt="Your Avatar"><a class="edit--avatar">Edit</a></li>
+                <li><span class="label">Name</span>Ashley Colella<a class="edit--name">Edit</a></li>
+                <li><span class="label">Email Address</span>acolella@enservio.com<a class="edit--email">Edit</a></li>
+                <li><span class="label">Password</span>&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;<a class="edit--password">Edit</a></li>
+              </ul>
+            </div>
+            <div class="slide two">
+              <div class="text">
+                <a class="back--two"><i class="la la-angle-left"></i></a>
+                <h1>Your Avatar</h1>
+              </div>
+            </div>
+            <div class="slide three">
+              <div class="text">
+                <a class="back--three"><i class="la la-angle-left"></i></a>
+                <h1>Your Name</h1>
+              </div>
+            </div>
+            <div class="slide four">
+              <div class="text">
+                <a class="back--four"><i class="la la-angle-left"></i></a>
+                <h1>Your Email Address</h1>
+              </div>
+            </div>
+            <div class="slide five">
+              <div class="text">
+                <a class="back--five"><i class="la la-angle-left"></i></a>
+                <h1>Your Password</h1>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <!-- scripts -->
@@ -54,6 +93,24 @@
     <script>
       $('.nav--open').click(function() {$('nav').addClass('open');});
       $('.nav--close').click(function() {$('nav').removeClass('open');});
+
+      $('.edit--avatar').click(function() {$('.slider.int').addClass('slide-two');});
+      $('.edit--name').click(function() {$('.slider.int').addClass('slide-three');});
+      $('.edit--email').click(function() {$('.slider.int').addClass('slide-four');});
+      $('.edit--password').click(function() {$('.slider.int').addClass('slide-five');});
+
+      $('.back--two').click(function() {$('.slider.int').removeClass('slide-two');
+        $('.slider.int').addClass('slide-one');
+      });
+      $('.back--three').click(function() {$('.slider.int').removeClass('slide-three');
+        $('.slider.int').addClass('slide-one');
+      });
+      $('.back--four').click(function() {$('.slider.int').removeClass('slide-four');
+        $('.slider.int').addClass('slide-one');
+      });
+      $('.back--five').click(function() {$('.slider.int').removeClass('slide-five');
+        $('.slider.int').addClass('slide-one');
+      });
     </script>
   </body>
 </html>

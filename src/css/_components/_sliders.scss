@@ -87,3 +87,11 @@
 .field-setup .slider.int {min-width: 300%;}
 .field-setup .slider.int.slide-two {@include transform(translateX(-33.3%));}
 .field-setup .slider.int.slide-three {@include transform(translateX(-66.6%));}
+
+
+// PROFILE SLIDER
+.profile .slider.int {min-width: 500%;}
+.profile .slider.int.slide-two {@include transform(translateX(-20%));}
+.profile .slider.int.slide-three {@include transform(translateX(-40%));}
+.profile .slider.int.slide-four {@include transform(translateX(-60%));}
+.profile .slider.int.slide-five {@include transform(translateX(-80%));}
