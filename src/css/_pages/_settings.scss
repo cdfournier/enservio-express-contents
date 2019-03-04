@@ -1,0 +1,28 @@
+// SETTINGS LIST
+.settings ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 1rem 0 0;
+  list-style-type: none;
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding: 1rem 0 0;
+    fieldset label {font-size: 1rem;}
+    span {padding: 0 4rem 0 0;}
+  }
+  li:after {
+    display: block;
+    width: 100%;
+    padding: 1rem 0 0;
+    border-bottom: 1px solid $iron;
+    content: "";
+  }
+}

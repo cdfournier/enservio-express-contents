@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio | </title>
+    <title>Enservio | Settings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -26,7 +26,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="flex-start">
       <section data-qa="notifications">
         <div class="notification error">
           <div class="message">
@@ -44,7 +44,25 @@
           </div>
         </div>
       </section>
-      <section data-qa="" class="">
+      <section data-qa="settings" class="settings">
+        <div class="text">
+          <h1>Settings</h1>
+          <ul>
+            <li>
+              <fieldset>
+                <legend>Touch ID</legend>
+                <label class="toggle" for="touch">Touch ID<input type="checkbox" name="touch" class="toggle" id="touch"></label>
+              </fieldset>
+            </li>
+            <li>
+              <fieldset>
+                <legend>Non-Stop Field Inventory</legend>
+                <label class="toggle" for="non-stop">Non-Stop Field Inventory<input type="checkbox" name="non-stop" class="toggle" id="non-stop"></label>
+              </fieldset>
+              <span>Turn this on to power through field inventories without stopping to review each item</span>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <!-- scripts -->

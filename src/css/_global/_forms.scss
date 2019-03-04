@@ -161,7 +161,7 @@ input.toggle[type="checkbox"] {
   border-color: transparent;
   border-radius: 2rem;
   background-color: $mako;
-  @include transition(all, 0.325s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 input.toggle[type="checkbox"]:checked:before {display: none;}
@@ -182,7 +182,7 @@ input.toggle[type="checkbox"]:after {
   font-size: 1rem;
   background-color: $white;
   content: "\f342";
-  @include transition(all, 0.325s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 input.toggle[type="checkbox"]:checked {
