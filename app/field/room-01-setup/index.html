@@ -176,7 +176,7 @@
         $('.slider.int').addClass('slide-three');
           setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
           setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
-          setTimeout(function() {annyang.start();}, 1000);
+          setTimeout(function() {annyang.start({autoRestart: false, continuous: false});}, 1000);
           setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
 /*
           setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 8000);
