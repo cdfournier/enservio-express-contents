@@ -49,11 +49,6 @@
   @include animation-duration(0.5s);
 }
 
-.loading .logo .express-contents {
-  fill: $white;
-  @include animation-delay(1.5s);
-}
-
 .loading.loaded {@include transform(translateY(-100rem));}
 
 

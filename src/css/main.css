@@ -1065,6 +1065,11 @@ fieldset.valid .show-hide-password {
 .indicator-gauge > span.loaded {
   width: 100%; }
 
+.loading .indicator {
+  padding: 4rem 2rem 0;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
+
 .loading .indicator .indicator-gauge {
   background-color: #ffffff; }
 
@@ -1765,11 +1770,6 @@ input.accordion:checked ~ label .item-header:after {
   animation-delay: 1s;
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s; }
-
-.loading .logo .express-contents {
-  fill: #ffffff;
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s; }
 
 .loading.loaded {
   -webkit-transform: translateY(-100rem);

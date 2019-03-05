@@ -39,6 +39,10 @@
 
 
 // LOADING INDICATOR
+.loading .indicator {
+  padding: 4rem 2rem 0;
+  @include animation-delay(1s);
+}
 .loading .indicator .indicator-gauge {background-color: $white;}
 .loading .indicator .indicator-gauge > span {background-color: var(--accent-color);}
 
