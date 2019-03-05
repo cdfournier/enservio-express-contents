@@ -71,10 +71,6 @@
     <script>
       $(document).ready(function() {
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1000);
-      });
-
-      $('.nav--open').click(function() {$('nav').addClass('open');});
-      $('.nav--close').click(function() {$('nav').removeClass('open');});
 
       if (annyang) {
         var commands = {
@@ -100,6 +96,10 @@
         // Start listening.
         setTimeout(function() {annyang.start();}, 1000);
       }
+
+        $('.nav--open').click(function() {$('nav').addClass('open');});
+        $('.nav--close').click(function() {$('nav').removeClass('open');});
+      });
     </script>
   </body>
 </html>
