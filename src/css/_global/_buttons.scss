@@ -131,6 +131,11 @@ span.button.camera span.button-label {font-size: 2rem;}
   background-color: var(--accent-color);
 }
 
+.button.disabled {
+  border: 1px solid $iron;
+  background-color: $iron;
+}
+
 
 // SECONDARY BUTTON DEFAULT COLOR
 .button.secondary {
@@ -152,6 +157,22 @@ span.button.camera span.button-label {font-size: 2rem;}
 .button.secondary:hover span.number, .button.secondary:focus span.number {
   color: var(--accent-color);
   background-color: $white;
+}
+
+.button.secondary.disabled {
+  border: 1px solid $iron;
+  color: $iron;
+}
+
+
+// BACK BUTTONS
+a.back--two,
+a.back--three,
+a.back--four,
+a.back--five {
+  display: block;
+  padding: 0 0 1rem;
+  font-size: 1.75rem;
 }
 
 

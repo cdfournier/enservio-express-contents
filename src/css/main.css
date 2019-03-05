@@ -344,6 +344,10 @@ span.button.camera span.button-label {
   color: #ffffff;
   background-color: var(--accent-color); }
 
+.button.disabled {
+  border: 1px solid #cccece;
+  background-color: #cccece; }
+
 .button.secondary {
   border: 1px solid var(--accent-color);
   color: var(--accent-color);
@@ -360,6 +364,18 @@ span.button.camera span.button-label {
 .button.secondary:hover span.number, .button.secondary:focus span.number {
   color: var(--accent-color);
   background-color: #ffffff; }
+
+.button.secondary.disabled {
+  border: 1px solid #cccece;
+  color: #cccece; }
+
+a.back--two,
+a.back--three,
+a.back--four,
+a.back--five {
+  display: block;
+  padding: 0 0 1rem;
+  font-size: 1.75rem; }
 
 span.count {
   display: flex;
@@ -2004,14 +2020,6 @@ ul.inventory-checklist li.incomplete span i.la.la-check-circle {
     content: ""; }
   .profile ul li.avatar:after {
     display: none; }
-
-.profile a.back--two,
-.profile a.back--three,
-.profile a.back--four,
-.profile a.back--five {
-  display: block;
-  padding: 0 0 1rem;
-  font-size: 1.75rem; }
 
 .avatar {
   display: flex;
