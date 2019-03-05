@@ -130,11 +130,33 @@
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
     <script>
       $(document).ready(function() {
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1000);
       });
+
+      if (annyang) {
+        // Let's define a command.
+        var commands = {
+          'description *tag': function() {
+            setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 1000);
+          },
+          'value *tag': function() {
+            setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 1000);
+          },
+          'quantity *tag': function() {
+            setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 1000);
+          },
+          'age *tag': function() {
+            setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 1000);
+          }
+        };
+
+        // Add our commands to annyang
+        annyang.addCommands(commands);
+      }
 
       $('.nav--open').click(function() {$('nav').addClass('open');});
       $('.nav--close').click(function() {$('nav').removeClass('open');});
@@ -155,12 +177,14 @@
         $('.slider.int').addClass('slide-three');
           setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
           setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
+          setTimeout(function() {annyang.start();}, 1000);
           setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
-          setTimeout(function() {$('ul.inventory-checklist li.room').addClass('complete')}, 4000);
+/*
           setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 8000);
           setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 12000);
           setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 16000);
           setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 19000);
+*/
       });
 
       $('#listen-two').click(function() {
