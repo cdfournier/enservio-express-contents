@@ -86,14 +86,14 @@
       if (annyang) {
         // Let's define a command.
         var commands = {
-          'field': function() {
+          'field *tag': function() {
             $('.voice.one .icon').removeClass('active animated pulse infinite');
             $('.voice.one .icon').addClass('inactive');
             setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 1000);
               setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1500);
               setTimeout(function() {$(window.location.href = '../../field/room-01-setup/index.html')}, 4750);
           },
-          'express': function() {
+          'express *tag': function() {
             $('.voice.one .icon').removeClass('active animated pulse infinite');
             $('.voice.one .icon').addClass('inactive');
             setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 1000);
