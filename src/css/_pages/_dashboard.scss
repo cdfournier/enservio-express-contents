@@ -32,6 +32,7 @@
     text-align: left;
     color: $mako;
     cursor: pointer;
+    @include transition(all, 0.325s, ease);
     span {
       display: block;
       width: 100%;
@@ -43,11 +44,59 @@
 }
 
 
-// DASHBOARD BACK BUTTON
-.dashboard a.back--two,
-.dashboard a.back--three,
-.dashboard a.back--four {
-  display: block;
-  padding: 0 0 1rem;
-  font-size: 1.75rem;
+// DASHBOARD CLAIMS LIST
+.dashboard .text a ul.claim {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 1rem auto 0;
+  padding: 1rem;
+  border: 1px solid $silver;
+  border-radius: 0.25rem;
+  list-style-type: none;
+  cursor: pointer;
+  li {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border: none;
+    font-weight: 400;
+    color: $black;
+    span {
+      padding: 0 0 0.25rem;
+      font-size: 0.875rem;
+      font-weight: 600;      
+    }
+  }
+  .number {width: 60%;}
+  .items {width: 30%;}
+  .go {
+    width: 10%;
+    font-size: 1.25rem;
+    text-align: right;
+    color: var(--accent-color);
+    @include transition(all, 0.325s, ease);
+  }
+}
+
+.dashboard .text a:hover ul.claim li.go,
+.dashboard .text a:focus ul.claim li.go {
+  color: $mako;
+}
+
+.dashboard .text.one,
+.dashboard .text.two,
+.dashboard .text.three {
+  max-height: 0;
+  @include transition(all, 0.325s, ease);
+}
+
+.dashboard .text.one.show,
+.dashboard .text.two.show,
+.dashboard .text.three.show {
+  max-height: 100rem;
+  @include transition(all, 0.325s, ease);
 }

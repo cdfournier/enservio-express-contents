@@ -44,7 +44,7 @@
           </div>
         </div>
       </section>
-      <section data-qa="dashboard" class="dashboard">
+      <section data-qa="dashboard" class="dashboard lg">
         <div class="slider ext">
           <div class="slider int">
             <div class="slide">
@@ -59,24 +59,79 @@
               </div>
             </div>
             <div class="slide">
-              <div class="text">
+              <div class="text one">
                 <a class="back--two"><i class="la la-angle-left"></i></a>
                 <h1>Open Claims</h1>
                 <p>These claims are open and require your attention.</p>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
               </div>
             </div>
             <div class="slide">
-              <div class="text">
+              <div class="text two">
                 <a class="back--three"><i class="la la-angle-left"></i></a>
                 <h1>Pending Claims</h1>
                 <p>These claims are out for review.</p>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
               </div>
             </div>
             <div class="slide">
-              <div class="text">
+              <div class="text three">
                 <a class="back--four"><i class="la la-angle-left"></i></a>
                 <h1>Closed Claims</h1>
                 <p>These claims are complete.</p>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
               </div>
             </div>
           </div>
@@ -91,18 +146,33 @@
       $('.nav--open').click(function() {$('nav').addClass('open');});
       $('.nav--close').click(function() {$('nav').removeClass('open');});
 
-      $('.claims--open').click(function() {$('.slider.int').addClass('slide-two');});
-      $('.claims--pending').click(function() {$('.slider.int').addClass('slide-three');});
-      $('.claims--closed').click(function() {$('.slider.int').addClass('slide-four');});
+      $('.claims--open').click(function() {
+        $('.slider.int').addClass('slide-two');
+        $('.text.one').addClass('show');
+      });
+      $('.claims--pending').click(function() {
+        $('.slider.int').addClass('slide-three');
+        $('.text.two').addClass('show');
+      });
+      $('.claims--closed').click(function() {
+        $('.slider.int').addClass('slide-four');
+        $('.text.three').addClass('show');
+      });
 
-      $('.back--two').click(function() {$('.slider.int').removeClass('slide-two');
+      $('.back--two').click(function() {
+        $('.slider.int').removeClass('slide-two');
         $('.slider.int').addClass('slide-one');
+        $('.text.one').removeClass('show');
       });
-      $('.back--three').click(function() {$('.slider.int').removeClass('slide-three');
+      $('.back--three').click(function() {
+        $('.slider.int').removeClass('slide-three');
         $('.slider.int').addClass('slide-one');
+        $('.text.two').removeClass('show');
       });
-      $('.back--four').click(function() {$('.slider.int').removeClass('slide-four');
+      $('.back--four').click(function() {
+        $('.slider.int').removeClass('slide-four');
         $('.slider.int').addClass('slide-one');
+        $('.text.three').removeClass('show');
       });
     </script>
   </body>
