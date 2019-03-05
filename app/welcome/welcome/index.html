@@ -41,12 +41,17 @@
             </div>
           </div>
         </div>
+        <div class="voice one hidden">
+          <a id="listen-one" class="icon active animated pulse infinite listen one"><i class="la la-microphone"></i></a>
+        </div>
+<!--
         <div class="chat two hidden">
           <div class="button-box">
             <a href="../../field/room-01-setup/index.html" class="button"><span class="button-label">New Field Inventory</span></a>
             <a href="../../express/setup/index.html" class="button"><span class="button-label">New Express Inventory</span></a>
           </div>
         </div>
+-->
       </section>
       <section data-qa="loading" class="loading">
         <div class="logo">
@@ -63,14 +68,30 @@
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
     <script>
       $(document).ready(function() {
         setTimeout(function() {$('.loading .indicator-gauge span').addClass('loaded')}, 2500);
         setTimeout(function() {$('.loading').addClass('loaded')}, 5000);
         setTimeout(function() {$('.chat.one').removeClass('hidden')}, 5500);
-        setTimeout(function() {$('.chat.two').removeClass('hidden')}, 6500);
+        setTimeout(function() {$('.voice.one').removeClass('hidden')}, 6000);
       });
+
+      if (annyang) {
+        // Let's define a command.
+        var commands = {
+          'field': function() {
+            $(window.location.href = '../field/room-01-setup-01/index.html');
+          }
+        };
+      
+        // Add our commands to annyang
+        annyang.addCommands(commands);
+      
+        // Start listening.
+        setTimeout(function() {annyang.start();}, 6000);
+      }
     </script>
   </body>
 </html>
