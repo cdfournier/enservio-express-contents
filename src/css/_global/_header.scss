@@ -47,18 +47,26 @@ nav {
       align-items: center;
       flex-wrap: nowrap;
       justify-content: flex-start;
+      width: 80%;
+      margin: 0 auto;
       a {
         display: flex;
         align-items: center;
+        width: 100%;
+        font-size: 1.5rem;
         font-weight: 500;
       }
       span.icon {
-        width: 4rem;
-        font-size: 2rem;
+        width: 6rem;
+        font-size: 3rem;
         text-align: center;
       }
-      a.nav--close .icon {width: auto;}
+      a.nav--close .icon {
+        width: auto;
+        font-size: 2rem;
+      }
     }
+    li.nav-close {width: 100%;}
   }
 }
 
