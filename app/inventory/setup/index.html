@@ -100,6 +100,14 @@
         // Start listening.
         setTimeout(function() {annyang.start();}, 1000);
       }
+
+      $('#listen-one').click(function() {
+        $('.voice.one .icon').removeClass('active animated pulse infinite');
+        $('.voice.one .icon').addClass('inactive');
+        setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 500);
+          setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1500);
+          setTimeout(function() {$(window.location.href = '../../express/setup/index.html')}, 4750);
+      });
     </script>
   </body>
 </html>
