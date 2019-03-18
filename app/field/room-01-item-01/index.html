@@ -56,6 +56,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="slide">
               <div class="form-container hidden">
                 <form>
                   <fieldset class="description">
@@ -125,6 +127,8 @@
     <script src="../../../src/scripts/express-contents.js"></script>
     <script>
       $(document).ready(function() {
+        setTimeout(function() {$('.item-summary .slider.int').addClass('slide-two');}, 1000);
+
         setTimeout(function() {
           $('.form-container').addClass('loaded')
           $('.text.action').addClass('loaded')
@@ -139,7 +143,7 @@
       $('.nav--close').click(function() {$('nav').removeClass('open');});
 
       $('.next--done').click(function() {
-        $('.slider.int').addClass('slide-two');
+        $('.slider.int').addClass('slide-three');
         setTimeout(function() {$('.chat.two').removeClass('hidden')
           $('.form-container').addClass('hidden')
         }, 500);

@@ -47,8 +47,9 @@
 
 
 // ITEM SUMMARY SLIDER
-.item-summary .slider.int {min-width: 200%;}
-.item-summary .slider.int.slide-two {@include transform(translateX(-50%));}
+.item-summary .slider.int {min-width: 300%;}
+.item-summary .slider.int.slide-two {@include transform(translateX(-33.3%));}
+.item-summary .slider.int.slide-three {@include transform(translateX(-66.6%));}
 
 
 // ONSITE SETUP SLIDER
