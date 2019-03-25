@@ -8,7 +8,6 @@
 - [Montserrat font](https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700)
 - [Line Awesome icon font](https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css)
 - [Animate.css](https://daneden.github.io/animate.css/)
-- [Animate On Scroll](https://github.com/michalsnik/aos/tree/v2)
-- [Flickity carousel](https://flickity.metafizzy.co/)
+- [Annyang](https://github.com/TalAter/annyang)
 
-Version 2.0
+Version 2.1
