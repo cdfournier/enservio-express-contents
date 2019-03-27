@@ -85,8 +85,6 @@
       navigator.mediaDevices.getUserMedia(constraints).
         then((stream) => {video.srcObject = stream});
 
-
-/*
       if (annyang) {
         var commands = {
           'field *tag': function() {
@@ -111,7 +109,6 @@
         // Start listening.
         setTimeout(function() {annyang.start();}, 6250);
       }
-*/
 
       $('#listen-one').click(function() {
         $('.voice.one .icon').removeClass('active animated pulse infinite');
