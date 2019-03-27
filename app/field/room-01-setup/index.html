@@ -49,6 +49,14 @@
           <div class="slider int">
             <div class="slide one">
               <div class="chat one">
+                <div class="chat-bot onsite reverse">
+                  <div class="small-avatar"><img src="../../../src/images/user.jpg" align="You"></div>
+                  <div class="bubble">
+                    <p>Field inventory</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat two hidden">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
@@ -66,7 +74,7 @@
               </div>
             </div>
             <div class="slide two">
-              <div class="chat two hidden">
+              <div class="chat three hidden">
                 <div class="chat-bot onsite reverse">
                   <div class="small-avatar"><img src="../../../src/images/user.jpg" align="You"></div>
                   <div class="bubble">
@@ -74,7 +82,7 @@
                   </div>
                 </div>
               </div>
-              <div class="chat three hidden">
+              <div class="chat four hidden">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
@@ -82,14 +90,14 @@
                   </div>
                 </div>
               </div>
-              <div class="chat four hidden">
+              <div class="chat five hidden">
                 <div class="button-box">
                   <a class="button start"><span class="button-label">Start</span></a>
                 </div>
               </div>
             </div>
             <div class="slide three">
-              <div class="chat five hidden">
+              <div class="chat six hidden">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
@@ -109,7 +117,7 @@
                   <li class="age">Age<span><i class="la la-circle"></i><i class="la la-check-circle"></i><i class="la la-exclamation-circle"></i></span></li>
                 </ul>
               </div>
-              <div class="chat six hidden">
+              <div class="chat seven hidden">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
@@ -133,8 +141,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
     <script>
+      /* Demo video scripts here */
+      $('.nav--open').click(function() {$('nav').addClass('open');});
+      $('.nav--close').click(function() {$('nav').removeClass('open');});
+
       $(document).ready(function() {
-        setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1000);
+        setTimeout(function() {$('.chat.two').removeClass('hidden')}, 1000);
+        setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1500);
+
+        setTimeout(function() {$('.voice.one .icon').removeClass('active animated pulse infinite')}, 4000);
+        setTimeout(function() {$('.voice.one .icon').addClass('inactive')}, 4000);
+        setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 4500);
+        setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 5000);
+        setTimeout(function() {$('.slider.int').addClass('slide-two')}, 7500);
+        setTimeout(function() {$('.chat.three').removeClass('hidden')}, 8000);
+        setTimeout(function() {$('.chat.four').removeClass('hidden')}, 8500);
+        setTimeout(function() {$('.chat.five').removeClass('hidden')}, 9000);
+      });
+      $('.start').click(function() {
+        setTimeout(function() {$('.slider.int').addClass('slide-three');}, 2000);
+        setTimeout(function() {$('.slider.int').removeClass('slide-two');}, 2000);
+        setTimeout(function() {$('.chat.six').removeClass('hidden')}, 2500);
+        setTimeout(function() {$('.voice.two').removeClass('hidden')}, 3000);
+        setTimeout(function() {$('.text').removeClass('hidden')}, 4000);
+        setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 5000);
+        setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 6000);
+        setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 7000);
+        setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 8000);
+        setTimeout(function() {$('.voice.two .icon').removeClass('active animated pulse infinite')}, 8500);
+        setTimeout(function() {$('.voice.two .icon').addClass('inactive')}, 9000);
+        setTimeout(function() {$('.chat.seven').removeClass('hidden')}, 9500);
+        setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 10000);
+        setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 10500);
+      });
+    </script>
+<!--
+    <script>
+      $(document).ready(function() {
+        setTimeout(function() {$('.chat.two').removeClass('hidden')}, 1000);
+        setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1500);
       });
 
       if (annyang) {
@@ -166,15 +211,15 @@
         setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 1000);
           setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1500);
           setTimeout(function() {$('.slider.int').addClass('slide-two')}, 4000);
-          setTimeout(function() {$('.chat.two').removeClass('hidden')}, 4500);
-          setTimeout(function() {$('.chat.three').removeClass('hidden')}, 5000);
-          setTimeout(function() {$('.chat.four').removeClass('hidden')}, 5500);
+          setTimeout(function() {$('.chat.three').removeClass('hidden')}, 4500);
+          setTimeout(function() {$('.chat.four').removeClass('hidden')}, 5000);
+          setTimeout(function() {$('.chat.five').removeClass('hidden')}, 5500);
       });
 
       $('.start').click(function() {
         $('.slider.int').removeClass('slide-two');
         $('.slider.int').addClass('slide-three');
-          setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
+          setTimeout(function() {$('.chat.six').removeClass('hidden')}, 500);
           setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
           setTimeout(function() {annyang.start();}, 1000);
           setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
@@ -187,11 +232,12 @@
       $('#listen-two').click(function() {
         $('.voice.two .icon').removeClass('active animated pulse infinite');
         $('.voice.two .icon').addClass('inactive');
-        setTimeout(function() {$('.chat.six').removeClass('hidden')}, 1000);
+        setTimeout(function() {$('.chat.seven').removeClass('hidden')}, 1000);
         setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 1500);
           setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 2500);
           setTimeout(function() {$(window.location.href = '../room-01-item-01/index.html')}, 7500);
       });
     </script>
+-->
   </body>
 </html>

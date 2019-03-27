@@ -60,27 +60,13 @@
           </div>
         </div>
       </section>
+      <video autoplay style="display: none;"></video>
     </main>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
-    <script>
-      /* Demo video scripts here */
-      $(document).ready(function() {
-        setTimeout(function() {$('.loading .indicator-gauge span').addClass('loaded')}, 2000);
-        setTimeout(function() {$('.loading').addClass('loaded')}, 5250);
-        setTimeout(function() {$('.chat.one').removeClass('hidden')}, 5800);
-        setTimeout(function() {$('.voice.one').removeClass('hidden')}, 6350);
-        setTimeout(function() {$('.voice.one .icon').removeClass('active animated pulse infinite')}, 8850);
-        setTimeout(function() {$('.voice.one .icon').addClass('inactive')}, 8850);
-        setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 9350);
-        setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 10350);
-        setTimeout(function() {$(window.location.href = '../../field/room-01-setup/index.html')}, 12850);
-      });
-    </script>
-<!--
     <script>
       $(document).ready(function() {
         setTimeout(function() {$('.loading .indicator-gauge span').addClass('loaded')}, 2000);
@@ -89,6 +75,18 @@
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 6250);
       });
 
+      const constraints = {
+        video: false,
+        audio: true
+      };
+
+      const video = document.querySelector('video');
+      
+      navigator.mediaDevices.getUserMedia(constraints).
+        then((stream) => {video.srcObject = stream});
+
+
+/*
       if (annyang) {
         var commands = {
           'field *tag': function() {
@@ -113,6 +111,7 @@
         // Start listening.
         setTimeout(function() {annyang.start();}, 6250);
       }
+*/
 
       $('#listen-one').click(function() {
         $('.voice.one .icon').removeClass('active animated pulse infinite');
@@ -122,6 +121,5 @@
           setTimeout(function() {$(window.location.href = '../../field/room-01-setup/index.html')}, 4750);
       });
     </script>
--->
   </body>
 </html>
