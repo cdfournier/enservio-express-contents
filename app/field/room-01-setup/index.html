@@ -78,7 +78,7 @@
                 <div class="chat-bot onsite reverse">
                   <div class="small-avatar"><img src="../../../src/images/user.jpg" align="You"></div>
                   <div class="bubble">
-                    <p>The bedroom</p>
+                    <p>Master bedroom</p>
                   </div>
                 </div>
               </div>
@@ -86,7 +86,7 @@
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
-                    <p>Okay. We'll start in the bedroom. Tap the <em>Start</em> button when you're ready to add your first item.</p>
+                    <p>Okay. We'll start in the master bedroom. Tap the <em>Start</em> button when you're ready to add your first item.</p>
                   </div>
                 </div>
               </div>
@@ -140,6 +140,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
+<!--
     <script>
       /* Demo video scripts here */
       $('.nav--open').click(function() {$('nav').addClass('open');});
@@ -158,6 +159,7 @@
         setTimeout(function() {$('.chat.four').removeClass('hidden')}, 8500);
         setTimeout(function() {$('.chat.five').removeClass('hidden')}, 9000);
       });
+
       $('.start').click(function() {
         setTimeout(function() {$('.slider.int').addClass('slide-three');}, 2000);
         setTimeout(function() {$('.slider.int').removeClass('slide-two');}, 2000);
@@ -175,8 +177,11 @@
         setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 10500);
       });
     </script>
-<!--
+-->
     <script>
+      $('.nav--open').click(function() {$('nav').addClass('open');});
+      $('.nav--close').click(function() {$('nav').removeClass('open');});
+
       $(document).ready(function() {
         setTimeout(function() {$('.chat.two').removeClass('hidden')}, 1000);
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1500);
@@ -201,9 +206,6 @@
         // Add our commands to annyang
         annyang.addCommands(commands);
       }
-
-      $('.nav--open').click(function() {$('nav').addClass('open');});
-      $('.nav--close').click(function() {$('nav').removeClass('open');});
 
       $('#listen-one').click(function() {
         $('.voice.one .icon').removeClass('active animated pulse infinite');
@@ -238,6 +240,5 @@
           setTimeout(function() {$(window.location.href = '../room-01-item-01/index.html')}, 7500);
       });
     </script>
--->
   </body>
 </html>

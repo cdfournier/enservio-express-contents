@@ -18,7 +18,7 @@
 
 
 // SLIDER CONTAINERS
-.setup, .room-item, .room-inventory, .dashboard-item {
+.setup, .room-item, .dashboard-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +37,7 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: 0 0 2rem;
+  padding: 0;
 }
 
 
@@ -47,9 +47,10 @@
 
 
 // ITEM SUMMARY SLIDER
-.item-summary .slider.int {min-width: 300%;}
-.item-summary .slider.int.slide-two {@include transform(translateX(-33.3%));}
-.item-summary .slider.int.slide-three {@include transform(translateX(-66.6%));}
+.item-summary .slider.int {min-width: 400%;}
+.item-summary .slider.int.slide-two {@include transform(translateX(-25%));}
+.item-summary .slider.int.slide-three {@include transform(translateX(-50%));}
+.item-summary .slider.int.slide-four {@include transform(translateX(-75%));}
 
 
 // ONSITE SETUP SLIDER
@@ -78,10 +79,12 @@
 
 
 // EXPRESS SETUP
-.express-setup .slider.int {min-width: 400%;}
-.express-setup .slider.int.slide-two {@include transform(translateX(-25%));}
-.express-setup .slider.int.slide-three {@include transform(translateX(-50%));}
-.express-setup .slider.int.slide-four {@include transform(translateX(-75%));}
+.express-setup .slider.int {min-width: 600%;}
+.express-setup .slider.int.slide-two {@include transform(translateX(-16.666%));}
+.express-setup .slider.int.slide-three {@include transform(translateX(-33.332%));}
+.express-setup .slider.int.slide-four {@include transform(translateX(-49.998%));}
+.express-setup .slider.int.slide-five {@include transform(translateX(-66.664%));}
+.express-setup .slider.int.slide-six {@include transform(translateX(-83.33%));}
 
 
 // FIELD SETUP

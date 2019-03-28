@@ -58,7 +58,19 @@
 .onsite .indicator.two .indicator-gauge > span {@include transition(all, 5s, ease);}
 
 
+// ITEM SUMMARY INDICATOR
+.item-summary .indicator.two.hidden {padding: 0;}
+.item-summary .indicator.two {padding: 4rem 2rem;}
+.item-summary .indicator.two .indicator-gauge > span {@include transition(all, 5s, ease);}
+
+
 // FIELD SETUP INDICATOR
 .field-setup .indicator.two.hidden {padding: 0;}
 .field-setup .indicator.two {padding: 4rem 2rem;}
 .field-setup .indicator.two .indicator-gauge > span {@include transition(all, 5s, ease);}
+
+
+// EXPRESS SETUP INDICATOR
+.express-setup .indicator.one.hidden {padding: 0;}
+.express-setup .indicator.one {padding: 4rem 2rem;}
+.express-setup .indicator.one .indicator-gauge > span {@include transition(all, 5s, ease);}

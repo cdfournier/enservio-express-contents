@@ -21,6 +21,13 @@
   @include transform(translateX(100rem));
 }
 
+.chat.hidden .button-box {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  @include transition(all, 0.325s, ease);
+}
+
 .chat-bot {
   display: flex;
   flex-direction: row;
@@ -58,6 +65,18 @@
 .chat-bot.reverse {flex-direction: row-reverse;}
 .chat-bot.reverse .small-avatar {margin: 0 0 0 1rem;}
 .chat-bot.reverse .bubble {border-radius: 0.25rem 0.25rem 0 0.25rem;}
+
+
+// CHAT BOT HIDDEN
+.chat.hidden .chat-bot,
+.chat.hidden .chat-bot .small-avatar,
+.chat.hidden .chat-bot .bubble,
+.chat.hidden .chat-bot .bubble p {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  @include transition(all, 0.325s, ease);
+}
 
 
 // ONSITE CHAT

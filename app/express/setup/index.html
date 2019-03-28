@@ -47,7 +47,7 @@
       <section data-qa="express-setup" class="express-setup md">
         <div class="slider ext">
           <div class="slider int">
-            <div class="slide one">
+            <div class="slide">
               <div class="chat one">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
@@ -70,7 +70,7 @@
                 </div>
               </div>
             </div>
-            <div class="slide two">
+            <div class="slide">
               <div class="form-container one hidden">
                 <form class="wrap" style="justify-content: space-between;">
                   <h1>Loss Information</h1>
@@ -131,18 +131,18 @@
                     <label for="limit">Content Limit<input type="text" name="limit" placeholder="Content Limit"><span class="is-valid"></span></label>
                     <span class="error-message"></span>
                   </fieldset>
-                  <div class="button-box row">
-                    <a class="button next--one"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
-                  </div>
                 </form>
+                <div class="button-box row">
+                  <a class="button next--one"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                </div>
               </div>
             </div>
-            <div class="slide three">
+            <div class="slide">
               <div class="chat four hidden">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
-                    <p>Next let's make a list of all of the affected rooms.</p>
+                    <p>Let's make a list of all of the affected rooms.</p>
                   </div>
                 </div>
               </div>
@@ -168,6 +168,11 @@
                   <fieldset class="half">
                     <legend>Bedroom</legend>
                     <label for="bedroom" class="checkbox">Bedroom<input type="checkbox" name="bedroom" id="bedroom"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Dining Room</legend>
+                    <label for="dining-room" class="checkbox">Dining Room<input type="checkbox" name="dining-room" id="dining-room"></label>
                     <span class="error-message"></span>
                   </fieldset>
                   <fieldset class="half">
@@ -200,77 +205,318 @@
                     <label for="other" class="checkbox">Other<input type="checkbox" name="other" id="other"></label>
                     <span class="error-message"></span>
                   </fieldset>
-                  <div class="button-box row">
-                    <a class="button previous--one"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
-                    <a class="button next--two"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
-                  </div>
                 </form>
+                <div class="button-box row">
+                  <a class="button previous--one"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+                  <a class="button next--two"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                </div>
               </div>
             </div>
-            <div class="slide four">
+            <div class="slide">
               <div class="chat five hidden">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
-                    <p>Now let's make a list of the types of items in each room. We'll start in the bedroom.</p>
+                    <p>Let's make a list of the types of items in each room. We'll start in the kitchen.</p>
                   </div>
                 </div>
               </div>
               <div class="form-container three hidden">
                 <form class="wrap" style="justify-content: space-between;">
-                  <h1>Bedroom Items</h1>
+                  <h1>Kitchen</h1>
                   <p>Please check all that apply.</p>
                   <fieldset class="half">
-                    <legend>Bed</legend>
-                    <label for="bed" class="checkbox">Bed<input type="checkbox" name="bed" id="bed"></label>
+                    <legend>Spatula</legend>
+                    <label for="spatula" class="checkbox">Spatula<input type="checkbox" name="spatula" id="spatula"></label>
                     <span class="error-message"></span>
                   </fieldset>
                   <fieldset class="half">
-                    <legend>Box Spring</legend>
-                    <label for="box-spring" class="checkbox">Box Spring<input type="checkbox" name="box-spring" id="box-spring"></label>
+                    <legend>Glasses</legend>
+                    <label for="glasses" class="checkbox">Glasses<input type="checkbox" name="glasses" id="glasses"></label>
                     <span class="error-message"></span>
                   </fieldset>
                   <fieldset class="half">
-                    <legend>Drapery</legend>
-                    <label for="drapery" class="checkbox">Drapery<input type="checkbox" name="drapery" id="drapery"></label>
+                    <legend>Cleaning Fluid</legend>
+                    <label for="cleaning-fluid" class="checkbox">Cleaning Fluid<input type="checkbox" name="cleaning-fluid" id="cleaning-fluid"></label>
                     <span class="error-message"></span>
                   </fieldset>
                   <fieldset class="half">
-                    <legend>Lighting</legend>
-                    <label for="lighting" class="checkbox">Lighting<input type="checkbox" name="lighting" id="lighting"></label>
+                    <legend>Coffee Maker</legend>
+                    <label for="coffee-maker" class="checkbox">Coffee Maker<input type="checkbox" name="coffee-maker" id="coffee-maker"></label>
                     <span class="error-message"></span>
                   </fieldset>
                   <fieldset class="half">
-                    <legend>Linen</legend>
-                    <label for="linen" class="checkbox">Linen<input type="checkbox" name="linen" id="linen"></label>
+                    <legend>Kitchen Mixer</legend>
+                    <label for="kitchen-mixer" class="checkbox">Kitchen Mixer<input type="checkbox" name="kitchen-mixer" id="kitchen-mixer"></label>
                     <span class="error-message"></span>
                   </fieldset>
                   <fieldset class="half">
-                    <legend>Mattress</legend>
-                    <label for="mattress" class="checkbox">Mattress<input type="checkbox" name="mattress" id="mattress"></label>
+                    <legend>Refrigerator</legend>
+                    <label for="refrigerator" class="checkbox">Refrigerator<input type="checkbox" name="refrigerator" id="refrigerator"></label>
                     <span class="error-message"></span>
                   </fieldset>
                   <fieldset class="half">
-                    <legend>Pillows</legend>
-                    <label for="pillows" class="checkbox">Pillows<input type="checkbox" name="pillows" id="pillows"></label>
+                    <legend>Baking Dish</legend>
+                    <label for="baking-dish" class="checkbox">Baking Dish<input type="checkbox" name="baking-dish" id="baking-dish"></label>
                     <span class="error-message"></span>
                   </fieldset>
                   <fieldset class="half">
-                    <legend>Television</legend>
-                    <label for="television" class="checkbox">Television<input type="checkbox" name="television" id="television"></label>
+                    <legend>Blender</legend>
+                    <label for="blender" class="checkbox">Blender<input type="checkbox" name="blender" id="blender"></label>
                     <span class="error-message"></span>
                   </fieldset>
                   <fieldset class="half">
-                    <legend>Other</legend>
-                    <label for="other" class="checkbox">Other<input type="checkbox" name="other" id="other"></label>
+                    <legend>Cutting Board</legend>
+                    <label for="cutting-board" class="checkbox">Cutting Board<input type="checkbox" name="cutting-board" id="cutting-board"></label>
                     <span class="error-message"></span>
                   </fieldset>
-                  <div class="button-box row">
-                    <a class="button previous--two"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
-                    <a href="../room-01-inventory/index.html" class="button"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
-                  </div>
+                  <fieldset class="half">
+                    <legend>Serving Bowl</legend>
+                    <label for="serving-bowl" class="checkbox">Serving Bowl<input type="checkbox" name="serving-bowl" id="serving-bowl"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Plate Ceramic</legend>
+                    <label for="plate-ceramic" class="checkbox">Plate Ceramic<input type="checkbox" name="plate-ceramic" id="plate-ceramic"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Pot and Pan Set</legend>
+                    <label for="pot-and-pan-set" class="checkbox">Pot and Pan Set<input type="checkbox" name="pot-and-pan-set" id="pot-and-pan-set"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Flatware Set</legend>
+                    <label for="flatware-set" class="checkbox">Flatware Set<input type="checkbox" name="flatware-set" id="flatware-set"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Mugs</legend>
+                    <label for="mugs" class="checkbox">Mugs<input type="checkbox" name="mugs" id="mugs"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Mixing Bowl</legend>
+                    <label for="mixing-bowl" class="checkbox">Mixing Bowl<input type="checkbox" name="mixing-bowl" id="mixing-bowl"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Serving Platter</legend>
+                    <label for="serving-platter" class="checkbox">Serving Platter<input type="checkbox" name="serving-platter" id="serving-platter"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Knife</legend>
+                    <label for="knife" class="checkbox">Knife<input type="checkbox" name="knife" id="knife"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Measuring Cup</legend>
+                    <label for="measuring-cup" class="checkbox">Measuring Cup<input type="checkbox" name="measuring-cup" id="measuring-cup"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Cake Pan</legend>
+                    <label for="cake-pan" class="checkbox">Cake Pan<input type="checkbox" name="cake-pan" id="cake-pan"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Dinnerware Set Fine China</legend>
+                    <label for="dinnerware-set-fine-china" class="checkbox">Dinnerware Set Fine China<input type="checkbox" name="dinnerware-set-fine-china" id="dinnerware-set-fine-china"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Frying Pan</legend>
+                    <label for="frying-pan" class="checkbox">Frying Pan<input type="checkbox" name="frying-pan" id="frying-pan"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Microwave Oven</legend>
+                    <label for="microwave-oven" class="checkbox">Microwave Oven<input type="checkbox" name="microwave-oven" id="microwave-oven"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Crock Pot</legend>
+                    <label for="crock-pot" class="checkbox">Crock Pot<input type="checkbox" name="crock-pot" id="crock-pot"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Wastebasket</legend>
+                    <label for="wastebasket" class="checkbox">Wastebasket<input type="checkbox" name="wastebasket" id="wastebasket"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Toaster</legend>
+                    <label for="toaster" class="checkbox">Toaster<input type="checkbox" name="toaster" id="toaster"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
                 </form>
+                <div class="button-box row">
+                  <a class="button previous--two"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+                  <a class="button next--three"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                </div>
               </div>
+            </div>
+            <div class="slide">
+              <div class="chat six hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Now let's make a list of the types of items in the living room.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-container four hidden">
+                <form class="wrap" style="justify-content: space-between;">
+                  <h1>Living Room</h1>
+                  <p>Please check all that apply.</p>
+                  <fieldset class="half">
+                    <legend>Coffee Table</legend>
+                    <label for="coffee-table" class="checkbox">Coffee Table<input type="checkbox" name="coffee-table" id="coffee-table"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Picture Frame</legend>
+                    <label for="picture-frame" class="checkbox">Picture Frame<input type="checkbox" name="picture-frame" id="picture-frame"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Lamp</legend>
+                    <label for="lamp" class="checkbox">Lamp<input type="checkbox" name="lamp" id="lamp"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Rug</legend>
+                    <label for="rug" class="checkbox">Rug<input type="checkbox" name="rug" id="rug"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Book Hardcover</legend>
+                    <label for="book-hardcover" class="checkbox">Book Hardcover<input type="checkbox" name="book-hardcover" id="book-hardcover"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Book Softcover</legend>
+                    <label for="book-softcover" class="checkbox">Book Softcover<input type="checkbox" name="book-softcover" id="book-softcover"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Chair</legend>
+                    <label for="chair" class="checkbox">Chair<input type="checkbox" name="chair" id="chair"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Decorative Pillow</legend>
+                    <label for="decorative-pillow" class="checkbox">Decorative Pillow<input type="checkbox" name="decorative-pillow" id="decorative-pillow"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Vase</legend>
+                    <label for="vase" class="checkbox">Vase<input type="checkbox" name="vase" id="vase"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>TV</legend>
+                    <label for="tv" class="checkbox">TV<input type="checkbox" name="tv" id="tv"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Sofa</legend>
+                    <label for="sofa" class="checkbox">Sofa<input type="checkbox" name="sofa" id="sofa"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Candle</legend>
+                    <label for="candle" class="checkbox">Candle<input type="checkbox" name="candle" id="candle"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Board Game</legend>
+                    <label for="board-game" class="checkbox">Board Game<input type="checkbox" name="board-game" id="board-game"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>DVD</legend>
+                    <label for="dvd" class="checkbox">DVD<input type="checkbox" name="dvd" id="dvd"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>DVD Player</legend>
+                    <label for="dvd-player" class="checkbox">DVD Player<input type="checkbox" name="dvd-player" id="dvd-player"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Blanket</legend>
+                    <label for="blanket" class="checkbox">Blanket<input type="checkbox" name="blanket" id="blanket"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Mirror</legend>
+                    <label for="mirror" class="checkbox">Mirror<input type="checkbox" name="mirror" id="mirror"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Basket</legend>
+                    <label for="basket" class="checkbox">Basket<input type="checkbox" name="basket" id="basket"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>End Table</legend>
+                    <label for="end-table" class="checkbox">End Table<input type="checkbox" name="end-table" id="end-table"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Curtains</legend>
+                    <label for="curtains" class="checkbox">Curtains<input type="checkbox" name="curtains" id="curtains"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Recliner</legend>
+                    <label for="recliner" class="checkbox">Recliner<input type="checkbox" name="recliner" id="recliner"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>TV Stand</legend>
+                    <label for="tv-stand" class="checkbox">TV Stand<input type="checkbox" name="tv-stand" id="tv-stand"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Loveseat</legend>
+                    <label for="loveseat" class="checkbox">Loveseat<input type="checkbox" name="loveseat" id="loveseat"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Ottoman</legend>
+                    <label for="ottoman" class="checkbox">Ottoman<input type="checkbox" name="ottoman" id="ottoman"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="half">
+                    <legend>Bookcase</legend>
+                    <label for="bookcase" class="checkbox">Bookcase<input type="checkbox" name="bookcase" id="bookcase"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                </form>
+                <div class="button-box row">
+                  <a class="button previous--three"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+                  <a class="button next--four"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="chat seven hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Give me a second&hellip; I'm putting these details together.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="indicator one hidden">
+                <div class="indicator-gauge">
+                  <span></span>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -281,44 +527,85 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
     <script>
+      $('.nav--open').click(function() {$('nav').addClass('open');});
+      $('.nav--close').click(function() {$('nav').removeClass('open');});
+
       $(document).ready(function() {
         setTimeout(function() {$('.chat.two').removeClass('hidden')}, 1000);
         setTimeout(function() {$('.chat.three').removeClass('hidden')}, 2000);
       });
 
-      $('.nav--open').click(function() {$('nav').addClass('open');});
-      $('.nav--close').click(function() {$('nav').removeClass('open');});
-
       $('.start').click(function() {
         $('.slider.int').addClass('slide-two');
+        $('.chat.one').addClass('hidden');
+        $('.chat.two').addClass('hidden');
+        $('.chat.three').addClass('hidden');
           setTimeout(function() {$('.form-container.one').addClass('loaded')}, 500);
           setTimeout(function() {$('.form-container.one').removeClass('hidden loaded')}, 600);
       });
 
       $('.next--one').click(function() {
-        $('.slider.int').removeClass('slide-two');
         $('.slider.int').addClass('slide-three');
+        $('.slider.int').removeClass('slide-two');
+          setTimeout(function() {$('.form-container.one').addClass('hidden')}, 500);
           setTimeout(function() {$('.chat.four').removeClass('hidden')}, 500);
           setTimeout(function() {$('.form-container.two').addClass('loaded')}, 1500);
           setTimeout(function() {$('.form-container.two').removeClass('hidden loaded')}, 1600);
       });
-
       $('.previous--one').click(function() {
-        $('.slider.int').removeClass('slide-three');
         $('.slider.int').addClass('slide-two');
+        $('.slider.int').removeClass('slide-three');
+        $('.chat.four').addClass('hidden');
+          setTimeout(function() {$('.form-container.two').addClass('hidden')}, 500);
+          setTimeout(function() {$('.form-container.one').addClass('loaded')}, 500);
+          setTimeout(function() {$('.form-container.one').removeClass('hidden loaded')}, 600);
       });
 
       $('.next--two').click(function() {
-        $('.slider.int').removeClass('slide-three');
         $('.slider.int').addClass('slide-four');
+        $('.slider.int').removeClass('slide-three');
+        $('.chat.four').addClass('hidden');
+        $('.form-container.two').addClass('hidden');
           setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
           setTimeout(function() {$('.form-container.three').addClass('loaded')}, 1500);
           setTimeout(function() {$('.form-container.three').removeClass('hidden loaded')}, 1600);
-
-      $('.previous--two').click(function() {
-        $('.slider.int').removeClass('slide-four');
-        $('.slider.int').addClass('slide-three');
       });
+      $('.previous--two').click(function() {
+        $('.slider.int').addClass('slide-three');
+        $('.slider.int').removeClass('slide-four');
+        $('.chat.five').addClass('hidden');
+          setTimeout(function() {$('.form-container.three').addClass('hidden')}, 500);
+          setTimeout(function() {$('.form-container.two').addClass('loaded')}, 500);
+          setTimeout(function() {$('.form-container.two').removeClass('hidden loaded')}, 600);
+      });
+
+      $('.next--three').click(function() {
+        $('.slider.int').addClass('slide-five');
+        $('.slider.int').removeClass('slide-four');
+        $('.chat.five').addClass('hidden');
+        $('.form-container.three').addClass('hidden');
+          setTimeout(function() {$('.chat.six').removeClass('hidden')}, 500);
+          setTimeout(function() {$('.form-container.four').addClass('loaded')}, 1500);
+          setTimeout(function() {$('.form-container.four').removeClass('hidden loaded')}, 1600);
+      });
+      $('.previous--three').click(function() {
+        $('.slider.int').removeClass('slide-five');
+        $('.slider.int').addClass('slide-four');
+        $('.chat.six').addClass('hidden');
+          setTimeout(function() {$('.form-container.four').addClass('hidden')}, 500);
+          setTimeout(function() {$('.form-container.three').addClass('loaded')}, 500);
+          setTimeout(function() {$('.form-container.three').removeClass('hidden loaded')}, 600);
+      });
+
+      $('.next--four').click(function() {
+        $('.slider.int').addClass('slide-six');
+        $('.slider.int').removeClass('slide-five');
+        $('.chat.six').addClass('hidden');
+        $('.form-container.four').addClass('hidden');
+          setTimeout(function() {$('.chat.seven').removeClass('hidden')}, 500);
+          setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 1500);
+            setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 2500);
+            setTimeout(function() {$(window.location.href = '../room-01-inventory/index.html')}, 7500);
       });
     </script>
   </body>

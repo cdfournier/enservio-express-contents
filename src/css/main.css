@@ -478,7 +478,7 @@ main {
   min-height: 100vh;
   overflow: hidden;
   margin: 0;
-  padding: 2rem 0 4rem; }
+  padding: 4rem 0; }
 
 main.flex-start {
   justify-content: flex-start; }
@@ -1095,6 +1095,19 @@ fieldset.valid .show-hide-password {
   -o-transition: all 5s ease 0s;
   transition: all 5s ease 0s; }
 
+.item-summary .indicator.two.hidden {
+  padding: 0; }
+
+.item-summary .indicator.two {
+  padding: 4rem 2rem; }
+
+.item-summary .indicator.two .indicator-gauge > span {
+  -webkit-transition: all 5s ease 0s;
+  -moz-transition: all 5s ease 0s;
+  -ms-transition: all 5s ease 0s;
+  -o-transition: all 5s ease 0s;
+  transition: all 5s ease 0s; }
+
 .field-setup .indicator.two.hidden {
   padding: 0; }
 
@@ -1102,6 +1115,19 @@ fieldset.valid .show-hide-password {
   padding: 4rem 2rem; }
 
 .field-setup .indicator.two .indicator-gauge > span {
+  -webkit-transition: all 5s ease 0s;
+  -moz-transition: all 5s ease 0s;
+  -ms-transition: all 5s ease 0s;
+  -o-transition: all 5s ease 0s;
+  transition: all 5s ease 0s; }
+
+.express-setup .indicator.one.hidden {
+  padding: 0; }
+
+.express-setup .indicator.one {
+  padding: 4rem 2rem; }
+
+.express-setup .indicator.one .indicator-gauge > span {
   -webkit-transition: all 5s ease 0s;
   -moz-transition: all 5s ease 0s;
   -ms-transition: all 5s ease 0s;
@@ -1212,6 +1238,16 @@ fieldset.valid .show-hide-password {
   -o-transform: translateX(100rem);
   transform: translateX(100rem); }
 
+.chat.hidden .button-box {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  -webkit-transition: all 0.325s ease 0s;
+  -moz-transition: all 0.325s ease 0s;
+  -ms-transition: all 0.325s ease 0s;
+  -o-transition: all 0.325s ease 0s;
+  transition: all 0.325s ease 0s; }
+
 .chat-bot {
   display: flex;
   flex-direction: row;
@@ -1253,6 +1289,19 @@ fieldset.valid .show-hide-password {
 
 .chat-bot.reverse .bubble {
   border-radius: 0.25rem 0.25rem 0 0.25rem; }
+
+.chat.hidden .chat-bot,
+.chat.hidden .chat-bot .small-avatar,
+.chat.hidden .chat-bot .bubble,
+.chat.hidden .chat-bot .bubble p {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  -webkit-transition: all 0.325s ease 0s;
+  -moz-transition: all 0.325s ease 0s;
+  -ms-transition: all 0.325s ease 0s;
+  -o-transition: all 0.325s ease 0s;
+  transition: all 0.325s ease 0s; }
 
 .onsite .chat.two {
   padding: 0 1rem; }
@@ -1342,7 +1391,7 @@ fieldset.valid .show-hide-password {
   -o-transform: translateX(0%);
   transform: translateX(0%); }
 
-.setup, .room-item, .room-inventory, .dashboard-item {
+.setup, .room-item, .dashboard-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1360,7 +1409,7 @@ fieldset.valid .show-hide-password {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: 0 0 2rem; }
+  padding: 0; }
 
 .welcome .slider.int {
   min-width: 200%; }
@@ -1373,21 +1422,28 @@ fieldset.valid .show-hide-password {
   transform: translateX(-50%); }
 
 .item-summary .slider.int {
-  min-width: 300%; }
+  min-width: 400%; }
 
 .item-summary .slider.int.slide-two {
-  -webkit-transform: translateX(-33.3%);
-  -moz-transform: translateX(-33.3%);
-  -ms-transform: translateX(-33.3%);
-  -o-transform: translateX(-33.3%);
-  transform: translateX(-33.3%); }
+  -webkit-transform: translateX(-25%);
+  -moz-transform: translateX(-25%);
+  -ms-transform: translateX(-25%);
+  -o-transform: translateX(-25%);
+  transform: translateX(-25%); }
 
 .item-summary .slider.int.slide-three {
-  -webkit-transform: translateX(-66.6%);
-  -moz-transform: translateX(-66.6%);
-  -ms-transform: translateX(-66.6%);
-  -o-transform: translateX(-66.6%);
-  transform: translateX(-66.6%); }
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.item-summary .slider.int.slide-four {
+  -webkit-transform: translateX(-75%);
+  -moz-transform: translateX(-75%);
+  -ms-transform: translateX(-75%);
+  -o-transform: translateX(-75%);
+  transform: translateX(-75%); }
 
 .onsite .slider.int {
   min-width: 300%; }
@@ -1465,28 +1521,42 @@ fieldset.valid .show-hide-password {
   transform: translateX(-75%); }
 
 .express-setup .slider.int {
-  min-width: 400%; }
+  min-width: 600%; }
 
 .express-setup .slider.int.slide-two {
-  -webkit-transform: translateX(-25%);
-  -moz-transform: translateX(-25%);
-  -ms-transform: translateX(-25%);
-  -o-transform: translateX(-25%);
-  transform: translateX(-25%); }
+  -webkit-transform: translateX(-16.666%);
+  -moz-transform: translateX(-16.666%);
+  -ms-transform: translateX(-16.666%);
+  -o-transform: translateX(-16.666%);
+  transform: translateX(-16.666%); }
 
 .express-setup .slider.int.slide-three {
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%); }
+  -webkit-transform: translateX(-33.332%);
+  -moz-transform: translateX(-33.332%);
+  -ms-transform: translateX(-33.332%);
+  -o-transform: translateX(-33.332%);
+  transform: translateX(-33.332%); }
 
 .express-setup .slider.int.slide-four {
-  -webkit-transform: translateX(-75%);
-  -moz-transform: translateX(-75%);
-  -ms-transform: translateX(-75%);
-  -o-transform: translateX(-75%);
-  transform: translateX(-75%); }
+  -webkit-transform: translateX(-49.998%);
+  -moz-transform: translateX(-49.998%);
+  -ms-transform: translateX(-49.998%);
+  -o-transform: translateX(-49.998%);
+  transform: translateX(-49.998%); }
+
+.express-setup .slider.int.slide-five {
+  -webkit-transform: translateX(-66.664%);
+  -moz-transform: translateX(-66.664%);
+  -ms-transform: translateX(-66.664%);
+  -o-transform: translateX(-66.664%);
+  transform: translateX(-66.664%); }
+
+.express-setup .slider.int.slide-six {
+  -webkit-transform: translateX(-83.33%);
+  -moz-transform: translateX(-83.33%);
+  -ms-transform: translateX(-83.33%);
+  -o-transform: translateX(-83.33%);
+  transform: translateX(-83.33%); }
 
 .field-setup .slider.int {
   min-width: 300%; }
@@ -1929,9 +1999,6 @@ ul.inventory-checklist li.incomplete span i.la.la-check-circle {
 
 .accordion.inventory .item-summary .form-container {
   padding: 1rem; }
-
-.accordion.inventory .item-summary .form-container form fieldset.room {
-  width: calc(66% - 1rem); }
 
 .accordion.inventory .item-summary .form-container form .button-box {
   padding: 0; }
