@@ -78,7 +78,7 @@
                 <div class="chat-bot onsite reverse">
                   <div class="small-avatar"><img src="../../../src/images/user.jpg" align="You"></div>
                   <div class="bubble">
-                    <p>Master bedroom</p>
+                    <p>The master bedroom</p>
                   </div>
                 </div>
               </div>
@@ -187,8 +187,28 @@
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1500);
       });
 
+      const constraints = {
+        video: false,
+        audio: true
+      };
+
+      const video = document.querySelector('video');
+      
+      navigator.mediaDevices.getUserMedia(constraints).
+        then((stream) => {video.srcObject = stream});
+
       if (annyang) {
         var commands = {
+          'field *tag': function() {
+            $('.voice.one .icon').removeClass('active animated pulse infinite');
+            $('.voice.one .icon').addClass('inactive');
+            setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 1000);
+              setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1500);
+              setTimeout(function() {$('.slider.int').addClass('slide-two')}, 4000);
+              setTimeout(function() {$('.chat.three').removeClass('hidden')}, 4500);
+              setTimeout(function() {$('.chat.four').removeClass('hidden')}, 5000);
+              setTimeout(function() {$('.chat.five').removeClass('hidden')}, 5500);
+          },
           'description *tag': function() {
             setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 1000);
           },

@@ -37,7 +37,7 @@
           <div class="chat-bot">
             <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
             <div class="bubble">
-              <p>Welcome back <b>Ashley</b>! I am Khal Drogo. What do you want to do today?</p>
+              <p>Welcome back <b>Ashley</b>! I'm Jay. What do you want to do today?</p>
             </div>
           </div>
         </div>
@@ -66,6 +66,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
+<!--
     <script>
       /* Demo video scripts here */
       $(document).ready(function() {
@@ -80,7 +81,7 @@
         setTimeout(function() {$(window.location.href = '../../field/room-01-setup/index.html')}, 12850);
       });
     </script>
-<!--
+-->
     <script>
       $(document).ready(function() {
         setTimeout(function() {$('.loading .indicator-gauge span').addClass('loaded')}, 2000);
@@ -88,6 +89,16 @@
         setTimeout(function() {$('.chat.one').removeClass('hidden')}, 5750);
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 6250);
       });
+
+      const constraints = {
+        video: false,
+        audio: true
+      };
+
+      const video = document.querySelector('video');
+      
+      navigator.mediaDevices.getUserMedia(constraints).
+        then((stream) => {video.srcObject = stream});
 
       if (annyang) {
         var commands = {
@@ -111,7 +122,7 @@
         annyang.addCommands(commands);
       
         // Start listening.
-        setTimeout(function() {annyang.start();}, 6250);
+        annyang.start();
       }
 
       $('#listen-one').click(function() {
@@ -122,6 +133,5 @@
           setTimeout(function() {$(window.location.href = '../../field/room-01-setup/index.html')}, 4750);
       });
     </script>
--->
   </body>
 </html>
