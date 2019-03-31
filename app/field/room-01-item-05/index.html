@@ -155,10 +155,12 @@
           </div>
         </div>
       </section>
+      <video autoplay style="display: none;"></video>
     </main>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
     <script>
       $('.nav--open').click(function() {$('nav').addClass('open');});
@@ -166,40 +168,37 @@
 
       $(document).ready(function() {
         setTimeout(function() {$('.item-summary .slider.int').addClass('slide-two');}, 2500);
-
         setTimeout(function() {
-          $('.form-container').addClass('loaded')
-          $('.text.action').addClass('loaded')
+          $('.form-container').addClass('loaded');
+          $('.text.action').addClass('loaded');
         }, 1000);
         setTimeout(function() {
-          $('.form-container').removeClass('hidden loaded')
-          $('.text.action').removeClass('hidden loaded')
+          $('.form-container').removeClass('hidden loaded');
+          $('.text.action').removeClass('hidden loaded');
         }, 1100);
       });
 
       $('.next--done').click(function() {
         $('.slider.int').addClass('slide-three');
-        setTimeout(function() {$('.chat.two').removeClass('hidden')
-          $('.form-container').addClass('hidden')
+        setTimeout(function() {
+          $('.chat.two').removeClass('hidden');
+          $('.form-container').addClass('hidden');
         }, 500);
         setTimeout(function() {$('.chat.three').removeClass('hidden')}, 1000);
       });
 
-      $('.camera').on('change', function() {
-        $('.count').removeClass('hidden')
-      });
+      $('.camera').on('change', function() {$('.count').removeClass('hidden')});
 
       $('.next--item').click(function() {
         $('.slider.int').removeClass('slide-two');
         $('.slider.int').addClass('slide-four');
-          setTimeout(function() {$('.chat.six').removeClass('hidden')}, 500);
-          setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
-          setTimeout(function() {annyang.start();}, 1000);
-          setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
-          setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 8000);
-          setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 12000);
-          setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 16000);
-          setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 19000);
+        setTimeout(function() {$('.chat.six').removeClass('hidden')}, 500);
+        setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
+        setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
+        setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 8000);
+        setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 12000);
+        setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 16000);
+        setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 19000);
       });
 
       $('#listen-two').click(function() {
@@ -207,8 +206,8 @@
         $('.voice.two .icon').addClass('inactive');
         setTimeout(function() {$('.chat.seven').removeClass('hidden')}, 1000);
         setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 1500);
-          setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 2500);
-          setTimeout(function() {$(window.location.href = '../room-01-item-05/index.html')}, 7500);
+        setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 2500);
+        setTimeout(function() {$(window.location.href = '../room-01-item-05/index.html')}, 7500);
       });
     </script>
   </body>

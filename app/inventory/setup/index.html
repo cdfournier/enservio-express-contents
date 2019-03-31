@@ -76,6 +76,16 @@
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1000);
       });
 
+      const constraints = {
+        video: false,
+        audio: true
+      };
+
+      const video = document.querySelector('video');
+      
+      navigator.mediaDevices.getUserMedia(constraints).
+        then((stream) => {video.srcObject = stream});
+
       if (annyang) {
         var commands = {
           'field *tag': function() {
@@ -98,7 +108,7 @@
         annyang.addCommands(commands);
       
         // Start listening.
-        setTimeout(function() {annyang.start();}, 1000);
+        annyang.start();
       }
 
       $('#listen-one').click(function() {
