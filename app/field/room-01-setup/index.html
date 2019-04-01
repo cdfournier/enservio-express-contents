@@ -138,6 +138,7 @@
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/6.4.0/adapter.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
 <!--
@@ -179,12 +180,51 @@
     </script>
 -->
     <script>
+      /* document ready script */
       $(document).ready(function() {
         setTimeout(function() {$('.chat.two').removeClass('hidden')}, 1000);
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1500);
-        setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1500);
+        /* setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1500); */
       });
-
+    </script>
+    <script>
+      /* web audio api script */
+      if (navigator.mediaDevices === undefined) {
+        navigator.mediaDevices = {};
+      }
+      
+      if (navigator.mediaDevices.getUserMedia === undefined) {
+        navigator.mediaDevices.getUserMedia = function(constraints) {
+          // First get ahold of the legacy getUserMedia, if present
+          let getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+      
+          // Some browsers just don't implement it - return a rejected promise with an error
+          // to keep a consistent interface
+          if (!getUserMedia) {
+            return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+          }
+      
+          // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
+          return new Promise(function(resolve, reject) {
+            getUserMedia.call(navigator, constraints, resolve, reject);
+          });
+        }
+      }
+      
+      navigator.mediaDevices.getUserMedia({
+        audio: true
+      }).then(function(stream) {
+        successCallBack(stream);
+      }).catch(function(error) {
+        console.log('error: ',error);
+      });
+      
+      function successCallback(stream){
+        console.log('stream: ',stream);
+      }
+    </script>
+    <script>
+      /* click event scripts */
       $('#listen-one').click(function() {
         $('.voice.one .icon').removeClass('active animated pulse infinite');
         $('.voice.one .icon').addClass('inactive');
@@ -195,7 +235,6 @@
           setTimeout(function() {$('.chat.four').removeClass('hidden')}, 5000);
           setTimeout(function() {$('.chat.five').removeClass('hidden')}, 5500);
       });
-
       $('.start').click(function() {
         $('.slider.int').removeClass('slide-two');
         $('.slider.int').addClass('slide-three');
@@ -203,7 +242,6 @@
           setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
           setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
       });
-
       $('#listen-two').click(function() {
         $('.voice.two .icon').removeClass('active animated pulse infinite');
         $('.voice.two .icon').addClass('inactive');
@@ -215,7 +253,9 @@
 
       $('.nav--open').click(function() {$('nav').addClass('open');});
       $('.nav--close').click(function() {$('nav').removeClass('open');});
-
+    </script>
+    <script>
+      /* speech recognition script */
       if (annyang) {
 
         // define functions
@@ -254,7 +294,7 @@
 
         // define commands
         var commands = {
-          'master *tag': roomChoice,
+          '(the)master *tag': roomChoice,
           'description': checkDescription,
           'value': checkValue,
           'quantity': checkQuantity,
