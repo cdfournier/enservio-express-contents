@@ -88,6 +88,7 @@
         setTimeout(function() {$('.loading').addClass('loaded')}, 5250);
         setTimeout(function() {$('.chat.one').removeClass('hidden')}, 5750);
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 6250);
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
         setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 6250);
       });
 
