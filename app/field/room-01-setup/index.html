@@ -182,6 +182,7 @@
       $(document).ready(function() {
         setTimeout(function() {$('.chat.two').removeClass('hidden')}, 1000);
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1500);
+        setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1500);
       });
 
       $('#listen-one').click(function() {
@@ -201,12 +202,6 @@
           setTimeout(function() {$('.chat.six').removeClass('hidden')}, 500);
           setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
           setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
-/*
-          setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 8000);
-          setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 12000);
-          setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 16000);
-          setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 19000);
-*/
       });
 
       $('#listen-two').click(function() {
@@ -221,16 +216,6 @@
       $('.nav--open').click(function() {$('nav').addClass('open');});
       $('.nav--close').click(function() {$('nav').removeClass('open');});
 
-      const constraints = {
-        video: false,
-        audio: true
-      };
-      
-      const video = document.querySelector('video');
-      
-      navigator.mediaDevices.getUserMedia(constraints).
-        then((stream) => {video.srcObject = stream});
-      
       if (annyang) {
 
         // define functions
@@ -261,10 +246,10 @@
           $('ul.inventory-checklist li.age').addClass('complete')
           $('.voice.two .icon').removeClass('active animated pulse infinite');
           $('.voice.two .icon').addClass('inactive');
-          setTimeout(function() {$('.chat.seven').removeClass('hidden')}, 1000);
-          setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 1500);
-          setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 2500);
-          setTimeout(function() {$(window.location.href = '../room-01-item-01/index.html')}, 7500);
+          setTimeout(function() {$('.chat.seven').removeClass('hidden')}, 2000);
+          setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 2500);
+          setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 3500);
+          setTimeout(function() {$(window.location.href = '../room-01-item-01/index.html')}, 8500);
         };
 
         // define commands

@@ -71,6 +71,7 @@
     <script>
       $(document).ready(function() {
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1000);
+        setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1000);
       });
 
       $('#listen-one').click(function() {
@@ -83,16 +84,6 @@
 
       $('.nav--open').click(function() {$('nav').addClass('open');});
       $('.nav--close').click(function() {$('nav').removeClass('open');});
-
-      const constraints = {
-        video: false,
-        audio: true
-      };
-
-      const video = document.querySelector('video');
-      
-      navigator.mediaDevices.getUserMedia(constraints).
-        then((stream) => {video.srcObject = stream});
 
       if (annyang) {
 
