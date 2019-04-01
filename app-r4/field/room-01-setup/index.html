@@ -142,6 +142,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/6.4.0/adapter.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
+    <script src="../../../src/scripts/app.js"></script>
 <!--
     <script>
       /* Demo video scripts here */
@@ -188,64 +189,6 @@
         /* setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1500); */
       });
     </script>
-    <script>
-      /* web audio api script */
-      const audio = document.querySelector('audio');
-      var constraints = {video: false, audio: true};
-
-      navigator.mediaDevices.getUserMedia(constraints)
-        .then((stream) => {
-          audio.srcObject = stream;
-        var successCallback = function(error) {
-          $('.loading').addClass('loaded')
-        };
-        var errorCallback = function(error) {
-          if (error.name == 'NotAllowedError') {
-            // user denied access to camera
-          }
-        };
-        navigator.mediaDevices.getUserMedia(constraints)
-          .then(successCallback, errorCallback);
-      });
-    </script>
-<!--
-    <script>
-      /* web audio api script */
-      if (navigator.mediaDevices === undefined) {
-        navigator.mediaDevices = {};
-      }
-      
-      if (navigator.mediaDevices.getUserMedia === undefined) {
-        navigator.mediaDevices.getUserMedia = function(constraints) {
-          // First get ahold of the legacy getUserMedia, if present
-          let getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-      
-          // Some browsers just don't implement it - return a rejected promise with an error
-          // to keep a consistent interface
-          if (!getUserMedia) {
-            return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
-          }
-      
-          // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
-          return new Promise(function(resolve, reject) {
-            getUserMedia.call(navigator, constraints, resolve, reject);
-          });
-        }
-      }
-      
-      navigator.mediaDevices.getUserMedia({
-        audio: true
-      }).then(function(stream) {
-        successCallBack(stream);
-      }).catch(function(error) {
-        console.log('error: ',error);
-      });
-      
-      function successCallback(stream){
-        console.log('stream: ',stream);
-      }
-    </script>
--->
     <script>
       /* click event scripts */
       $('#listen-one').click(function() {
