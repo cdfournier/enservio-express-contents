@@ -155,7 +155,6 @@
           </div>
         </div>
       </section>
-      <video autoplay style="display: none;"></video>
     </main>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -163,9 +162,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
     <script>
-      $('.nav--open').click(function() {$('nav').addClass('open');});
-      $('.nav--close').click(function() {$('nav').removeClass('open');});
-
       $(document).ready(function() {
         setTimeout(function() {$('.item-summary .slider.int').addClass('slide-two');}, 2500);
         setTimeout(function() {
@@ -195,10 +191,12 @@
         setTimeout(function() {$('.chat.six').removeClass('hidden')}, 500);
         setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
         setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
+/*
         setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 8000);
         setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 12000);
         setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 16000);
         setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 19000);
+*/
       });
 
       $('#listen-two').click(function() {
@@ -209,6 +207,61 @@
         setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 2500);
         setTimeout(function() {$(window.location.href = '../room-01-item-04/index.html')}, 7500);
       });
+
+      $('.nav--open').click(function() {$('nav').addClass('open');});
+      $('.nav--close').click(function() {$('nav').removeClass('open');});
+
+      const constraints = {
+        video: false,
+        audio: true
+      };
+      
+      const video = document.querySelector('video');
+      
+      navigator.mediaDevices.getUserMedia(constraints).
+        then((stream) => {video.srcObject = stream});
+      
+      if (annyang) {
+
+        // define functions
+        var checkDescription = function() {
+          $('ul.inventory-checklist li.description').addClass('complete')
+        };
+
+        var checkValue = function() {
+          $('ul.inventory-checklist li.value').addClass('complete')
+        };
+
+        var checkQuantity = function() {
+          $('ul.inventory-checklist li.quantity').addClass('complete')
+        };
+
+        var checkAge = function() {
+          $('ul.inventory-checklist li.age').addClass('complete')
+          $('.voice.two .icon').addClass('inactive');
+          setTimeout(function() {$('.chat.seven').removeClass('hidden')}, 1000);
+          setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 1500);
+          setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 2500);
+          setTimeout(function() {$(window.location.href = '../room-01-item-04/index.html')}, 7500);
+        };
+
+        // define commands
+        var commands = {
+          'description': checkDescription,
+          'value': checkValue,
+          'quantity': checkQuantity,
+          'age': checkAge,
+        };
+
+        // OPTIONAL: activate debug mode for detailed logging in the console
+        annyang.debug();
+
+        // Add our commands to annyang
+        annyang.addCommands(commands);
+
+        // Start listening.
+        annyang.start();
+      };
     </script>
   </body>
 </html>

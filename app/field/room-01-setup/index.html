@@ -134,7 +134,6 @@
           </div>
         </div>
       </section>
-      <video autoplay style="display: none;"></video>
     </main>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -201,12 +200,13 @@
         $('.slider.int').addClass('slide-three');
           setTimeout(function() {$('.chat.six').removeClass('hidden')}, 500);
           setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
-          /* setTimeout(function() {annyang.start();}, 1000); */
           setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
+/*
           setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 8000);
           setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 12000);
           setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 16000);
           setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 19000);
+*/
       });
 
       $('#listen-two').click(function() {
@@ -232,22 +232,56 @@
         then((stream) => {video.srcObject = stream});
       
       if (annyang) {
-        var commands = {
-          'room *tag': function() {
-            $('.voice.one .icon').removeClass('active animated pulse infinite');
-            $('.voice.one .icon').addClass('inactive');
-            setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 1000);
-            setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1500);
-            setTimeout(function() {$('.slider.int').addClass('slide-two')}, 4000);
-            setTimeout(function() {$('.chat.three').removeClass('hidden')}, 4500);
-            setTimeout(function() {$('.chat.four').removeClass('hidden')}, 5000);
-            setTimeout(function() {$('.chat.five').removeClass('hidden')}, 5500);
-          }
+
+        // define functions
+        var roomChoice = function() {
+          $('.voice.one .icon').removeClass('active animated pulse infinite');
+          $('.voice.one .icon').addClass('inactive');
+          setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 1000);
+          setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1500);
+          setTimeout(function() {$('.slider.int').addClass('slide-two')}, 4000);
+          setTimeout(function() {$('.chat.three').removeClass('hidden')}, 4500);
+          setTimeout(function() {$('.chat.four').removeClass('hidden')}, 5000);
+          setTimeout(function() {$('.chat.five').removeClass('hidden')}, 5500);
         };
-      
+
+        var checkDescription = function() {
+          $('ul.inventory-checklist li.description').addClass('complete')
+        };
+
+        var checkValue = function() {
+          $('ul.inventory-checklist li.value').addClass('complete')
+        };
+
+        var checkQuantity = function() {
+          $('ul.inventory-checklist li.quantity').addClass('complete')
+        };
+
+        var checkAge = function() {
+          $('ul.inventory-checklist li.age').addClass('complete')
+          $('.voice.two .icon').removeClass('active animated pulse infinite');
+          $('.voice.two .icon').addClass('inactive');
+          setTimeout(function() {$('.chat.seven').removeClass('hidden')}, 1000);
+          setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 1500);
+          setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 2500);
+          setTimeout(function() {$(window.location.href = '../room-01-item-01/index.html')}, 7500);
+        };
+
+        // define commands
+        var commands = {
+          'master *tag': roomChoice,
+          'description': checkDescription,
+          'value': checkValue,
+          'quantity': checkQuantity,
+          'age': checkAge,
+        };
+
+        // OPTIONAL: activate debug mode for detailed logging in the console
+        annyang.debug();
+
         // Add our commands to annyang
         annyang.addCommands(commands);
-      
+
         // Start listening.
         annyang.start();
       };
