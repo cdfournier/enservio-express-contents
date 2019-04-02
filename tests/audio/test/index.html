@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio | Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta id="apple-mobile-web-app-capable" name="apple-mobile-web-app-capable" content="yes">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700">
+    <link rel="stylesheet" href="../../../src/css/main.css">
+  </head>
+  <body>
+    <main>
+      <section data-qa="welcome" class="welcome md">
+        <div class="slider ext">
+          <div class="slider int">
+            <div class="slide">
+              <button id="begin" class="button" onclick="beginAudioCapture()">Begin Audio Capture</button>
+            </div>
+            <div class="slide">
+              <div class="chat one hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Welcome back <b>Ashley</b>! I'm Jay. What do you want to do today?</p>
+                  </div>
+                </div>
+              </div>
+              <div class="voice one hidden">
+                <a id="listen-one" class="icon active animated pulse infinite listen one"><i class="la la-microphone"></i></a>
+              </div>
+              <div class="indicator one hidden">
+                <div class="indicator-gauge">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/6.4.0/adapter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script>
+      /* document ready script */
+      $(document).ready(function() {
+        setTimeout(function() {$('.chat.one').removeClass('hidden')}, 1500);
+        setTimeout(function() {$('.voice.one').removeClass('hidden')}, 2000);
+      });
+    </script>
+    <script>
+      /* click event scripts */
+      $('#begin').click(function() {
+        $('.slider.int').addClass('slide-two');
+
+        // start listening.
+        annyang.start();
+      });
+      $('#listen-one').click(function() {
+        $('.voice.one .icon').removeClass('active animated pulse infinite');
+        $('.voice.one .icon').addClass('inactive');
+        setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 500);
+        setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1500);
+      });
+    </script>
+    <script>
+      function beginAudioCapture() {
+    
+        var AudioContext = window.AudioContext || window.webkitAudioContext;    
+        var context = new AudioContext();
+        var processor = context.createScriptProcessor(1024, 1, 1);
+        processor.connect(context.destination);
+    
+        var handleSuccess = function (stream) {
+          var input = context.createMediaStreamSource(stream);
+          input.connect(processor);
+    
+          var recievedAudio = false;
+          processor.onaudioprocess = function (e) {
+            // This will be called multiple times per second.
+            // The audio data will be in e.inputBuffer
+            if (!recievedAudio) {
+              recievedAudio = true;
+              console.log('got audio', e);
+            }
+          };
+        };
+    
+        navigator.mediaDevices.getUserMedia({audio: true, video: false})
+          .then(handleSuccess);
+      }
+    </script>
+    <script>
+      /* annyang speech recognition script */
+      if (annyang) {
+
+        // define functions
+        var fieldInventory = function() {
+          $('.voice.one .icon').removeClass('active animated pulse infinite');
+          $('.voice.one .icon').addClass('inactive');
+          setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 1000);
+          setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1500);
+          setTimeout(function() {$(window.location.href = 'index.html')}, 6500);
+        };
+
+        var expressContents = function() {
+          $('.voice.one .icon').removeClass('active animated pulse infinite');
+          $('.voice.one .icon').addClass('inactive');
+          setTimeout(function() {$('.indicator.one').removeClass('hidden')}, 1000);
+          setTimeout(function() {$('.indicator.one .indicator-gauge span').addClass('loaded')}, 1500);
+          setTimeout(function() {$(window.location.href = 'index.html')}, 6500);
+        };
+
+        // define commands
+        var commands = {
+          'field *tag': fieldInventory,
+          'express *tag': expressContents,
+        };
+
+        // OPTIONAL: activate debug mode for detailed logging in the console
+        annyang.debug();
+
+        // add our commands to annyang
+        annyang.addCommands(commands);
+      };
+    </script>
+  </body>
+</html>
