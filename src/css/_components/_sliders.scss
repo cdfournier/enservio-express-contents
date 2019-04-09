@@ -47,10 +47,11 @@
 
 
 // ITEM SUMMARY SLIDER
-.item-summary .slider.int {min-width: 400%;}
-.item-summary .slider.int.slide-two {@include transform(translateX(-25%));}
-.item-summary .slider.int.slide-three {@include transform(translateX(-50%));}
-.item-summary .slider.int.slide-four {@include transform(translateX(-75%));}
+.item-summary .slider.int {min-width: 500%;}
+.item-summary .slider.int.slide-two {@include transform(translateX(-20%));}
+.item-summary .slider.int.slide-three {@include transform(translateX(-40%));}
+.item-summary .slider.int.slide-four {@include transform(translateX(-60%));}
+.item-summary .slider.int.slide-five {@include transform(translateX(-80%));}
 
 
 // ONSITE SETUP SLIDER

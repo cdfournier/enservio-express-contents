@@ -113,12 +113,44 @@
               <div class="chat three hidden">
                 <div class="button-box">
                   <a class="button"><span class="button-label">Next Room</span></a>
-                  <a href="../../dashboard/dashboard/index.html" class="button"><span class="button-label">Stop</span></a>
+                  <a class="button stop--save"><span class="button-label">Stop</span></a>
                 </div>
               </div>
             </div>
             <div class="slide">
-              <div class="chat six hidden">
+              <div class="chat four hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Let's save this so that we can get back to it easily later.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-container hidden">
+                <form>
+                  <fieldset class="name">
+                    <legend>Insured's Name</legend>
+                    <label for="name">Insured's Name<input type="text" name="name" placeholder="Insured's Name"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="lines">
+                    <legend>Lines</legend>
+                    <label for="lines">Lines<input type="number" name="lines" placeholder="Lines"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="value">
+                    <legend>Value</legend>
+                    <label for="value">Value<input type="text" name="value" placeholder="&#36;"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <div class="button-box">
+                    <a href="../../dashboard/dashboard/index.html" class="button"><span class="button-label">Save this List</span></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="chat five hidden">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
@@ -138,7 +170,7 @@
                   <li class="age">Age<span><i class="la la-circle"></i><i class="la la-check-circle"></i><i class="la la-exclamation-circle"></i></span></li>
                 </ul>
               </div>
-              <div class="chat seven hidden">
+              <div class="chat six hidden">
                 <div class="chat-bot">
                   <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
                   <div class="bubble">
@@ -175,6 +207,7 @@
         }, 1100);
       });
     </script>
+<!--
     <script>
       /* web audio api script */
       if (navigator.mediaDevices === undefined) {
@@ -211,6 +244,7 @@
         console.log('stream: ',stream);
       }
     </script>
+-->
     <script>
       /* click event scripts */
       $('.next--done').click(function() {
@@ -226,11 +260,18 @@
 
       $('.next--item').click(function() {
         $('.slider.int').removeClass('slide-two');
-        $('.slider.int').addClass('slide-four');
-        setTimeout(function() {$('.chat.six').removeClass('hidden')}, 500);
+        $('.slider.int').addClass('slide-five');
+        setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
         setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
         setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
-        setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1500);
+        /* setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1500); */
+      });
+
+      $('.stop--save').click(function() {
+        $('.slider.int').removeClass('slide-three');
+        $('.slider.int').addClass('slide-four');
+        setTimeout(function() {$('.chat.four').removeClass('hidden')}, 500);
+        setTimeout(function() {$('.form-container').removeClass('hidden')}, 1000);
       });
 
       $('#listen-two').click(function() {
