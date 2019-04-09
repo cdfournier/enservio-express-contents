@@ -69,11 +69,50 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
     <script>
+      /* document ready script */
       $(document).ready(function() {
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1000);
         setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1000);
       });
-
+    </script>
+    <script>
+      /* web audio api script */
+      if (navigator.mediaDevices === undefined) {
+        navigator.mediaDevices = {};
+      }
+      
+      if (navigator.mediaDevices.getUserMedia === undefined) {
+        navigator.mediaDevices.getUserMedia = function(constraints) {
+          // First get ahold of the legacy getUserMedia, if present
+          let getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+      
+          // Some browsers just don't implement it - return a rejected promise with an error
+          // to keep a consistent interface
+          if (!getUserMedia) {
+            return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+          }
+      
+          // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
+          return new Promise(function(resolve, reject) {
+            getUserMedia.call(navigator, constraints, resolve, reject);
+          });
+        }
+      }
+      
+      navigator.mediaDevices.getUserMedia({
+        audio: true
+      }).then(function(stream) {
+        successCallBack(stream);
+      }).catch(function(error) {
+        console.log('error: ',error);
+      });
+      
+      function successCallback(stream){
+        console.log('stream: ',stream);
+      }
+    </script>
+    <script>
+      /* click event scripts */
       $('#listen-one').click(function() {
         $('.voice.one .icon').removeClass('active animated pulse infinite');
         $('.voice.one .icon').addClass('inactive');
@@ -84,7 +123,9 @@
 
       $('.nav--open').click(function() {$('nav').addClass('open');});
       $('.nav--close').click(function() {$('nav').removeClass('open');});
-
+    </script>
+    <script>
+      /* annyang speech recognition script */
       if (annyang) {
 
         // define functions

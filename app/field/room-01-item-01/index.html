@@ -162,6 +162,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="../../../src/scripts/express-contents.js"></script>
     <script>
+      /* document ready script */
       $(document).ready(function() {
         setTimeout(function() {$('.item-summary .slider.int').addClass('slide-two');}, 2500);
         setTimeout(function() {
@@ -173,7 +174,45 @@
           $('.text.action').removeClass('hidden loaded');
         }, 1100);
       });
-
+    </script>
+    <script>
+      /* web audio api script */
+      if (navigator.mediaDevices === undefined) {
+        navigator.mediaDevices = {};
+      }
+      
+      if (navigator.mediaDevices.getUserMedia === undefined) {
+        navigator.mediaDevices.getUserMedia = function(constraints) {
+          // First get ahold of the legacy getUserMedia, if present
+          let getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+      
+          // Some browsers just don't implement it - return a rejected promise with an error
+          // to keep a consistent interface
+          if (!getUserMedia) {
+            return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+          }
+      
+          // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
+          return new Promise(function(resolve, reject) {
+            getUserMedia.call(navigator, constraints, resolve, reject);
+          });
+        }
+      }
+      
+      navigator.mediaDevices.getUserMedia({
+        audio: true
+      }).then(function(stream) {
+        successCallBack(stream);
+      }).catch(function(error) {
+        console.log('error: ',error);
+      });
+      
+      function successCallback(stream){
+        console.log('stream: ',stream);
+      }
+    </script>
+    <script>
+      /* click event scripts */
       $('.next--done').click(function() {
         $('.slider.int').addClass('slide-three');
         setTimeout(function() {
@@ -205,9 +244,18 @@
 
       $('.nav--open').click(function() {$('nav').addClass('open');});
       $('.nav--close').click(function() {$('nav').removeClass('open');});
-
-      
+    </script>
+    <script>
+      /* speech recognition script */
       if (annyang) {
+
+        // define commands
+        var commands = {
+          'description *tag': checkDescription,
+          'value *tag': checkValue,
+          'quantity *tag': checkQuantity,
+          'age *tag': checkAge,
+        };
 
         // define functions
         var checkDescription = function() {
@@ -223,20 +271,13 @@
         };
 
         var checkAge = function() {
-          $('ul.inventory-checklist li.age').addClass('complete')
+          $('ul.inventory-checklist li.age').addClass('complete');
+          $('.voice.two .icon').removeClass('active animated pulse infinite');
           $('.voice.two .icon').addClass('inactive');
           setTimeout(function() {$('.chat.seven').removeClass('hidden')}, 2000);
           setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 2500);
           setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 3500);
           setTimeout(function() {$(window.location.href = '../room-01-item-02/index.html')}, 8500);
-        };
-
-        // define commands
-        var commands = {
-          'description': checkDescription,
-          'value': checkValue,
-          'quantity': checkQuantity,
-          'age': checkAge,
         };
 
         // OPTIONAL: activate debug mode for detailed logging in the console

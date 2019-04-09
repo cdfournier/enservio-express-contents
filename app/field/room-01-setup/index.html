@@ -188,6 +188,7 @@
         /* setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1500); */
       });
     </script>
+<!--
     <script>
       /* web audio api script */
       const audio = document.querySelector('audio');
@@ -208,6 +209,7 @@
           .then(successCallback, errorCallback);
       });
     </script>
+-->
 <!--
     <script>
       /* web audio api script */
@@ -318,10 +320,10 @@
         // define commands
         var commands = {
           '(the)master *tag': roomChoice,
-          'description': checkDescription,
-          'value': checkValue,
-          'quantity': checkQuantity,
-          'age': checkAge,
+          'description *tag': checkDescription,
+          'value *tag': checkValue,
+          'quantity *tag': checkQuantity,
+          'age *tag': checkAge,
         };
 
         // OPTIONAL: activate debug mode for detailed logging in the console
