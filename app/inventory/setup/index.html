@@ -62,6 +62,7 @@
           </div>
         </div>
       </section>
+      <audio style="display: none;"></audio>
     </main>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -72,11 +73,32 @@
       /* document ready script */
       $(document).ready(function() {
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1000);
-        setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1000);
+/*         setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1000); */
       });
     </script>
     <script>
-      /* web audio api script */
+      /* web audio api script version 1 */
+      const audio = document.querySelector('audio');
+      var constraints = {video: false, audio: true};
+
+      navigator.mediaDevices.getUserMedia(constraints)
+        .then((stream) => {
+          audio.srcObject = stream;
+        var successCallback = function(error) {
+          $('.loading').addClass('loaded')
+        };
+        var errorCallback = function(error) {
+          if (error.name == 'NotAllowedError') {
+            // user denied access to camera
+          }
+        };
+        navigator.mediaDevices.getUserMedia(constraints)
+          .then(successCallback, errorCallback);
+      });
+    </script>
+<!--
+    <script>
+      /* web audio api script version 2 */
       if (navigator.mediaDevices === undefined) {
         navigator.mediaDevices = {};
       }
@@ -111,6 +133,7 @@
         console.log('stream: ',stream);
       }
     </script>
+-->
     <script>
       /* click event scripts */
       $('#listen-one').click(function() {

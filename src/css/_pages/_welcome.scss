@@ -44,7 +44,7 @@
 }
 
 .loading .logo .l-dot {
-  fill: $monza;
+  fill: $white;
   @include animation-delay(1s);
   @include animation-duration(0.5s);
 }

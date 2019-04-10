@@ -57,6 +57,15 @@
                   <li><a class="claims--closed"><span>35</span>Closed Claims</a></li>
                 </ul>
               </div>
+              <div class="text">
+                <h1>Recent Lists</h1>
+                <a><ul class="claim">
+                  <li class="name"><span>Name</span><div id="name"></div></li>
+                  <li class="lines"><span>Lines</span><div id="lines"></div></li>
+                  <li class="value"><span>Value</span><div id="value"></div></li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+              </div>
             </div>
             <div class="slide">
               <div class="text one">
@@ -174,6 +183,11 @@
         $('.slider.int').addClass('slide-one');
         $('.text.three').removeClass('show');
       });
+    </script>
+    <script>
+      document.getElementById('name').innerHTML = sessionStorage.getItem('name');
+      document.getElementById('lines').innerHTML = sessionStorage.getItem('lines');
+      document.getElementById('value').innerHTML = sessionStorage.getItem('value');
     </script>
   </body>
 </html>

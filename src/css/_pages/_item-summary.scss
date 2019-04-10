@@ -43,3 +43,29 @@
 .item-summary .form-container form fieldset.months {width: calc(33% - 1rem);}
 
 .item-summary .form-container form fieldset.value input {font-size: 2rem;}
+
+
+// SAVE LIST FORM
+.item-summary .form-container.save-list form label {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.item-summary .form-container.save-list form input {
+  border-bottom: 1px solid $cool-gray;
+  text-align: left;
+}
+
+.item-summary .form-container.save-list form input:focus {border-bottom: 1px solid var(--accent-color);}
+
+.item-summary .form-container.save-list form fieldset.value input {font-size: 1rem;}
+
+.item-summary .form-container.save-list:before {
+  display: block;
+  width: 100%;
+  margin: 0 0 2rem;
+  background-color: transparent;
+  content: "";
+}
+
+.item-summary .form-container.save-list:after {display: none;}

@@ -185,12 +185,11 @@
       $(document).ready(function() {
         setTimeout(function() {$('.chat.two').removeClass('hidden')}, 1000);
         setTimeout(function() {$('.voice.one').removeClass('hidden')}, 1500);
-        /* setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1500); */
+        setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1500);
       });
     </script>
-<!--
     <script>
-      /* web audio api script */
+      /* web audio api script version 1 */
       const audio = document.querySelector('audio');
       var constraints = {video: false, audio: true};
 
@@ -209,10 +208,9 @@
           .then(successCallback, errorCallback);
       });
     </script>
--->
 <!--
     <script>
-      /* web audio api script */
+      /* web audio api script version 2 */
       if (navigator.mediaDevices === undefined) {
         navigator.mediaDevices = {};
       }

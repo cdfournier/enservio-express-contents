@@ -126,25 +126,25 @@
                   </div>
                 </div>
               </div>
-              <div class="form-container hidden">
+              <div class="form-container save-list hidden">
                 <form>
                   <fieldset class="name">
                     <legend>Insured's Name</legend>
-                    <label for="name">Insured's Name<input type="text" name="name" placeholder="Insured's Name"><span class="is-valid"></span></label>
+                    <label for="name">Insured's Name<input type="text" id="name" name="name" placeholder="Insured's Name"><span class="is-valid"></span></label>
                     <span class="error-message"></span>
                   </fieldset>
                   <fieldset class="lines">
                     <legend>Lines</legend>
-                    <label for="lines">Lines<input type="number" name="lines" placeholder="Lines"><span class="is-valid"></span></label>
+                    <label for="lines">Lines<input type="number" id="lines" name="lines" placeholder="Lines"><span class="is-valid"></span></label>
                     <span class="error-message"></span>
                   </fieldset>
                   <fieldset class="value">
                     <legend>Value</legend>
-                    <label for="value">Value<input type="text" name="value" placeholder="&#36;"><span class="is-valid"></span></label>
+                    <label for="value">Value<input type="text" id="value" name="value" placeholder="Value"><span class="is-valid"></span></label>
                     <span class="error-message"></span>
                   </fieldset>
                   <div class="button-box">
-                    <a href="../../dashboard/dashboard/index.html" class="button"><span class="button-label">Save this List</span></a>
+                    <a href="../../dashboard/dashboard/index.html" class="button save"><span class="button-label">Save this List</span></a>
                   </div>
                 </form>
               </div>
@@ -187,6 +187,7 @@
           </div>
         </div>
       </section>
+      <audio style="display: none;"></audio>
     </main>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -205,6 +206,38 @@
           $('.form-container').removeClass('hidden loaded');
           $('.text.action').removeClass('hidden loaded');
         }, 1100);
+
+        $(".save").click(function(){
+          // Get input name
+          var name = $("#name").val();
+          var lines = $("#lines").val();
+          var value = $("#value").val();
+  
+          // Store data
+          sessionStorage.setItem("name", name);
+          sessionStorage.setItem("lines", lines);
+          sessionStorage.setItem("value", value);
+        });
+      });
+    </script>
+    <script>
+      /* web audio api script version 1 */
+      const audio = document.querySelector('audio');
+      var constraints = {video: false, audio: true};
+
+      navigator.mediaDevices.getUserMedia(constraints)
+        .then((stream) => {
+          audio.srcObject = stream;
+        var successCallback = function(error) {
+          $('.loading').addClass('loaded')
+        };
+        var errorCallback = function(error) {
+          if (error.name == 'NotAllowedError') {
+            // user denied access to camera
+          }
+        };
+        navigator.mediaDevices.getUserMedia(constraints)
+          .then(successCallback, errorCallback);
       });
     </script>
 <!--
@@ -264,7 +297,7 @@
         setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
         setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
         setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
-        /* setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1500); */
+        setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1500);
       });
 
       $('.stop--save').click(function() {
@@ -307,7 +340,7 @@
           $('ul.inventory-checklist li.age').addClass('complete')
           $('.voice.two .icon').removeClass('active animated pulse infinite');
           $('.voice.two .icon').addClass('inactive');
-          setTimeout(function() {$('.chat.seven').removeClass('hidden')}, 2000);
+          setTimeout(function() {$('.chat.six').removeClass('hidden')}, 2000);
           setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 2500);
           setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 3500);
           setTimeout(function() {$(window.location.href = '../room-01-item-04/index.html')}, 8500);

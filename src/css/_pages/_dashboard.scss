@@ -73,6 +73,9 @@
   }
   .number {width: 60%;}
   .items {width: 30%;}
+  .name {width: 45%;}
+  .lines {width: 20%;}
+  .value {width: 25%;}
   .go {
     width: 10%;
     font-size: 1.25rem;
@@ -80,6 +83,21 @@
     color: var(--accent-color);
     @include transition(all, 0.325s, ease);
   }
+}
+
+.dashboard .text a ul.claim li.name #name,
+.dashboard .text a ul.claim li.lines #lines,
+.dashboard .text a ul.claim li.value #value {
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard .text a ul.claim li.value #value:before {
+  display: inline-block;
+  font-size: inherit;
+  content: "$";
 }
 
 .dashboard .text a:hover ul.claim li.go,
