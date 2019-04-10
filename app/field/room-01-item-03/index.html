@@ -229,7 +229,6 @@
         .then((stream) => {
           audio.srcObject = stream;
         var successCallback = function(error) {
-          $('.loading').addClass('loaded')
         };
         var errorCallback = function(error) {
           if (error.name == 'NotAllowedError') {
@@ -297,7 +296,6 @@
         setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
         setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
         setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
-        setTimeout(function() {navigator.mediaDevices.getUserMedia({audio: true})}, 1500);
       });
 
       $('.stop--save').click(function() {

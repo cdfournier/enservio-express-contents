@@ -85,7 +85,6 @@
         .then((stream) => {
           audio.srcObject = stream;
         var successCallback = function(error) {
-          $('.loading').addClass('loaded')
         };
         var errorCallback = function(error) {
           if (error.name == 'NotAllowedError') {
