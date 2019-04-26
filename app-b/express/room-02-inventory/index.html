@@ -1,0 +1,1272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio | Express Contents Inventory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta id="apple-mobile-web-app-capable" name="apple-mobile-web-app-capable" content="yes">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700">
+    <link rel="stylesheet" href="../../../src/css/main.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="nav--open"><i class="la la-bars"></i></a>
+        <ul>
+          <li class="nav-close"><a class="nav--close"><span class="icon"><i class="la la-close"></i></span></a></li>
+          <li class="nav-dashboard"><a href="../../dashboard/dashboard/index.html" class="active"><span class="icon"><i class="la la-dashboard"></i></span>Dashboard</a></li>
+          <li class="nav-offsite"><a href="../../inventory/setup/index.html"><span class="icon"><i class="la la-file-text"></i></span>Inventory</a></li>
+          <li class="nav-profile"><a href="../../profile/profile/index.html"><span class="icon"><i class="la la-user"></i></span>Profile</a></li>
+          <li class="nav-settings"><a href="../../settings/settings/index.html"><span class="icon"><i class="la la-sliders"></i></span>Settings</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section data-qa="notifications">
+        <div class="notification error">
+          <div class="message">
+            <p>This is where the error message goes</p>
+          </div>
+          <span class="dismiss error"><i class="la la-times-circle"></i></span>
+        </div>
+        <div class="notification confirm delete">
+          <div class="message">
+            <p>Are you sure you want to delete this item?</p>
+            <div class="action">
+              <button class="button dismiss--yes"><span class="button-label">Yes</span></button>
+              <button class="button dismiss--no"><span class="button-label">No</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="notification confirm">
+          <div class="message">
+            <p>You have unsaved changes. If you continue those changes will be lost. Are you sure you want to continue?</p>
+            <div class="action">
+              <button class="button dismiss--yes"><span class="button-label">Yes</span></button>
+              <button class="button dismiss--no"><span class="button-label">No</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-qa="room-inventory" class="room-inventory md">
+        <div class="slider ext">
+          <div class="slider int">
+            <div class="room-inventory">
+              <div class="inventory-list">
+                <h1>Living Room Inventory</h1>
+                <div class="accordion inventory">
+                	<input id="item-24" type="checkbox" name="item-24" class="accordion">
+                	<label for="item-24">
+                		<div class="item-number">Item Number:&nbsp;<span>24</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Coffee Table</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;271.99</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Coffee Table"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="271.99"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-25" type="checkbox" name="item-25" class="accordion">
+                	<label for="item-25">
+                		<div class="item-number">Item Number:&nbsp;<span>25</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Picture Frame</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;14.99</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Picture Frame"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="14.99"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-26" type="checkbox" name="item-26" class="accordion">
+                	<label for="item-26">
+                		<div class="item-number">Item Number:&nbsp;<span>26</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Lamp</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;59.94</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Lamp"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="59.94"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-27" type="checkbox" name="item-27" class="accordion">
+                	<label for="item-27">
+                		<div class="item-number">Item Number:&nbsp;<span>27</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Rug</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;129.8</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Rug"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="129.8"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-28" type="checkbox" name="item-28" class="accordion">
+                	<label for="item-28">
+                		<div class="item-number">Item Number:&nbsp;<span>28</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Book Hardcover</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;17.58</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Book Hardcover"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="17.58"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-29" type="checkbox" name="item-29" class="accordion">
+                	<label for="item-29">
+                		<div class="item-number">Item Number:&nbsp;<span>29</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Chair</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;73.99</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Chair"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="73.99"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-30" type="checkbox" name="item-30" class="accordion">
+                	<label for="item-30">
+                		<div class="item-number">Item Number:&nbsp;<span>30</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Decorative Pillow</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;14.99</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Decorative Pillow"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="14.99"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-31" type="checkbox" name="item-31" class="accordion">
+                	<label for="item-31">
+                		<div class="item-number">Item Number:&nbsp;<span>31</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>TV</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;199.99</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="TV"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="199.99"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-32" type="checkbox" name="item-32" class="accordion">
+                	<label for="item-32">
+                		<div class="item-number">Item Number:&nbsp;<span>32</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Sofa</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;819.99</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Sofa"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="819.99"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-33" type="checkbox" name="item-33" class="accordion">
+                	<label for="item-33">
+                		<div class="item-number">Item Number:&nbsp;<span>33</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Board Game</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;19.99</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Board Game"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="19.99"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-34" type="checkbox" name="item-34" class="accordion">
+                	<label for="item-34">
+                		<div class="item-number">Item Number:&nbsp;<span>34</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>DVD</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;9.43</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="DVD"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="9.43"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-35" type="checkbox" name="item-35" class="accordion">
+                	<label for="item-35">
+                		<div class="item-number">Item Number:&nbsp;<span>35</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>DVD Player</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;26.9</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="DVD Player"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="26.9"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-36" type="checkbox" name="item-36" class="accordion">
+                	<label for="item-36">
+                		<div class="item-number">Item Number:&nbsp;<span>36</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Blanket</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;23.99</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Blanket"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="23.99"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-37" type="checkbox" name="item-37" class="accordion">
+                	<label for="item-37">
+                		<div class="item-number">Item Number:&nbsp;<span>37</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Mirror</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;120.99</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Mirror"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="120.99"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-38" type="checkbox" name="item-38" class="accordion">
+                	<label for="item-38">
+                		<div class="item-number">Item Number:&nbsp;<span>38</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Basket</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;41.24</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Basket"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="41.24"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-39" type="checkbox" name="item-39" class="accordion">
+                	<label for="item-39">
+                		<div class="item-number">Item Number:&nbsp;<span>39</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>End Table</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;99.99</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="End Table"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="99.99"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-40" type="checkbox" name="item-40" class="accordion">
+                	<label for="item-40">
+                		<div class="item-number">Item Number:&nbsp;<span>40</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Curtains</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;31.99</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Curtains"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="31.99"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-41" type="checkbox" name="item-41" class="accordion">
+                	<label for="item-41">
+                		<div class="item-number">Item Number:&nbsp;<span>41</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Recliner</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;359.99</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Recliner"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="359.99"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-42" type="checkbox" name="item-42" class="accordion">
+                	<label for="item-42">
+                		<div class="item-number">Item Number:&nbsp;<span>42</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>TV Stand</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;107.68</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="TV Stand"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="107.68"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-43" type="checkbox" name="item-43" class="accordion">
+                	<label for="item-43">
+                		<div class="item-number">Item Number:&nbsp;<span>43</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Loveseat</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;726.37</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Loveseat"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="726.37"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-44" type="checkbox" name="item-44" class="accordion">
+                	<label for="item-44">
+                		<div class="item-number">Item Number:&nbsp;<span>44</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Ottoman</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;117.61</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Ottoman"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="117.61"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="accordion inventory">
+                	<input id="item-45" type="checkbox" name="item-45" class="accordion">
+                	<label for="item-45">
+                		<div class="item-number">Item Number:&nbsp;<span>45</span></div>
+                		<div class="item-header">
+                			<div class="description"><span>Description</span><p>Bookcase</p></div>
+                			<div class="cost"><span>Cost</span><p>&#36;179.99</p></div>
+                			<div class="qty"><span>Qty</span><p>1</p></div>
+                		</div>
+                	</label>
+                	<div class="item-summary">
+                		<div class="form-container">
+                			<form>
+                				<fieldset class="description">
+                					<legend>Description</legend>
+                					<label for="description">Description<input type="text" name="description" placeholder="Description" value="Bookcase"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="value">
+                					<legend>Value</legend>
+                					<label for="value">Value<input type="text" name="value" placeholder="Value" value="179.99"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="quantity">
+                					<legend>Quantity</legend>
+                					<label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="years">
+                					<legend>Age: Years</legend>
+                					<label for="years">Age: Years<input type="number" name="years" placeholder="Age: Years" value="2"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="months">
+                					<legend>Age: Months</legend>
+                					<label for="months">Age: Months<input type="number" name="months" placeholder="Age: Months" value="0"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<fieldset class="room">
+                					<legend>Room</legend>
+                					<label for="room">Room<input type="text" name="room" placeholder="Room" value="Living Room"><span class="is-valid"></span></label>
+                					<span class="error-message"></span>
+                				</fieldset>
+                				<div class="button-box">
+                					<a class="button attachments"><input type="file" name="files[]"><span class="button-label">Attachments<span class="number">0</span></span></a>
+                				</div>
+                			</form>
+                		</div>
+                		<div class="text action md">
+                			<span><a class="item--save">Save</a></span>
+                			<span><a class="item--delete">Delete</a></span>
+                		</div>
+                	</div>
+                </div>
+                <div class="button-box row">
+                  <a href="../room-01-inventory/index.html" class="button"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../../src/scripts/express-contents.js"></script>
+    <script>
+      $('.nav--open').click(function() {$('nav').addClass('open');});
+      $('.nav--close').click(function() {$('nav').removeClass('open');});
+
+      $('.item--delete').click(function() {$('.notification.confirm.delete').addClass('show');});
+      $('.dismiss--yes').click(function() {$('.notification.confirm.delete').removeClass('show');});
+      $('.dismiss--no').click(function() {$('.notification.confirm.delete').removeClass('show');});
+    </script>
+  </body>
+</html>

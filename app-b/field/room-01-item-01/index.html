@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio | Inventory Item Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta id="apple-mobile-web-app-capable" name="apple-mobile-web-app-capable" content="yes">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700">
+    <link rel="stylesheet" href="../../../src/css/main.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="nav--open"><i class="la la-bars"></i></a>
+        <ul>
+          <li class="nav-close"><a class="nav--close"><span class="icon"><i class="la la-close"></i></span></a></li>
+          <li class="nav-dashboard"><a href="../../dashboard/dashboard/index.html" class="active"><span class="icon"><i class="la la-dashboard"></i></span>Dashboard</a></li>
+          <li class="nav-offsite"><a href="../../inventory/setup/index.html"><span class="icon"><i class="la la-file-text"></i></span>Inventory</a></li>
+          <li class="nav-profile"><a href="../../profile/profile/index.html"><span class="icon"><i class="la la-user"></i></span>Profile</a></li>
+          <li class="nav-settings"><a href="../../settings/settings/index.html"><span class="icon"><i class="la la-sliders"></i></span>Settings</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section data-qa="notifications">
+        <div class="notification error">
+          <div class="message">
+            <p>This is where the error message goes</p>
+          </div>
+          <span class="dismiss error"><i class="la la-times-circle"></i></span>
+        </div>
+        <div class="notification confirm">
+          <div class="message">
+            <p>You have unsaved changes. If you continue those changes will be lost. Are you sure you want to continue?</p>
+            <div class="action">
+              <button class="button dismiss--yes"><span class="button-label">Yes</span></button>
+              <button class="button dismiss--no"><span class="button-label">No</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-qa="item-summary" class="item-summary md">
+        <div class="slider ext">
+          <div class="slider int">
+            <div class="slide">
+              <div class="chat one">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Here are this item's details:</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="form-container hidden">
+                <form>
+                  <fieldset class="description">
+                    <legend>Description</legend>
+                    <label for="description">Description<input type="text" name="description" placeholder="Description" value="serta queen size mattress and boxspring"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="value">
+                    <legend>Value</legend>
+                    <label for="value">Value<input type="text" name="value" placeholder="Value" value="&#36;850.00"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="quantity">
+                    <legend>Quantity</legend>
+                    <label for="quantity">Quantity<input type="number" name="quantity" placeholder="Quantity" value="1"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="years">
+                    <legend>Age: Years</legend>
+                    <label for="years">Age: Years<input type="number" name="years" class="years" placeholder="Years" value="5"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="months">
+                    <legend>Age: Months</legend>
+                    <label for="months">Age: Months<input type="number" name="months" class="months" placeholder="Months" min="0" max="11" value="0"></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="room">
+                    <legend>Room</legend>
+                    <label for="room">Room<input type="text" name="room" placeholder="Room" value="Master bedroom"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <div class="button-box">
+                    <label>Add Photo</label>
+                    <span class="button camera"><input type="file" id="files" name="files[]"><span class="button-label"><i class="la la-camera"></i></span><span class="count hidden">1</span></span>
+                  </div>
+                </form>
+              </div>
+              <div class="text action hidden md">
+                <span><a class="next--item">Next Item</a></span>
+                <span><a class="next--done">Done</a></span>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="chat two hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Move to another room or stop adding items?</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat three hidden">
+                <div class="button-box">
+                  <a class="button"><span class="button-label">Next Room</span></a>
+                  <a class="button stop--save"><span class="button-label">Stop</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="chat four hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Let's save this so that we can get back to it easily later.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-container save-list hidden">
+                <form>
+                  <fieldset class="name">
+                    <legend>Insured's Name</legend>
+                    <label for="name">Insured's Name<input type="text" id="name" name="name" placeholder="Insured's Name"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="lines">
+                    <legend>Lines</legend>
+                    <label for="lines">Lines<input type="number" id="lines" name="lines" placeholder="Lines"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <fieldset class="value">
+                    <legend>Value</legend>
+                    <label for="value">Value<input type="text" id="value" name="value" placeholder="Value"><span class="is-valid"></span></label>
+                    <span class="error-message"></span>
+                  </fieldset>
+                  <div class="button-box">
+                    <a href="../../dashboard/dashboard/index.html" class="button save"><span class="button-label">Save this List</span></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="chat five hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>I'm ready for your next item.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="voice two hidden">
+                <a id="listen-two" class="icon active animated pulse infinite listen one"><i class="la la-microphone"></i></a>
+              </div>
+              <div class="text inventory hidden">
+                <ul class="inventory-checklist xs">
+                  <li>Item Number:&nbsp;<b>2</b></li>
+                  <li class="description">Description<span><i class="la la-circle"></i><i class="la la-check-circle"></i><i class="la la-exclamation-circle"></i></span></li>
+                  <li class="value">Value<span><i class="la la-circle"></i><i class="la la-check-circle"></i><i class="la la-exclamation-circle"></i></span></li>
+                  <li class="quantity">Quantity<span><i class="la la-circle"></i><i class="la la-check-circle"></i><i class="la la-exclamation-circle"></i></span></li>
+                  <li class="age">Age<span><i class="la la-circle"></i><i class="la la-check-circle"></i><i class="la la-exclamation-circle"></i></span></li>
+                </ul>
+              </div>
+              <div class="chat six hidden">
+                <div class="chat-bot">
+                  <div class="small-avatar"><img src="../../../src/images/guide.jpg" align="Your Guide"></div>
+                  <div class="bubble">
+                    <p>Give me a second&hellip; I'm putting these details together.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="indicator two hidden">
+                <div class="indicator-gauge">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <audio style="display: none;"></audio>
+    </main>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="../../../src/scripts/express-contents.js"></script>
+    <script>
+      /* document ready script */
+      $(document).ready(function() {
+        setTimeout(function() {$('.item-summary .slider.int').addClass('slide-two');}, 2500);
+        setTimeout(function() {
+          $('.form-container').addClass('loaded');
+          $('.text.action').addClass('loaded');
+        }, 1000);
+        setTimeout(function() {
+          $('.form-container').removeClass('hidden loaded');
+          $('.text.action').removeClass('hidden loaded');
+        }, 1100);
+
+        $(".save").click(function(){
+          // Get input name
+          var name = $("#name").val();
+          var lines = $("#lines").val();
+          var value = $("#value").val();
+  
+          // Store data
+          sessionStorage.setItem("name", name);
+          sessionStorage.setItem("lines", lines);
+          sessionStorage.setItem("value", value);
+        });
+      });
+    </script>
+<!--
+    <script>
+      /* web audio api script version 1 */
+      const audio = document.querySelector('audio');
+      var constraints = {video: false, audio: true};
+
+      navigator.mediaDevices.getUserMedia(constraints)
+        .then((stream) => {
+          audio.srcObject = stream;
+        var successCallback = function(error) {
+        };
+        var errorCallback = function(error) {
+          if (error.name == 'NotAllowedError') {
+            // user denied access to camera
+          }
+        };
+        navigator.mediaDevices.getUserMedia(constraints)
+          .then(successCallback, errorCallback);
+      });
+    </script>
+-->
+<!--
+    <script>
+      /* web audio api script */
+      if (navigator.mediaDevices === undefined) {
+        navigator.mediaDevices = {};
+      }
+      
+      if (navigator.mediaDevices.getUserMedia === undefined) {
+        navigator.mediaDevices.getUserMedia = function(constraints) {
+          // First get ahold of the legacy getUserMedia, if present
+          let getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+      
+          // Some browsers just don't implement it - return a rejected promise with an error
+          // to keep a consistent interface
+          if (!getUserMedia) {
+            return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+          }
+      
+          // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
+          return new Promise(function(resolve, reject) {
+            getUserMedia.call(navigator, constraints, resolve, reject);
+          });
+        }
+      }
+      
+      navigator.mediaDevices.getUserMedia({
+        audio: true
+      }).then(function(stream) {
+        successCallBack(stream);
+      }).catch(function(error) {
+        console.log('error: ',error);
+      });
+      
+      function successCallback(stream){
+        console.log('stream: ',stream);
+      }
+    </script>
+-->
+    <script>
+      /* click event scripts */
+      $('.next--done').click(function() {
+        $('.slider.int').addClass('slide-three');
+        setTimeout(function() {
+          $('.chat.two').removeClass('hidden');
+          $('.form-container').addClass('hidden');
+        }, 500);
+        setTimeout(function() {$('.chat.three').removeClass('hidden')}, 1000);
+      });
+
+      $('.camera').on('change', function() {$('.count').removeClass('hidden')});
+
+      $('.next--item').click(function() {
+        $('.slider.int').removeClass('slide-two');
+        $('.slider.int').addClass('slide-five');
+        setTimeout(function() {$('.chat.five').removeClass('hidden')}, 500);
+        setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
+        setTimeout(function() {$('.text.inventory').removeClass('hidden')}, 1500);
+        setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 5500);
+        setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 9500);
+        setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 13500);
+        setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 17000);
+        setTimeout(function() {$('.voice.two .icon').removeClass('active animated pulse infinite')}, 17000);
+        setTimeout(function() {$('.voice.two .icon').addClass('inactive')}, 17500);
+        setTimeout(function() {$('.chat.six').removeClass('hidden')}, 18000);
+        setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 18500);
+        setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 19000);
+        setTimeout(function() {$(window.location.href = '../room-01-item-02/index.html')}, 22500);
+      });
+
+      $('.stop--save').click(function() {
+        $('.slider.int').removeClass('slide-three');
+        $('.slider.int').addClass('slide-four');
+        setTimeout(function() {$('.chat.four').removeClass('hidden')}, 500);
+        setTimeout(function() {$('.form-container').removeClass('hidden')}, 1000);
+      });
+
+      $('#listen-two').click(function() {
+        $('.voice.two .icon').removeClass('active animated pulse infinite');
+        $('.voice.two .icon').addClass('inactive');
+        setTimeout(function() {$('.chat.six').removeClass('hidden')}, 1000);
+        setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 1500);
+        setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 2500);
+        setTimeout(function() {$(window.location.href = '../room-01-item-02/index.html')}, 7500);
+      });
+
+      $('.nav--open').click(function() {$('nav').addClass('open');});
+      $('.nav--close').click(function() {$('nav').removeClass('open');});
+    </script>
+<!--
+    <script>
+      /* speech recognition script */
+      if (annyang) {
+
+        // define functions
+        var checkDescription = function() {
+          $('ul.inventory-checklist li.description').addClass('complete')
+        };
+
+        var checkValue = function() {
+          $('ul.inventory-checklist li.value').addClass('complete')
+        };
+
+        var checkQuantity = function() {
+          $('ul.inventory-checklist li.quantity').addClass('complete')
+        };
+
+        var checkAge = function() {
+          $('ul.inventory-checklist li.age').addClass('complete');
+          $('.voice.two .icon').removeClass('active animated pulse infinite');
+          $('.voice.two .icon').addClass('inactive');
+          setTimeout(function() {$('.chat.six').removeClass('hidden')}, 2000);
+          setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 2500);
+          setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 3500);
+          setTimeout(function() {$(window.location.href = '../room-01-item-02/index.html')}, 8500);
+        };
+
+        // define commands
+        var commands = {
+          'description *tag': checkDescription,
+          'value *tag': checkValue,
+          'quantity *tag': checkQuantity,
+          'age *tag': checkAge,
+        };
+
+        // OPTIONAL: activate debug mode for detailed logging in the console
+        annyang.debug();
+
+        // Add our commands to annyang
+        annyang.addCommands(commands);
+
+        // Start listening.
+        annyang.start();
+      };
+    </script>
+-->
+  </body>
+</html>

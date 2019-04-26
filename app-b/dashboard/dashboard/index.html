@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta id="apple-mobile-web-app-capable" name="apple-mobile-web-app-capable" content="yes">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700">
+    <link rel="stylesheet" href="../../../src/css/main.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="nav--open"><i class="la la-bars"></i></a>
+        <ul>
+          <li class="nav-close"><a class="nav--close"><span class="icon"><i class="la la-close"></i></span></a></li>
+          <li class="nav-dashboard"><a href="../../dashboard/dashboard/index.html" class="active"><span class="icon"><i class="la la-dashboard"></i></span>Dashboard</a></li>
+          <li class="nav-offsite"><a href="../../inventory/setup/index.html"><span class="icon"><i class="la la-file-text"></i></span>Inventory</a></li>
+          <li class="nav-profile"><a href="../../profile/profile/index.html"><span class="icon"><i class="la la-user"></i></span>Profile</a></li>
+          <li class="nav-settings"><a href="../../settings/settings/index.html"><span class="icon"><i class="la la-sliders"></i></span>Settings</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="flex-start">
+      <section data-qa="notifications">
+        <div class="notification error">
+          <div class="message">
+            <p>This is where the error message goes</p>
+          </div>
+          <span class="dismiss error"><i class="la la-times-circle"></i></span>
+        </div>
+        <div class="notification confirm">
+          <div class="message">
+            <p>You have unsaved changes. If you continue those changes will be lost. Are you sure you want to continue?</p>
+            <div class="action">
+              <button class="button dismiss--yes"><span class="button-label">Yes</span></button>
+              <button class="button dismiss--no"><span class="button-label">No</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-qa="dashboard" class="dashboard lg">
+        <div class="slider ext">
+          <div class="slider int">
+            <div class="slide">
+              <div class="text">
+                <h1>Dashboard</h1>
+                <h2>Overview</h2>
+                <ul>
+                  <li><a class="claims--open"><span>12</span>Open Claims</a></li>
+                  <li><a class="claims--pending"><span>6</span>Pending Claims</a></li>
+                  <li><a class="claims--closed"><span>35</span>Closed Claims</a></li>
+                </ul>
+              </div>
+              <div class="text">
+                <h1>Recent Lists</h1>
+                <a><ul class="claim">
+                  <li class="name"><span>Name</span><div id="name"></div></li>
+                  <li class="lines"><span>Lines</span><div id="lines"></div></li>
+                  <li class="value"><span>Value</span><div id="value"></div></li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="text one">
+                <a class="back--two"><i class="la la-angle-left"></i></a>
+                <h1>Open Claims</h1>
+                <p>These claims are open and require your attention.</p>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="text two">
+                <a class="back--three"><i class="la la-angle-left"></i></a>
+                <h1>Pending Claims</h1>
+                <p>These claims are out for review.</p>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="text three">
+                <a class="back--four"><i class="la la-angle-left"></i></a>
+                <h1>Closed Claims</h1>
+                <p>These claims are complete.</p>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+                <a href="#!"><ul class="claim">
+                  <li class="number"><span>Number</span>{Claim_Number}</li>
+                  <li class="items"><span>Items</span>{00}</li>
+                  <li class="go"><i class="la la-angle-right"></i></li>
+                </ul></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../../src/scripts/express-contents.js"></script>
+    <script>
+      $('.nav--open').click(function() {$('nav').addClass('open');});
+      $('.nav--close').click(function() {$('nav').removeClass('open');});
+
+      $('.claims--open').click(function() {
+        $('.slider.int').addClass('slide-two');
+        $('.text.one').addClass('show');
+      });
+      $('.claims--pending').click(function() {
+        $('.slider.int').addClass('slide-three');
+        $('.text.two').addClass('show');
+      });
+      $('.claims--closed').click(function() {
+        $('.slider.int').addClass('slide-four');
+        $('.text.three').addClass('show');
+      });
+
+      $('.back--two').click(function() {
+        $('.slider.int').removeClass('slide-two');
+        $('.slider.int').addClass('slide-one');
+        $('.text.one').removeClass('show');
+      });
+      $('.back--three').click(function() {
+        $('.slider.int').removeClass('slide-three');
+        $('.slider.int').addClass('slide-one');
+        $('.text.two').removeClass('show');
+      });
+      $('.back--four').click(function() {
+        $('.slider.int').removeClass('slide-four');
+        $('.slider.int').addClass('slide-one');
+        $('.text.three').removeClass('show');
+      });
+    </script>
+    <script>
+      document.getElementById('name').innerHTML = sessionStorage.getItem('name');
+      document.getElementById('lines').innerHTML = sessionStorage.getItem('lines');
+      document.getElementById('value').innerHTML = sessionStorage.getItem('value');
+    </script>
+  </body>
+</html>
