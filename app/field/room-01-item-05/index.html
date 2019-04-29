@@ -133,16 +133,6 @@
                     <label for="name">Insured's Name<input type="text" id="name" name="name" placeholder="Insured's Name"><span class="is-valid"></span></label>
                     <span class="error-message"></span>
                   </fieldset>
-                  <fieldset class="lines">
-                    <legend>Lines</legend>
-                    <label for="lines">Lines<input type="number" id="lines" name="lines" placeholder="Lines"><span class="is-valid"></span></label>
-                    <span class="error-message"></span>
-                  </fieldset>
-                  <fieldset class="value">
-                    <legend>Value</legend>
-                    <label for="value">Value<input type="text" id="value" name="value" placeholder="Value"><span class="is-valid"></span></label>
-                    <span class="error-message"></span>
-                  </fieldset>
                   <div class="button-box">
                     <a href="../../dashboard/dashboard/index.html" class="button save"><span class="button-label">Save this List</span></a>
                   </div>
@@ -210,13 +200,9 @@
         $(".save").click(function(){
           // Get input name
           var name = $("#name").val();
-          var lines = $("#lines").val();
-          var value = $("#value").val();
   
           // Store data
           sessionStorage.setItem("name", name);
-          sessionStorage.setItem("lines", lines);
-          sessionStorage.setItem("value", value);
         });
       });
     </script>
