@@ -287,9 +287,7 @@
         }, 500);
         setTimeout(function() {$('.chat.three').removeClass('hidden')}, 1000);
       });
-
       $('.camera').on('change', function() {$('.count').removeClass('hidden')});
-
       $('.next--item').click(function() {
         $('.slider.int').removeClass('slide-two');
         $('.slider.int').addClass('slide-five');
@@ -297,23 +295,24 @@
         setTimeout(function() {$('.voice.two').removeClass('hidden')}, 1000);
         setTimeout(function() {$('.text').removeClass('hidden')}, 1500);
       });
-
       $('.stop--save').click(function() {
         $('.slider.int').removeClass('slide-three');
         $('.slider.int').addClass('slide-four');
         setTimeout(function() {$('.chat.four').removeClass('hidden')}, 500);
         setTimeout(function() {$('.form-container').removeClass('hidden')}, 1000);
       });
-
       $('#listen-two').click(function() {
         $('.voice.two .icon').removeClass('active animated pulse infinite');
         $('.voice.two .icon').addClass('inactive');
-        setTimeout(function() {$('.chat.seven').removeClass('hidden')}, 1000);
-        setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 1500);
-        setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 2500);
-        setTimeout(function() {$(window.location.href = '../room-01-item-03/index.html')}, 7500);
+        setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 1000);
+        setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 2000);
+        setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 3000);
+        setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 4000);
+        setTimeout(function() {$('.chat.six').removeClass('hidden')}, 4500);
+        setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 5000);
+        setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 5500);
+        setTimeout(function() {$(window.location.href = '../room-01-item-03/index.html')}, 10500);
       });
-
       $('.nav--open').click(function() {$('nav').addClass('open');});
       $('.nav--close').click(function() {$('nav').removeClass('open');});
     </script>

@@ -267,10 +267,14 @@
       $('#listen-two').click(function() {
         $('.voice.two .icon').removeClass('active animated pulse infinite');
         $('.voice.two .icon').addClass('inactive');
-        setTimeout(function() {$('.chat.seven').removeClass('hidden')}, 1000);
-        setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 1500);
-          setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 2500);
-          setTimeout(function() {$(window.location.href = '../room-01-item-01/index.html')}, 7500);
+        setTimeout(function() {$('ul.inventory-checklist li.description').addClass('complete')}, 1000);
+        setTimeout(function() {$('ul.inventory-checklist li.value').addClass('complete')}, 2000);
+        setTimeout(function() {$('ul.inventory-checklist li.quantity').addClass('complete')}, 3000);
+        setTimeout(function() {$('ul.inventory-checklist li.age').addClass('complete')}, 4000);
+        setTimeout(function() {$('.chat.seven').removeClass('hidden')}, 4500);
+        setTimeout(function() {$('.indicator.two').removeClass('hidden')}, 5000);
+        setTimeout(function() {$('.indicator.two .indicator-gauge span').addClass('loaded')}, 5500);
+        setTimeout(function() {$(window.location.href = '../room-01-item-01/index.html')}, 10500);
       });
 
       $('.nav--open').click(function() {$('nav').addClass('open');});
