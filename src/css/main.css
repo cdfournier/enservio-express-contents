@@ -1733,7 +1733,10 @@ input.accordion:checked ~ label .item-header:after {
   padding: 0.5rem 0.5rem 0 0; }
 
 .accordion.inventory .item-header .description {
-  width: calc(100% - 1.5rem); }
+  width: calc(75% - 1.5rem); }
+
+.accordion.inventory .item-header .cost {
+  width: calc(25% - 1.5rem); }
 
 .accordion.inventory .item-header .description span,
 .accordion.inventory .item-header .cost span,
@@ -1751,16 +1754,12 @@ input.accordion:checked ~ label .item-header:after {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.accordion.inventory .item-header .cost,
 .accordion.inventory .item-header .qty {
   display: none; }
 
 @media (min-width: 48rem) {
   .accordion.inventory .item-header .description {
-    width: calc(80% - 1.5rem); }
-  .accordion.inventory .item-header .cost {
-    display: flex;
-    width: calc(25% - 1.5rem); } }
+    width: calc(80% - 1.5rem); } }
 
 @media (min-width: 64rem) {
   .accordion.inventory .item-header .description {
